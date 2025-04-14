@@ -1,0 +1,16 @@
+[
+  {
+    "id": "pattaya",
+    "title": "Pattaya Series",
+    "intro": "Exploring Pattaya's nightlife and street energy.",
+    "prefix": "pattaya",
+    "imageCount": 20
+  },
+  {
+    "id": "sihanoukville",
+    "title": "Sihanoukville Series",
+    "intro": "Documenting the changes in Sihanoukville, Cambodia.",
+    "prefix": "sihanoukville",
+    "imageCount": 10
+  }
+]

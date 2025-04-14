@@ -1,0 +1,47 @@
+// Step 2: Set up routing using React Router
+
+// 1. Install React Router
+// In your project folder, run:
+// npm install react-router-dom
+
+// 2. Update your main.jsx or index.jsx
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from 'react-router-dom';
+import App from './App';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Pattaya from './pages/projects/Pattaya';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />, // shared layout component
+    children: [
+      { path: '', element: <Home /> },
+      { path: 'about', element: <About /> },
+      { path: 'contact', element: <Contact /> },
+      { path: 'projects/pattaya', element: <Pattaya /> },
+    ]
+  }
+]);
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
+);
+
+// 3. Create the page components inside /src/pages/
+// Home.jsx, About.jsx, Contact.jsx, and /projects/Pattaya.jsx
+
+// Example: src/pages/Home.jsx
+export default function Home() {
+  return <h1>Welcome to Çağdaş’s Photography</h1>;
+}
+
+// Do similar stubs for About, Contact, Pattaya
