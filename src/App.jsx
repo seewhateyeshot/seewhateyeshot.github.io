@@ -8,7 +8,6 @@ import './App.css';
  */
 const LINKS = [
   { to: '/', label: 'Home' },
-  { to: '/about', label: 'About' },
   {
     label: 'Projects',
     subLinks: [
