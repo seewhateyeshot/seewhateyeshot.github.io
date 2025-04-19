@@ -1,0 +1,48 @@
+.portrait-reel-wrapper {
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 2em 0;
+  margin: 3em 0;
+  overflow: hidden;
+}
+
+.portrait-reel-title {
+  text-align: center;
+  font-size: 1.4em;
+  margin-bottom: 1em;
+  font-weight: 500;
+  font-family: 'EB Garamond', serif;
+}
+
+.portrait-reel {
+  display: flex;
+  gap: 1em;
+  overflow-x: scroll;
+  padding: 0 1em;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.portrait-reel::-webkit-scrollbar {
+  display: none;
+}
+
+.portrait-img {
+  flex: 0 0 auto;
+  height: 400px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.portrait-img:hover {
+  transform: scale(1.04);
+}
+
+.portrait-reel-wrapper {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  overflow-x: hidden;
+  background: white;
+  padding: 2rem 0;
+}

@@ -1,3 +1,6 @@
+import React from 'react';
+import PortraitReel from '../components/PortraitReel';
+
 const essayContent = [
   {
     type: 'text',
@@ -41,6 +44,49 @@ const essayContent = [
     type: 'image',
     src: '/images/pattaya/pattaya-04.jpg',
     caption: 'Start of another day'
+  },
+  {
+    type: 'text',
+    content: `For the next two weeks, even though I continued taking photos wherever I was, I returned to Soi 6 almost every day as part of our Beach Road walk—sometimes twice a day, once in the afternoon and again at night. My teacher usually came with me, offering tips on how to interact. He’d watch both me and the street, and later at home, he’d offer critique—on my presence, what I did or didn’t do.
+
+    I was starting to learn the rhythm: when the music started, when the bar stools were wiped down, when the girls stirred awake and had breakfast right where they’d work later. When the men began drifting in. Every hour had a different texture. In the afternoon, the street felt softer. There was space. By evening, it grew louder, more compressed, more electric.
+
+    I began to recognize faces. Some bar girls would wave. A few started calling me “photo man.” They’d pull me aside from the crowd, pose, and ask me to send the pictures later. I started exchanging contact info—Instagram, Line, WhatsApp. Sometimes I’d get a message within half an hour: “Where is my pic???” Occasionally, I’d see one of my photos appear on their profiles and feel a quiet satisfaction. They’d pose happily, fix each other’s makeup, laugh when I showed them the screen. I learned quickly: take many, and show the most flattering one first.
+
+    Others didn’t want to be seen, and I never pushed. I tried to read the room. My Thai was still clumsy, but just enough to say hello, to ask politely, to thank.
+
+    Sometimes I wasn’t just “photo man”—I was a potential customer, too. As it happens to most men on that street, I’d sometimes be grabbed by the wrist and pulled inside for a drink. I learned that raising my hands in a respectfully to give a salutation and saying nong kap, mai ao kap—sister, I don’t want—was disarming. They’d salute me back and let me go.
+
+    Some spoke better English. A few had once been married to Western men. One had lived in Sweden. Another had studied in Bangkok. Some had foreign fathers, usually absent. But the vast majority were from rural areas. When I asked where, the answer was often “Isan”—Thailand’s northeast. A rice-farming region. Poor. Hard to leave.`
+  },
+  {
+    type: 'component',
+    render: () => {
+      const portraitImages = Array.from({ length: 31 }, (_, i) => {
+        const num = String(i + 1).padStart(2, '0'); // pad 1 → 01
+        return `/images/pattaya/portraits/pattaya_portrait-${num}.jpg`;
+      });
+
+      return <PortraitReel title="Faces from Soi 6" images={portraitImages} />;
+    }
+  },
+  {
+    type: 'text',
+    content: `Most of the attention, naturally, falls on the women. But the men are just as much a part of the street’s rhythm. They bring the money. They arrived from all over—Europe, the U.S., Australia, India, China, Japan, Korea. Some walked in groups, loud and confident. Others drifted alone, slowly, trying not to be noticed even as they scanned every bar.
+
+There were the usual types: solo men in polo shirts with tanned arms, groups of Brits in football jerseys, retired men with walking sticks, a few younger travelers holding beers, looking amazed and slightly lost at the same time. People of all colors.
+
+At first, I judged them—harshly. I wanted to photograph them in a way that exposed something. I wanted to make them look guilty. A few times, I did. One night, out walking on Beach Road, I caught an old man mid-negotiation—his hand on a girl’s back, whispering something into her ear. I lifted my camera, clicked, and kept walking. He gave me a half-hearted chase, yelling, “Idiot! Come back!” in a thick German accent. I didn’t stop.
+
+Later, my teacher asked, “What were you trying to prove?”
+
+He said I had picked on that man because he was old and weak. He reminded me that good photography doesn’t humiliate. It shouldn’t create enmity. It observes, reflects, connects. That moment stayed with me.
+
+After that, I tried to empathize with the men. I started talking to them. If they were Swedish, I’d say, Bra, jag pratar svenska också. I could get by with the Norwegians and catch a word or two from the Danes. If they were French, I’d mention that I religiously did Duolingo every day. If they were Welsh, I’d say I used to work with a guy from Caerphilly. Sometimes I didn’t need to say much—just telling them I was Turkish was enough to spark a conversation. “That’s where I got my hair transplant,” they’d say, or, “I flew there for my teeth.” Cheap and professional, they’d add, grinning.
+
+If they asked about my camera, I told them I was documenting the street. Some didn’t mind at all. Some bought me a beer. Some asked to pose. Others got serious—one said, “I’ve got a wife and kids back home.” Another just shook his head and walked away.
+
+I stopped trying to capture shame. Instead, I tried to photograph the reality of it—not the scandal, but the quiet ordinariness. Because for them, that’s what it was: a drink, a smile, a bar stool, a question, an agreement. Nothing illegal. Nothing hidden. Just something you’re not supposed to look at too closely.`
   }
 ];
 

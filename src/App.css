@@ -179,3 +179,19 @@ main {
   padding: 0;
   max-width: 100vw;
 }
+
+.dropdown .sub-menu li a {
+  display: block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: black;
+  transition: background 0.2s ease;
+}
+
+.dropdown .sub-menu li a:hover,
+.dropdown .sub-menu li a:focus {
+  background-color: #f0f0f0;
+  outline: none;
+  /* removes default blue border */
+  border-radius: 4px;
+}
