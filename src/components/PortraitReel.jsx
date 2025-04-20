@@ -4,7 +4,7 @@ import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import 'yet-another-react-lightbox/styles.css';
 import './PortraitReel.css';
 
-export default function PortraitReel({ title, images }) {
+export default function PortraitReel({ title, images, caption }) {
   const [lightboxIndex, setLightboxIndex] = useState(-1);
   const reelRef = useRef(null);
 
@@ -22,6 +22,7 @@ export default function PortraitReel({ title, images }) {
           />
         ))}
       </div>
+      {caption && <p className="portrait-reel-caption">{caption}</p>}
 
       <Lightbox
         open={lightboxIndex >= 0}

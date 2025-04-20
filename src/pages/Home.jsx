@@ -25,6 +25,7 @@ export default function Home() {
           aiming always to capture people the way they’d want to be remembered.
           At least in a way that we surely cannot forget them.
         </p>
+        <br />
         <p>Tag along, I'm on a journey to be king of photographers!</p>
       </section>
     </section>

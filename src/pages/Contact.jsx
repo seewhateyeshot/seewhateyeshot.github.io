@@ -8,12 +8,12 @@ export default function Contact() {
         Feel free to reach out — whether it’s about collaboration, exhibitions, prints, or just conversation.
       </p>
       <p>
-        <strong>email:</strong> <a href="mailto:seewhateyeshot@gmail.com">seewhateyeshot@gmail.com</a>
+        <strong>email:</strong> <a href="mailto:cagdas.raw@gmail.com">cagdas.raw@gmail.com</a>
       </p>
       <p>
         <strong>instagram:</strong>{' '}
-        <a href="https://www.instagram.com/seewhateyeshot" target="_blank" rel="noreferrer">
-          @seewhateyeshot
+        <a href="https://www.instagram.com/cagdas.raw" target="_blank" rel="noreferrer">
+          @cagdas.raw
         </a>
       </p>
     </section>

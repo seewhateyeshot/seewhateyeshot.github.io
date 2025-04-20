@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import Lightbox from 'yet-another-react-lightbox';
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import 'yet-another-react-lightbox/styles.css';
+import NotFound from "../components/NotFound";
 import ShareButtons from '../components/ShareButtons';
 import { useParams } from 'react-router-dom';
-import pattayaEssayBlocks from '../data/pattayaEssayBlocks';
+import soi6EssayBlocks from '../data/soi6EssayBlocks.jsx';
 import sihanoukvilleEssayBlocks from '../data/sihanoukvilleEssayBlocks';
 import './PhotoEssay.css';
 
@@ -12,15 +13,15 @@ export default function PhotoEssay() {
   const { id } = useParams();
 
   const projectMap = {
-    pattaya: {
+    soi6: {
       title: 'Soi 6',
-      subtitle: 'A documentary series from Pattaya, Thailand',
+      subtitle: 'For seven weeks, I photographed a bar street in Pattaya, Thailand',
       cover: {
-        src: './images/pattaya/pattaya-01.jpg',
-        caption: 'Start of a working day',
+        src: './images/pattaya/soi6-01.jpg',
+        caption: 'Start of a working day. June 2024.',
       },
-      essay: pattayaEssayBlocks,
-      shareUrl: 'https://seewhateyeshot.github.io/projects/pattaya',
+      essay: soi6EssayBlocks,
+      shareUrl: 'https://cagdasraw.github.io/projects/soi6',
       shareTitle: 'A Photo Essay on Pattaya’s Soi 6',
     },
     sihanoukville: {
@@ -31,12 +32,22 @@ export default function PhotoEssay() {
         caption: 'Morning in the new city',
       },
       essay: sihanoukvilleEssayBlocks,
-      shareUrl: 'https://seewhateyeshot.github.io/projects/sihanoukville',
+      shareUrl: 'https://cagdasraw.github.io/projects/sihanoukville',
       shareTitle: 'A Photo Essay on Sihanoukville',
     },
   };
 
   const project = projectMap[id];
+
+  if (!project) {
+    return (
+      <NotFound
+        title="404 – Project Not Found"
+        message="Sorry, we couldn’t find the photo essay you’re looking for."
+      />
+    );
+  }
+
   const essayContent = project.essay;
 
   const [lightboxIndex, setLightboxIndex] = useState(-1);
@@ -51,8 +62,8 @@ export default function PhotoEssay() {
     <div className="photo-essay">
       <div className="photo-essay-header">
         <center>
-          <h1 className="essay-title">{project.title}</h1>
-          <p className="essay-subtitle">{project.subtitle}</p>
+          <h1 className="text-4xl font-bold mt-6 mb-2">{project.title}</h1>
+          <p className="text-lg text-gray-700 italic">{project.subtitle}</p>
           <p className="essay-author">by Çağdaş</p>
           <div className="share-buttons" style={{ display: 'flex', justifyContent: 'center' }}>
             <ShareButtons url={project.shareUrl} title={project.shareTitle} />

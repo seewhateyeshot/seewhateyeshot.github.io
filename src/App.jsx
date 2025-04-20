@@ -11,7 +11,7 @@ const LINKS = [
   {
     label: 'Projects',
     subLinks: [
-      { to: '/projects/pattaya', label: 'Pattaya' },
+      { to: '/projects/soi6', label: 'Soi 6' },
       { to: '/projects/sihanoukville', label: 'Sihanoukville' },
     ],
   },
