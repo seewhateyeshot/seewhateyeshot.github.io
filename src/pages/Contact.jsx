@@ -8,7 +8,7 @@ export default function Contact() {
         Feel free to reach out — whether it’s about collaboration, exhibitions, prints, or just conversation.
       </p>
       <p>
-        <strong>email:</strong> <a href="mailto:cagdas.raw@gmail.com">cagdas.raw@gmail.com</a>
+        <strong>email:</strong> <a href="mailto:cagdasmore@gmail.com">cagdasmore@gmail.com</a>
       </p>
       <p>
         <strong>instagram:</strong>{' '}
