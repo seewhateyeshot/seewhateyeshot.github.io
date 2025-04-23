@@ -29,8 +29,8 @@ export default function HomePageProjects() {
       {featured.map((project, idx) => (
         <Link
           key={project.id || idx}
-          to={project.link}
-          className="relative w-full max-w-[500px] flex-shrink-0 snap-start overflow-hidden rounded shadow"
+          to={project.id}
+          className="relative w-full max-w-[420px] flex-shrink-0 snap-start overflow-hidden rounded shadow"
         >
           <img
             src={project.image}
