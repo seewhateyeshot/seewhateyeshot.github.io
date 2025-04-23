@@ -22,7 +22,7 @@ export default function PortraitReel({ title, images, caption }) {
           />
         ))}
       </div>
-      {caption && <p className="portrait-reel-caption">{caption}</p>}
+      {caption && <p className="portrait-reel-caption mx-auto max-w-3xl px-4">{caption}</p>}
 
       <Lightbox
         open={lightboxIndex >= 0}

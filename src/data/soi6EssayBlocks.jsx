@@ -255,17 +255,36 @@ Despite the visibility of the trade, Thai authorities officially deny the existe
     I don’t know what else to do with these photos.`
   },
   {
+    type: 'component',
+    render: () => {
+      const scenes = Array.from({ length: 24 }, (_, i) => {
+        const num = String(i + 1).padStart(2, '0'); // pad 1 → 01
+        return `/images/pattaya/scenes/scene-${num}.gif`;
+      });
+
+      return (
+        <PortraitReel
+          title={'"Scenes"'}
+          images={scenes}
+          caption={`In June 2024, in my stay in Pattaya for about a week I did a lot of "burst" shots. And I noticed some of them play out like an old silent film. Thanks to this realization, right after I left Pattaya I exported low-resolution JPEGs of the photos I took then that are lost now. They are just wide enough to display on a computer screen so here we go. And here are the fragmented scenes that led to the mass export. Big majority from June 2024, and a few from April 2024.`}
+        />
+      );
+    }
+  },
+  {
+    type: 'text',
+    content: `Pattaya is not a mystery. It’s a system. It’s built on mobility, memory, exchange. Some people come for a week. Some never leave. Many of the women I met were supporting families. Most of the men were running from something. And me? I came back with photographs—fragments of a place that’s always moving, always just out of frame.
+
+    Now I don’t know what these photos are for. Will this system ever change? The men won’t stop being rich, and they won’t stop wanting these women. The women won’t stop being poor, and they won’t stop wanting to make money. The Thai government looks the other way, as long as the economy moves and the tourists keep coming.`
+  },
+  {
     type: 'image',
     src: '/images/pattaya/soi6-14.jpg',
     caption: 'Breaking the fourth wall. April 2024.',
   },
   {
     type: 'text',
-    content: `Pattaya is not a mystery. It’s a system. It’s built on mobility, memory, exchange. Some people come for a week. Some never leave. Many of the women I met were supporting families. Most of the men were running from something. And me? I came back with photographs—fragments of a place that’s always moving, always just out of frame.
-
-    Now I don’t know what these photos are for. Will this system ever change? The men won’t stop being rich, and they won’t stop wanting these women. The women won’t stop being poor, and they won’t stop wanting to make money. The Thai government looks the other way, as long as the economy moves and the tourists keep coming.
-
-    Sometimes I wonder if I documented something or just circled around it. But I kept walking. I kept looking. And these photos—what’s left of them—are what I brought back.
+    content: `Sometimes I wonder if I documented something or just circled around it. But I kept walking. I kept looking. And these photos—what’s left of them—are what I brought back.
 
     And still—through all of it—photography brought me joy. Maybe that’s the most complicated part.`
   },
