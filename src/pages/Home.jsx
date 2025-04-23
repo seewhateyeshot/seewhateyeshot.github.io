@@ -1,3 +1,4 @@
+import HeroFlip from '../components/HeroFlip';
 import HomePageProjects from '../components/HomePageProjects';
 
 import './Home.css';
@@ -25,12 +26,8 @@ export default function Home() {
         </p>
         <br />
       </section>
-      <img
-        src={`${import.meta.env.BASE_URL}hero.jpg`}
-        alt="Main hero visual"
-        className="hero-img"
-      />
+      <HeroFlip />
       <p>Tag along, I'm on a journey to be king of photographers!</p>
-    </section>
+    </section >
   );
 }
