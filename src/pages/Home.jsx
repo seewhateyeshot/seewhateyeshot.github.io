@@ -1,16 +1,14 @@
+import HomePageProjects from '../components/HomePageProjects';
+
 import './Home.css';
 
 export default function Home() {
   return (
     <section className="hero">
       <div className="hero-text">
-        <p>Documentary photography from the roads less traveled</p>
+        <p>Documentary photography from the roads less photographed</p>
       </div>
-      <img
-        src={`${import.meta.env.BASE_URL}hero.jpg`}
-        alt="Main hero visual"
-        className="hero-img"
-      />
+      <HomePageProjects />
       <section className="bio">
         <p>
           I'm a street and documentary photographer loosely based in Stockholm.
@@ -26,8 +24,13 @@ export default function Home() {
           At least in a way that we surely cannot forget them.
         </p>
         <br />
-        <p>Tag along, I'm on a journey to be king of photographers!</p>
       </section>
+      <img
+        src={`${import.meta.env.BASE_URL}hero.jpg`}
+        alt="Main hero visual"
+        className="hero-img"
+      />
+      <p>Tag along, I'm on a journey to be king of photographers!</p>
     </section>
   );
 }

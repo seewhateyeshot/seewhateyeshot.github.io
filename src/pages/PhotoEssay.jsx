@@ -5,14 +5,27 @@ import 'yet-another-react-lightbox/styles.css';
 import NotFound from "../components/NotFound";
 import ShareButtons from '../components/ShareButtons';
 import { useParams } from 'react-router-dom';
+import bikingHomeEssayBlocks from '../data/bikingHomeEssayBlocks.js';
 import soi6EssayBlocks from '../data/soi6EssayBlocks.jsx';
 import sihanoukvilleEssayBlocks from '../data/sihanoukvilleEssayBlocks';
+import songkranEssayBlocks from '../data/songkranEssayBlocks';
 import './PhotoEssay.css';
 
 export default function PhotoEssay() {
   const { id } = useParams();
 
   const projectMap = {
+    biking_home: {
+      title: 'Biking Home',
+      subtitle: 'I cycled from Sweden to home in my parents across Europe.',
+      cover: {
+        src: './images/biking/biking.jpg',
+        caption: 'August 2024.',
+      },
+      essay: bikingHomeEssayBlocks,
+      shareUrl: 'https://cagdasraw.github.io/projects/biking_home',
+      shareTitle: 'A Photo Essay on Pattaya’s Soi 6',
+    },
     soi6: {
       title: 'Soi 6',
       subtitle: 'For seven weeks, I photographed a bar street in Pattaya, Thailand',
@@ -26,14 +39,25 @@ export default function PhotoEssay() {
     },
     sihanoukville: {
       title: 'Sihanoukville',
-      subtitle: 'A documentary series from Cambodia',
+      subtitle: 'One day in a Cambodian city in rapid transformation',
       cover: {
         src: './images/sihanoukville/sihanoukville-01.jpg',
-        caption: 'Morning in the new city',
+        caption: 'Morning in the city.',
       },
       essay: sihanoukvilleEssayBlocks,
-      shareUrl: 'https://cagdasraw.github.io/projects/sihanoukville',
-      shareTitle: 'A Photo Essay on Sihanoukville',
+      shareUrl: 'https://cagdasraw.github.io/brief/sihanoukville',
+      shareTitle: 'A Photo Series on Sihanoukville',
+    },
+    songkran: {
+      title: 'Songkran',
+      subtitle: 'Thailand\'s wettest day',
+      cover: {
+        src: './images/songkran/songkran-01.jpg',
+        caption: 'Buckets of water and smiles.',
+      },
+      essay: songkranEssayBlocks,
+      shareUrl: 'https://cagdasraw.github.io/brief/songkran',
+      shareTitle: 'A Photo Series on Songkran',
     },
   };
 

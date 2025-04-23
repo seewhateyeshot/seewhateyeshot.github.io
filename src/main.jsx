@@ -19,6 +19,7 @@ const router = createHashRouter([
       { path: '', element: <Home /> },
       { path: 'contact', element: <Contact /> },
       { path: 'projects/:id', element: <PhotoEssay /> }, // dynamic projects route
+      { path: 'brief/:id', element: <PhotoEssay /> }, // dynamic projects route
       { path: '*', element: <NotFound /> }, // ← catch-all route
     ],
   },

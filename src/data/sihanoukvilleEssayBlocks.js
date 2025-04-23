@@ -5,8 +5,8 @@ const sihanoukvilleEssayBlocks = [
   },
   {
     type: 'image',
-    src: '/images/sihanoukville/sihanoukville-01.jpg',
-    caption: 'Chinese-funded construction site across from a noodle stall.'
+    src: '/images/sihanoukville/sihanoukville-02.jpg',
+    caption: 'Cambodian workers entering a Chinese-funded construction site'
   },
   {
     type: 'text',
@@ -14,8 +14,35 @@ const sihanoukvilleEssayBlocks = [
   },
   {
     type: 'image',
-    src: '/images/sihanoukville/sihanoukville-02.jpg',
-    caption: 'Inside a Chinese-run shopping center.'
+    src: '/images/sihanoukville/sihanoukville-03.jpg',
+  },
+  {
+    type: 'image',
+    src: '/images/sihanoukville/sihanoukville-04.jpg',
+  },
+  {
+    type: 'image',
+    src: '/images/sihanoukville/sihanoukville-05.jpg',
+  },
+  {
+    type: 'image',
+    src: '/images/sihanoukville/sihanoukville-06.jpg',
+  },
+  {
+    type: 'image',
+    src: '/images/sihanoukville/sihanoukville-07.jpg',
+  },
+  {
+    type: 'image',
+    src: '/images/sihanoukville/sihanoukville-08.jpg',
+  },
+  {
+    type: 'image',
+    src: '/images/sihanoukville/sihanoukville-09.jpg',
+  },
+  {
+    type: 'image',
+    src: '/images/sihanoukville/sihanoukville-10.jpg',
   },
 ];
 

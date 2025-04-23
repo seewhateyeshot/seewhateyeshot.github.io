@@ -198,3 +198,27 @@ main {
   /* removes default blue border */
   border-radius: 4px;
 }
+
+.dropdown .sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+
+  min-width: 160px;
+  /* ✅ sets a better default width */
+}
+
+.dropdown .sub-menu li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  /* ✅ gives items breathing room */
+  white-space: nowrap;
+  /* keeps longer labels on one line */
+}

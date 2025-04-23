@@ -12,7 +12,15 @@ const LINKS = [
     label: 'Projects',
     subLinks: [
       { to: '/projects/soi6', label: 'Soi 6' },
-      { to: '/projects/sihanoukville', label: 'Sihanoukville' },
+      { to: '/projects/biking_home', label: 'Biking Home' },
+    ],
+  },
+  {
+    label: 'Short series',
+    subLinks: [
+      { to: '/brief/samos', label: 'Samos' },
+      { to: '/brief/sihanoukville', label: 'Sihanoukville' },
+      { to: '/brief/songkran', label: 'Songkran' },
     ],
   },
   { to: '/contact', label: 'Contact' },
@@ -46,7 +54,7 @@ export default function App() {
     return (
       <ul className="nav-right">
         {LINKS.map((item, idx) => {
-          // If it has subLinks => Projects dropdown
+          // If it has subLinks => it has a dropdown
           if (item.subLinks) {
             return (
               <li key={idx} className="dropdown">
@@ -119,8 +127,9 @@ export default function App() {
       {/* NAVBAR */}
       <nav className="navbar">
         {/* Logo on the left */}
-        <Link to="/" className="logo">
-          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Logo" />
+        <Link to="/" className="logo flex items-center gap-2">
+          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Logo" className="h-8" />
+          <span className="font-semibold text-lg tracking-tight">Çağdaş</span>
         </Link>
 
         {/* If mobile => show hamburger, else => desktop nav */}
