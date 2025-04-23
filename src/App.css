@@ -92,7 +92,8 @@ main {
   border-radius: 4px;
 }
 
-.dropdown:hover .sub-menu {
+.dropdown:hover .sub-menu,
+.dropdown.force-open .sub-menu {
   display: block;
 }
 

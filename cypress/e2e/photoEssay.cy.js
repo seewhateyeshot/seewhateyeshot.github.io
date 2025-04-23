@@ -1,0 +1,20 @@
+describe('Photo Essay Page', () => {
+  it('loads the Soi 6 project and opens a lightbox', () => {
+    cy.visit('/#/projects/soi6');
+    cy.get('.essay-image img').first().click();
+    cy.get('button[aria-label="Close"]').should('exist');
+  });
+
+  it('navigates to Soi 6 project', () => {
+    cy.visit('/');
+    // simulate dropdown open state
+    cy.get('.dropdown').invoke('addClass', 'force-open');
+    cy.contains('Soi 6').should('be.visible').click();
+    cy.get('[data-testid="essay-title"]').should('contain.text', 'Soi 6');
+  });
+
+  it('shows 404 on invalid project', () => {
+    cy.visit('/#/projects/doesnotexist');
+    cy.contains('404');
+  });
+});

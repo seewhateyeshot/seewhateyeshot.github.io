@@ -199,9 +199,9 @@ Despite the visibility of the trade, Thai authorities officially deny the existe
     type: 'text',
     content: `Eventually, my vacation ended. I flew back to Sweden—back to the grey skies and quiet desperation of Stockholm. I was still buzzing from what I’d shot. My teacher said I’d made strong work. But I knew I didn’t have much. A few decent frames. A few lucky moments. Still, I made a small album on my phone of what I thought were the best. I showed it to friends. They were amazed. A photographer I admired praised what he saw. Their reactions made me want to return. To go deeper.
 
-    But life in Stockholm was far from great. Work was draining. Money was tight. The thought of enduring another few months of Swedish winter filled me with dread.
+    But life in Stockholm was far from great. Work was draining. Money was tight. The thought of enduring another few months of Swedish winter filled me with dread. I started looking for another job, but I had hardly energy after working eight hours on facing a screen.
 
-    Then in February 2024, I got fired—with severance. And honestly, I couldn’t have been happier.
+    Then in February 2024, my manager set up a meeting. I got fired! With severance. We had a global lay-off apparently and thousands of people were laid off. And honestly, I couldn’t have been happier. At least for myself.
 
     I rented out my tiny bedsit, which more or less covered the mortgage, and booked a one-way ticket to Singapore. My teacher joined me there. We walked, took pictures, ate well. After a few days of sightseeing, we returned to Pattaya.`
   },

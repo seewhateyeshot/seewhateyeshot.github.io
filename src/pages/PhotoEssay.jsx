@@ -62,7 +62,10 @@ export default function PhotoEssay() {
     <div className="photo-essay">
       <div className="photo-essay-header">
         <center>
-          <h1 className="text-4xl font-bold mt-6 mb-2">{project.title}</h1>
+          <h1 className="essay-title text-4xl font-bold mt-6 mb-2"
+            data-testid="essay-title">
+            {project.title}
+          </h1>
           <p className="text-lg text-gray-700 italic">{project.subtitle}</p>
           <p className="essay-author">by Çağdaş</p>
           <div className="share-buttons" style={{ display: 'flex', justifyContent: 'center' }}>
