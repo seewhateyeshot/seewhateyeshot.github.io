@@ -17,4 +17,15 @@ describe('Photo Essay Page', () => {
     cy.visit('/#/projects/doesnotexist');
     cy.contains('404');
   });
+
+  // Previous bug, cover images weren't loading
+  it('loads cover image for Soi 6 and displays it correctly', () => {
+    cy.visit('/#/projects/soi6');
+    cy.get('.essay-image.cover img')
+      .should('be.visible')
+      .and($img => {
+        expect($img[0].naturalWidth).to.be.greaterThan(0); // image loaded
+        expect($img.attr('src')).to.match(/^\/images\//);  // path starts correctly
+      });
+  });
 });
