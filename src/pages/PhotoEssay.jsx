@@ -119,6 +119,7 @@ export default function PhotoEssay() {
               <img
                 src={block.src}
                 alt={block.alt || ''}
+                loading="lazy"
                 onClick={() => setLightboxIndex(currentIndex)}
               />
               {block.caption && <p className="image-caption">{block.caption}</p>}
