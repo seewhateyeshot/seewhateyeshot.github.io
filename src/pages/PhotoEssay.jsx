@@ -27,7 +27,7 @@ export default function PhotoEssay() {
       shareTitle: 'A Photo Essay on Pattaya’s Soi 6',
     },
     soi6: {
-      title: 'Soi 6',
+      title: 'Soi 6 — ซอยหก',
       subtitle: 'For seven weeks, I photographed a bar street in Pattaya, Thailand',
       cover: {
         src: '/images/pattaya/soi6-01.jpg',
