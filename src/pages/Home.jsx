@@ -5,12 +5,14 @@ import './Home.css';
 
 export default function Home() {
   return (
-    <section className="hero">
-      <div className="hero-text">
-        <p>Documentary photography from the roads less photographed</p>
+    <section className="hero px-4">
+      <div className="hero-text text-sm sm:text-base mb-6">
+        <p>Photography from roads less photographed</p>
       </div>
+
       <HomePageProjects />
-      <section className="bio">
+
+      <section className="bio text-sm sm:text-base leading-relaxed max-w-prose mx-auto my-8">
         <p>
           I'm a street and documentary photographer loosely based in Stockholm.
           I explore life on the margins: red light alleys in Thailand,
@@ -26,8 +28,12 @@ export default function Home() {
         </p>
         <br />
       </section>
+
       <HeroFlip />
-      <p>Tag along, I'm on a journey to be king of photographers!</p>
+
+      <p className="text-sm sm:text-base mt-4 text-center text-gray-700 italic">
+        Tag along, I'm on a journey to be king of photographers!
+      </p>
     </section >
   );
 }
