@@ -6,7 +6,7 @@ const songkranEssayBlocks = [
   {
     type: 'image',
     src: '/images/songkran/songkran-02.jpg',
-    caption: 'Cambodian workers entering a Chinese-funded construction site'
+    caption: 'Songkran'
   },
   {
     type: 'image',
