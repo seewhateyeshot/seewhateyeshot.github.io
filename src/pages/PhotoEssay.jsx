@@ -11,6 +11,19 @@ import sihanoukvilleEssayBlocks from '../data/sihanoukvilleEssayBlocks';
 import songkranEssayBlocks from '../data/songkranEssayBlocks';
 import './PhotoEssay.css';
 
+function ColoredTextBlock({ content, color = 'black' }) {
+  return (
+    <p style={{ color, padding: '1rem 0' }} className="essay-text">
+      {content.split('\n').map((line, i) => (
+        <span key={i}>
+          {line}
+          <br />
+        </span>
+      ))}
+    </p>
+  );
+}
+
 export default function PhotoEssay() {
   const { id } = useParams();
 
@@ -109,6 +122,9 @@ export default function PhotoEssay() {
 
       {essayContent.map((block, i) => {
         if (block.type === 'text') {
+          if (block.color) {
+            return <ColoredTextBlock key={i} content={block.content} color={block.color} />;
+          }
           return <p key={i} className="essay-text">{block.content}</p>;
         }
         if (block.type === 'image') {

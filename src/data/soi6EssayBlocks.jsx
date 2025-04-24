@@ -5,15 +5,33 @@ import Soi6Poem from '../components/Soi6Poem';
 const essayContent = [
   {
     type: 'text',
-    content: `I first arrived in Pattaya in December 2023. My photography teacher—a close friend—had arranged a place for me to stay. It was partly an escape from the Swedish winter, partly wanderlust. I’d heard of Pattaya before—maybe from him, maybe just from its reputation. Either way, I was curious. I had three weeks of vacation from my software engineering job that was slowly killing me, and I decided to take it all.
+    color: 'darkred',
+    content: `I first arrived in Pattaya in December 2023. My photography teacher—a close friend—had arranged a place for me to stay. It was partly an escape from the Swedish winter, partly wanderlust. I’d heard of Pattaya before—maybe from him, maybe just from its reputation. Either way, I was curious. I had three weeks of vacation from my software engineering job, which was slowly draining the life out of me, and I decided to take it all.
 
-  I’d started photographing that summer with real joy. At first, I asked my friend—who’s a published photographer and former teacher—about taking evening classes after work. He told me not to bother: “I’ll teach you everything I know.” And he did. He lent me his camera until I inevitably got a cheaper demo model of the Fujifilm X-Pro3 later. We held informal lessons in his kitchen, usually after I’d finished work. Once the technical basics were out of the way, he gave me themed homework: taxi drivers, nightlife, dreams, midsummer. The goal was always the same—approach strangers, build trust, and make portraits that felt honest.
+    I’d started photographing that summer with real joy. Earlier in the spring, I’d asked my friend—who’s a published photographer and had taught at several photography schools across Stockholm—if I should sign up for evening classes at one of the schools where he taught. I had recently won a small smartphone photography competition, and the spark was growing. He told me not to bother: “I’ll teach you everything I know.” And he did. He lent me his own camera until I eventually got a discounted demo model of the Fujifilm X-Pro3. We held informal lessons in his kitchen, usually after I finished work. Once I had the technical basics down, he began assigning me themed homework: taxi drivers, nightlife, dreams, midsummer. Each theme was open-ended, leaving room for improvisation. The goal was always the same—approach strangers, build trust, and make photos that spoke to the heart.
 
-  Sometimes I brought other photographers into the mix—people I’d met through mutual circles. We critiqued each other’s work. Some of the people I met on the street I still keep in touch with.
+    That summer, I went everywhere with my camera—even the toilet. Spare batteries stuffed in my pocket, the camera hung from my left shoulder, slung across my back. Early on, my teacher had corrected me: “Don’t wear it around your neck like a tourist. You’re not taking holiday pictures.” He could be blunt—especially when critiquing my homework—but it came from a place of wanting me to improve. And I did. Or at least, I remember feeling very confident—something I can’t quite explain now, as I write this. Maybe with more experience came more grounding.
 
-  I spent long hours in his home library. He owns more than a thousand books—mostly doorstops, many by masters. I’d leaf through monographs, street photography collections, retrospective volumes. I cataloged them all for him, and helped sell a few, hoping it might help his finances.
+    Sometimes I brought other photographers into the mix—people I’d met through mutual circles. We critiqued each other’s work, and I’m still in touch with some of the people I met on the street.
 
-  But by winter, Stockholm felt depleted. The days were short and gray. My job was draining me. I was buried under my mortgage. I spent most of my time at home. Street photography no longer gave me the same excitement it had in the summer. I needed contrast—something alive, even if chaotic.`
+    I spent long hours in his home library. He owns more than a thousand books—mostly doorstops, many by masters. I’d leaf through monographs, street photography collections, retrospective volumes. I cataloged them all for him, and helped sell a few, hoping it might help his finances.
+
+    But by September, our informal kitchen classes came to an end. It was time for my teacher to return to Pattaya, Thailand, where he spent most winters. A friend of his had owned two apartments there but had long since moved to Norway, so he stayed in one of them. Financially—and weather-wise—it made more sense than facing another Swedish winter.
+
+    By winter, Stockholm felt depleted. The days were short, the light cold and gray. My job was draining me. I was buried under my mortgage and rising interest rates. I could barely afford to do the things people did. I remember spending what little remained of my salary on a few screenings at the film festival, then scraping by on potatoes and lentils for the rest of the month. Street photography no longer gave me the same spark it had in the summer. Maybe it’s a weak excuse, but I still think Stockholm isn’t the most exciting place for photography—too clean, too quiet, too conforming.
+
+    I spent most of my time at my teacher’s apartment. He had left me a key before flying out. I’d go there just to browse his library, flipping through the works of photographers I was beginning to call my favorites—Daido Moriyama, Anders Petersen, Mary Ellen Mark, Nan Goldin, and many more. I was drawn to their rawness, their proximity to people and pain. But I also kept returning to the heavyweights of conflict and consequence—James Nachtwey, Don McCullin, Sebastião Salgado, W. Eugene Smith, Kent Klich. Their images captured war, famine, labor, injustice. They made me wonder what photography was for—and what it might still be capable of.
+
+    We were in touch often with my teacher and when I asked him about visiting him in Thailand, he said I could come.`
+  },
+  {
+    type: 'text',
+    color: 'darkgreen',
+    content: `I first arrived in Pattaya in December 2023. My photography teacher—a close friend—had arranged a place for me to stay. I had three weeks off from my software job and needed a change. I’d heard about Pattaya mostly from him—he once thought of doing a photo project there.
+
+    I had just started photography that summer. My teacher mentored me with informal lessons and themed assignments like nightlife, dreams, and taxi drivers. His homework taught me how to approach strangers, and how not to wear a camera like a tourist.
+
+    That winter, Stockholm felt lifeless. Colder and darker than usual. I was broke, tired, and uninspired. He had a spare apartment in Pattaya. He said I could come.`
   },
   {
     type: 'image',
@@ -22,7 +40,7 @@ const essayContent = [
   },
   {
     type: 'text',
-    content: `My teacher was already in Pattaya when I arrived. He welcomed me at the bus station, took me to the flat, handed me a key, and let me rest. The next morning, despite the jetlag, I fell into his rhythm: gym, breakfast, a walk along Beach Road, dinner at the same family-run restaurant every evening.
+    content: `He welcomed me at the bus station, took me to the flat, handed me a key, and let me rest. The next morning, despite the jetlag, I fell into his rhythm: gym, breakfast, a walk along Beach Road, dinner at the same family-run restaurant every evening.
 
     I had broken my camera back in Stockholm just before the trip, but he lent me his—the older Fujifilm X-Pro1 I practiced with during the summer. We used the same 18mm f/2.0 lens. This setup was lightweight and unintimidating. Just wide enough for the kind of close, intimate frames I was after. Not the best in low light, but good enough. And somehow, the softness suited the city.
 
