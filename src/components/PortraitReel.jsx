@@ -18,7 +18,7 @@ export default function PortraitReel({ title, images, caption }) {
             src={src}
             alt={`portrait-${index}`}
             loading="lazy"
-            className="portrait-img"
+            className="portrait-img h-56 w-auto max-w-full rounded object-cover"
             onClick={() => setLightboxIndex(index)}
           />
         ))}
