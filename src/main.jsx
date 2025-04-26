@@ -10,6 +10,8 @@ import NotFound from './components/NotFound';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import PhotoEssay from './pages/PhotoEssay';
+import BlogList from './pages/BlogList';
+import BlogPost from './pages/BlogPost';
 
 const router = createHashRouter([
   {
@@ -20,6 +22,8 @@ const router = createHashRouter([
       { path: 'contact', element: <Contact /> },
       { path: 'projects/:id', element: <PhotoEssay /> }, // dynamic projects route
       { path: 'brief/:id', element: <PhotoEssay /> }, // dynamic projects route
+      { path: 'blog/:slug', element: <BlogPost /> },
+      { path: 'blog', element: <BlogList /> },
       { path: '*', element: <NotFound /> }, // ← catch-all route
     ],
   },

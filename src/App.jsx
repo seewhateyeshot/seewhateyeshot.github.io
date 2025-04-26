@@ -23,6 +23,7 @@ const LINKS = [
       { to: '/brief/songkran', label: 'Songkran' },
     ],
   },
+  { to: '/blog', label: 'Blog' },
   { to: '/contact', label: 'Contact' },
 ];
 
