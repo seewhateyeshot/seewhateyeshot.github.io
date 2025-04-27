@@ -3,7 +3,7 @@ export const blogPosts = [
   {
     slug: 'starting-to-shoot',
     title: 'Starting to Shoot',
-    date: 'April 2025',
+    date: 'Work in progress (April 2025)',
     content: `I’d started photographing that summer with real joy. Earlier in the spring, I’d asked my friend—who’s a published photographer and had taught at several photography schools across Stockholm—if I should sign up for evening classes at one of the schools where he taught. I had recently won a small smartphone photography competition, and the spark was growing. He told me not to bother: “I’ll teach you everything I know.” And he did. He lent me his own camera until I eventually got a discounted demo model of the Fujifilm X-Pro3. We held informal lessons in his kitchen, usually after I finished work. Once I had the technical basics down, he began assigning me themed homework: taxi drivers, nightlife, dreams, midsummer. Each theme was open-ended, leaving room for improvisation. The goal was always the same—approach strangers, build trust, and make photos that spoke to the heart.
 
     That summer, I went everywhere with my camera—even the toilet. Spare batteries stuffed in my pocket, the camera hung from my left shoulder, slung across my back. Early on, my teacher had corrected me: “Don’t wear it around your neck like a tourist. You’re not taking holiday pictures.” He could be blunt—especially when critiquing my homework—but it came from a place of wanting me to improve. And I did. Or at least, I remember feeling very confident—something I can’t quite explain now, as I write this. Maybe with more experience came more grounding.

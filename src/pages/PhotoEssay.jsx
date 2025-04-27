@@ -35,6 +35,7 @@ export default function PhotoEssay() {
         src: '/images/biking/biking.jpg',
         caption: 'August 2024.',
       },
+      published: false,
       essay: bikingHomeEssayBlocks,
       shareUrl: 'https://seewhateyeshot.github.io/projects/biking_home',
       shareTitle: 'A Photo Essay on Pattaya’s Soi 6',
@@ -46,6 +47,8 @@ export default function PhotoEssay() {
         src: '/images/pattaya/soi6-01.jpg',
         caption: 'Start of a working day. June 2024.',
       },
+      published: true,
+      publishedDate: 'Work in progress',
       essay: soi6EssayBlocks,
       shareUrl: 'https://seewhateyeshot.github.io/projects/soi6',
       shareTitle: 'A Photo Essay on Pattaya’s Soi 6',
@@ -105,6 +108,15 @@ export default function PhotoEssay() {
           </h1>
           <p className="text-lg text-gray-700 italic">{project.subtitle}</p>
           <p className="essay-author">by Çağdaş</p>
+          {project.published ? (
+            <p className="essay-published text-sm text-gray-400">
+              {project.publishedDate}
+            </p>
+          ) : (
+            <p className="essay-published text-sm text-red-400">
+              Work in progress
+            </p>
+          )}
           <div className="share-buttons" style={{ display: 'flex', justifyContent: 'center' }}>
             <ShareButtons url={project.shareUrl} title={project.shareTitle} />
           </div>
