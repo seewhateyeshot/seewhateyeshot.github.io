@@ -1,7 +1,7 @@
 describe('Photo Essay Page', () => {
   it('loads the Soi 6 project and opens a lightbox', () => {
     cy.visit('/#/projects/soi6');
-    cy.get('.essay-image img').first().click();
+    cy.get('.essay-cover-image').click();
     cy.get('button[aria-label="Close"]').should('exist');
   });
 
@@ -21,7 +21,7 @@ describe('Photo Essay Page', () => {
   // Previous bug, cover images weren't loading
   it('loads cover image for Soi 6 and displays it correctly', () => {
     cy.visit('/#/projects/soi6');
-    cy.get('.essay-image.cover img')
+    cy.get('[data-testid="essay-cover-img"]')
       .should('be.visible')
       .and($img => {
         expect($img[0].naturalWidth).to.be.greaterThan(0); // image loaded

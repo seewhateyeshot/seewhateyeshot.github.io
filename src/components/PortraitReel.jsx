@@ -13,14 +13,22 @@ export default function PortraitReel({ title, images, caption }) {
       <h2 className="portrait-reel-title">{title}</h2>
       <div className="portrait-reel" ref={reelRef}>
         {images.map((src, index) => (
-          <img
-            key={index}
-            src={src}
-            alt={`portrait-${index}`}
-            loading="lazy"
-            className="portrait-img h-56 w-auto max-w-full rounded object-cover"
-            onClick={() => setLightboxIndex(index)}
-          />
+          <div key={index} className="relative group inline-block flex-shrink-0 w-36 sm:w-40">
+            <img
+              src={src}
+              alt={`portrait-${index}`}
+              loading="lazy"
+              className="portrait-img h-56 w-auto max-w-full rounded object-cover cursor-pointer transition-opacity duration-300 group-hover:opacity-90"
+              onClick={() => setLightboxIndex(index)}
+            />
+            <button
+              onClick={() => setLightboxIndex(index)}
+              className="absolute cursor-pointer top-2 right-4 bg-black bg-opacity-20 text-white w-6 h-6 flex items-center justify-center rounded transition-opacity duration-300 opacity-70 md:opacity-0 md:group-hover:opacity-100"
+              aria-label="View full screen"
+            >
+              ⛶
+            </button>
+          </div>
         ))}
       </div>
       {caption && <p className="portrait-reel-caption mx-auto max-w-3xl px-4">{caption}</p>}

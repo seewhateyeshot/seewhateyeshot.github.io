@@ -128,7 +128,8 @@ export default function PhotoEssay() {
           <img
             src={project.cover.src}
             alt="cover"
-            className="w-full rounded"
+            className="w-full rounded essay-cover-image"
+            data-testid="essay-cover-img"
             onClick={() => setLightboxIndex(0)}
           />
           <p className="image-caption text-center italic text-gray-500 text-sm mt-2">
@@ -154,14 +155,23 @@ export default function PhotoEssay() {
           return (
             <div className="w-full flex justify-center px-4" key={i}>
               <div className="max-w-5xl w-full">
-                <img
-                  src={block.src}
-                  alt={block.alt || ''}
-                  loading="lazy"
-                  className="w-full rounded"
-                  data-testid="essay-block-image"
-                  onClick={() => setLightboxIndex(currentIndex)}
-                />
+                <div className="relative group">
+                  <img
+                    src={block.src}
+                    alt={block.alt || ''}
+                    loading="lazy"
+                    className="w-full rounded cursor-pointer transition-opacity duration-300 group-hover:opacity-95"
+                    data-testid="essay-block-image"
+                    onClick={() => setLightboxIndex(currentIndex)}
+                  />
+                  <button
+                    onClick={() => setLightboxIndex(currentIndex)}
+                    className="absolute cursor-pointer top-2 right-2 bg-black bg-opacity-50 text-white w-5 h-5 flex items-center justify-center rounded transition-opacity duration-300 opacity-80 md:opacity-0 md:group-hover:opacity-100"
+                    aria-label="View full screen"
+                  >
+                    ⛶
+                  </button>
+                </div>
                 {block.caption && (
                   <p className="text-center italic text-gray-500 text-sm mt-2">
                     {block.caption}
