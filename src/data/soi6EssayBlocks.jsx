@@ -103,7 +103,7 @@ const essayContent = [
   },
   {
     type: 'image',
-    src: 'public/images/pattaya/soi6-34.jpg',
+    src: 'images/pattaya/soi6-34.jpg',
     caption: 'The Goya smile. December 2023.'
   },
   {
