@@ -123,13 +123,18 @@ export default function PhotoEssay() {
         </center>
       </div>
 
-      <div className="essay-image cover">
-        <img
-          src={project.cover.src}
-          alt="cover"
-          onClick={() => setLightboxIndex(0)}
-        />
-        <p className="image-caption">{project.cover.caption}</p>
+      <div className="flex justify-center px-4">
+        <div className="max-w-5xl w-full">
+          <img
+            src={project.cover.src}
+            alt="cover"
+            className="w-full rounded"
+            onClick={() => setLightboxIndex(0)}
+          />
+          <p className="image-caption text-center italic text-gray-500 text-sm mt-2">
+            {project.cover.caption}
+          </p>
+        </div>
       </div>
 
       {essayContent.map((block, i) => {
@@ -137,21 +142,32 @@ export default function PhotoEssay() {
           if (block.color) {
             return <ColoredTextBlock key={i} content={block.content} color={block.color} />;
           }
-          return <p key={i} className="essay-text">{block.content}</p>;
+          return (
+            <div className="max-w-2xl mx-auto px-4">
+              <p key={i} className="essay-text">{block.content}</p>
+            </div>
+          );
         }
         if (block.type === 'image') {
           const currentIndex = imageCount;
           imageCount++;
           return (
-            <div className="essay-image" key={i}>
-              <img
-                src={block.src}
-                alt={block.alt || ''}
-                loading="lazy"
-                data-testid="essay-block-image"
-                onClick={() => setLightboxIndex(currentIndex)}
-              />
-              {block.caption && <p className="image-caption">{block.caption}</p>}
+            <div className="w-full flex justify-center px-4" key={i}>
+              <div className="max-w-5xl w-full">
+                <img
+                  src={block.src}
+                  alt={block.alt || ''}
+                  loading="lazy"
+                  className="w-full rounded"
+                  data-testid="essay-block-image"
+                  onClick={() => setLightboxIndex(currentIndex)}
+                />
+                {block.caption && (
+                  <p className="text-center italic text-gray-500 text-sm mt-2">
+                    {block.caption}
+                  </p>
+                )}
+              </div>
             </div>
           );
         }

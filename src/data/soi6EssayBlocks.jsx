@@ -11,13 +11,15 @@ const essayContent = [
   {
     type: 'component',
     render: () => (
-      <p className="essay-text">
-        I had just started photography that summer. My teacher, to whom I inevitably refer a lot and pay a proper homage in{" "}
-        <Link to="/blog/starting-to-shoot" className="underline text-blue-600 hover:text-blue-800">
-          this blog post
-        </Link>
-        , mentored me with informal lessons and themed assignments like nightlife, dreams, and taxi drivers. His homework taught me how to move around with a camera, approach strangers, and "shoot with my heart, not my brain".
-      </p>
+      <div className="max-w-2xl mx-auto px-4">
+        <p className="essay-text">
+          I had just started photography that summer. My teacher, to whom I inevitably refer a lot and pay a proper homage in{" "}
+          <Link to="/blog/starting-to-shoot" className="underline text-blue-600 hover:text-blue-800">
+            this blog post
+          </Link>
+          , mentored me with informal lessons and themed assignments like nightlife, dreams, and taxi drivers. His homework taught me how to move around with a camera, approach strangers, and "shoot with my heart, not my brain".
+        </p>
+      </div>
     )
   },
   {
@@ -158,9 +160,11 @@ const essayContent = [
   {
     type: 'component',
     render: () => (
-      <p className="essay-text">
-        Sometimes I wasn’t just “photo man”—I was a potential customer, too. Like most men on Soi 6, I’d sometimes get grabbed by the wrist and pulled toward a bar for a drink. I learned to carry myself lightly in those situations—almost like a playful little boy—smiling, joking, gently saying no. Raising my hands in a respectful <i>namaste</i> and saying, “Nong kap, mai ao kap”—sister, I don’t want—was disarming. They would smile back, salute me, and let me go.
-      </p>
+      <div className="max-w-2xl mx-auto px-4">
+        <p className="essay-text">
+          Sometimes I wasn’t just “photo man”—I was a potential customer, too. Like most men on Soi 6, I’d sometimes get grabbed by the wrist and pulled toward a bar for a drink. I learned to carry myself lightly in those situations—almost like a playful little boy—smiling, joking, gently saying no. Raising my hands in a respectful <i>namaste</i> and saying, “Nong kap, mai ao kap”—sister, I don’t want—was disarming. They would smile back, salute me, and let me go.
+        </p>
+      </div>
     )
   },
   {
@@ -252,15 +256,17 @@ const essayContent = [
   {
     type: 'component',
     render: () => (
-      <p className="essay-text">
-        The more I walked the street, the more I began to notice the system behind the surface.
-        Every bar followed a routine.
-        The girls would arrive around early afternoon—sometimes still in their pajamas, sometimes already dressed for the shift.
-        A few lived upstairs, I'd seen a few I knew in the balcony hanging laundry and gave me a wave before. Others came by motorbike or shared ride.
-        Some grabbed a quick bowl of noodle soup from the carts parked outside for breakfast, then slipped into the bar, disappearing behind a curtain to change.
-        All this would unravel under the supervision of the <em>mamasan</em>—an older Thai woman—who runs the daily operations at the bar
-        recruiting workers, managing the floor, and ensuring everyone stays in character.
-      </p>
+      <div className="max-w-2xl mx-auto px-4">
+        <p className="essay-text">
+          The more I walked the street, the more I began to notice the system behind the surface.
+          Every bar followed a routine.
+          The girls would arrive around early afternoon—sometimes still in their pajamas, sometimes already dressed for the shift.
+          A few lived upstairs, I'd seen a few I knew in the balcony hanging laundry and gave me a wave before. Others came by motorbike or shared ride.
+          Some grabbed a quick bowl of noodle soup from the carts parked outside for breakfast, then slipped into the bar, disappearing behind a curtain to change.
+          All this would unravel under the supervision of the <em>mamasan</em>—an older Thai woman—who runs the daily operations at the bar
+          recruiting workers, managing the floor, and ensuring everyone stays in character.
+        </p>
+      </div>
     )
   },
   {
@@ -390,7 +396,11 @@ const essayContent = [
   },
   {
     type: 'component',
-    render: () => <Soi6Poem />,
+    render: () => (
+      <div className="max-w-2xl mx-auto px-4">
+        <Soi6Poem />
+      </div>
+    )
   },
   {
     type: 'image',
