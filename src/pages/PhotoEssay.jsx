@@ -99,7 +99,7 @@ export default function PhotoEssay() {
   let imageCount = 1;
 
   return (
-    <div className="photo-essay">
+    <div className="photo-essay" data-testid="photo-essay">
       <div className="photo-essay-header">
         <center>
           <h1 className="essay-title text-4xl font-bold mt-6 mb-2"
@@ -148,6 +148,7 @@ export default function PhotoEssay() {
                 src={block.src}
                 alt={block.alt || ''}
                 loading="lazy"
+                data-testid="essay-block-image"
                 onClick={() => setLightboxIndex(currentIndex)}
               />
               {block.caption && <p className="image-caption">{block.caption}</p>}

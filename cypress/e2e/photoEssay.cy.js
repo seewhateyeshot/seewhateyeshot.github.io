@@ -28,4 +28,19 @@ describe('Photo Essay Page', () => {
         expect($img.attr('src')).to.match(/^\/images\//);  // path starts correctly
       });
   });
+
+  it('should load and display all images after scrolling', () => {
+    cy.visit('/#/projects/soi6');
+
+    cy.get('[data-testid="photo-essay"]').should('exist');
+
+    cy.get('[data-testid="essay-block-image"]').each(($img) => {
+      cy.wrap($img)
+        .scrollIntoView()
+        .should('be.visible')
+        .and(($imgEl) => {
+          expect($imgEl[0].naturalWidth).to.be.greaterThan(0);
+        });
+    });
+  });
 });
