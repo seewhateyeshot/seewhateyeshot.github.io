@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Outlet, Link } from 'react-router-dom';
+import Analytics from './components/Analytics';
 import './App.css';
 
 /**
@@ -125,6 +126,7 @@ export default function App() {
 
   return (
     <div className="container">
+      <Analytics />
       {/* NAVBAR */}
       <nav className="navbar">
         {/* Logo on the left */}
