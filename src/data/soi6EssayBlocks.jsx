@@ -42,9 +42,18 @@ const essayContent = [
     type: 'text',
     content: `He welcomed me at the bus station in Pattaya, took me to the flat, handed me a key, and let me rest. The next morning, despite the jetlag, I fell into his rhythm: gym, breakfast, a walk along Beach Road, dinner at the same family-run restaurant every evening.
 
-    I had broken my camera back in Stockholm just before the trip. I worried I wouldn’t be able to photograph anything—especially after all the hype about Pattaya’s sex tourism—but he lent me his: the older Fujifilm X-Pro1 I had practiced with during the summer. We shared the same 18mm f/2.0 lens. The setup was lightweight, unimposing. Just wide enough for the kind of close, intimate frames I wanted. Not the best in low light, but somehow the softness suited the city.
-
-    I was hungry for all of it. Everything was new. At first, I photographed whatever caught my eye—stray dogs, food carts, fish markets, signs I couldn’t read. I was especially drawn to international couples. Whenever I saw an older Western man paired with a young, striking Thai woman—a common sight in Pattaya—I felt a strong urge to photograph it. The contrast spoke volumes.`
+    I had broken my camera back in Stockholm just before the trip. I worried I wouldn’t be able to photograph anything—especially after all the hype about Pattaya’s sex tourism—but he lent me his: the older Fujifilm X-Pro1 I had practiced with during the summer. We shared the same 18mm f/2.0 lens. The setup was lightweight, unimposing. Just wide enough for the kind of close, intimate frames I wanted. Not the best in low light, but somehow the softness suited the city.`
+  },
+  {
+    type: 'component',
+    render:
+      () => (
+        <div className="max-w-2xl mx-auto px-4">
+          <p className="essay-text">
+            I was hungry for all of it. Everything was new. At first, I photographed whatever caught my eye—stray dogs, food carts, fish markets, signs I couldn’t read. I was especially drawn to international couples. Whenever I saw an older Western man—what locals call a <i>farang</i>—paired with a young, striking Thai woman—a common sight in Pattaya—I felt a strong urge to photograph it. The contrast spoke volumes.
+          </p>
+        </div>
+      )
   },
   {
     type: 'image',
@@ -68,7 +77,7 @@ const essayContent = [
   },
   {
     type: 'text',
-    content: `My teacher spoke quite a bit of Thai and started teaching me from day one. “Sawatdee khrap” for hello. “Sabai dee mai?” for how are you. “Tai ruup dai mai?” to ask for a photo. He’d already made a long list of phrases on his phone, transliterated into Turkish—sawatdee khrap became savadikap, easier for me to read and remember. I’d review them before dinner. He was good with people—charming, quick to joke, unafraid to make a fool of himself if it helped build rapport. To a mother holding her toddler, he’d say “Nà-làk mâak mâak” (very cute). If the heat was unbearable, he’d complain loudly to a stranger: “Róon!” One night, when it dropped to 22 degrees and locals pulled on hoodies, he hugged himself dramatically and shrieked “Namkeng! Namkeng!”—ice—rubbing his arms like he was freezing. Maybe he didn’t know the word for “cold.” But it sure was entertaining.
+    content: `My teacher spoke quite a bit of Thai and started teaching me from day one. “Sawatdee khrap” for hello. “Sabai dee mai?” for how are you. “Tai ruup dai mai?” to ask for a photo. He’d already made a long list of phrases on his phone, transliterated into Turkish—sawatdee khrap became savadikap, easier for me to read and remember. I’d review them before dinner. He was good with people—charming, quick to joke, unafraid to make a fool of himself if it helped build rapport. To a mother holding her toddler, he’d say “Nà-làk mâak mâak” (น่ารักมากมาก), meaning very cute. If the heat was unbearable, he’d complain loudly to a stranger: “Róon!” One night, when it dropped to 22 degrees and locals pulled on hoodies, he hugged himself dramatically and shrieked “Namkeng! Namkeng!”—ice—rubbing his arms like he was freezing. Maybe he didn’t know the word for “cold.” But it sure was entertaining.
 
     I even took a Thai class online through Preply, and visited a language school in Pattaya to inquire about joining in person. But honestly, I wasn’t satisfied with the teaching. What helped more were the textbooks my teacher had kept from when he’d taken formal lessons years ago. I practiced with those instead, combining them with YouTube classes, and slowly built up the basics.`
   },
@@ -138,11 +147,29 @@ const essayContent = [
     type: 'text',
     content: `Apart from a trip to Chiang Mai and Bangkok for a few days, for the rest of my stay, even though I continued taking photos wherever I was, I returned to Soi 6 almost every day as part of our Beach Road walk—sometimes twice a day, once in the afternoon and again at night. My teacher usually came with me, offering tips on how to interact. He’d watch both me and the street, and later at home, he’d offer critique—on my presence, what I did or didn’t do.
 
-    I was starting to learn the rhythm: when the music started, when the bar stools were wiped down, when the girls stirred awake and had breakfast right where they’d work later. When the men began drifting in. Every hour had a different texture. In the afternoon, the street felt softer. There was space. By evening, it grew louder, more compressed, more electric.
+    I was starting to learn the rhythm: when the music started, when the bar stools were wiped down, when the girls stirred awake and had breakfast right where they’d work later. Later in the day, before customers started rolling in, they’d often sit idly at the bar, eyes glued to their smartphones—scrolling Instagram, dancing for TikTok, replying to messages. It was a digital lull, a quiet prelude to the chaos ahead. When the men began drifting in. Every hour had a different texture. In the afternoon, the street felt softer. There was space. By evening, it grew louder, more compressed, more electric.
 
-    Sometimes, when the constant commotion of Soi 6 grew overwhelming, I would slip into the alley that ran parallel to it—Soi 6/1. It was narrower, darker, and quieter. The back sides of the bars opened onto it: kitchens, trash bins, stacked crates, washing lines. It wasn’t meant for show.
-
-    I started walking Soi 6/1 often, partly to catch my breath, partly to find more natural moments—away from the endless calls of “handsome man” and the engineered performances on the main street. It was there that I quickly learned something else: Soi 6/1 was where many of the kathoeys—Thai trans women—waited for customers.
+    Sometimes, when the constant commotion of Soi 6 grew overwhelming, I would slip into the alley that ran parallel to it—Soi 6/1. It was narrower, darker, and quieter. The back sides of the bars opened onto it: kitchens, trash bins, stacked crates, washing lines. It wasn’t meant for show.`
+  },
+  {
+    type: 'component',
+    render: () => (
+      <div className="max-w-2xl mx-auto px-4">
+        <p className="essay-text">
+          He also had a few Thai expressions he liked to throw at me, half-mocking, half-endearing.
+          His favorite was <i>tin-ton farang</i> (ติ๊นต๊องฝรั่ง)—crazy foreigner.
+          He’d call me that whenever I was too enthusiastic, acting silly, or trying too hard to charm someone.
+          Another was <i>mao</i> (เมา), which means drunk.
+          Sometimes, while I was crouched down taking portraits on Soi 6, he’d shout <i>tin-ton farang</i>!
+          from across the street, or tease me with <i>maomao</i>! It always cracked up the bar girls nearby.
+          Moments like those broke the ice. They helped soften the scene, loosen everyone’s guard.
+        </p>
+      </div>
+    )
+  },
+  {
+    type: 'text',
+    content: `I started walking Soi 6/1 often, partly to catch my breath, partly to find more natural moments—away from the endless calls of “handsome man” and the engineered performances on the main street. It was there that I quickly learned something else: Soi 6/1 was where many of the kathoeys—Thai trans women—waited for customers.
 
     In the shadows of the bigger show, another reality unfolded. It was quieter, less aggressive, more vulnerable somehow. And it taught me that Pattaya’s economy of desire had many layers—not all of them equally seen.`
   },
@@ -223,9 +250,21 @@ While I was still learning the ropes, it was different with the men—especially
     type: 'text',
     content: `Most of the attention, naturally, falls on the women. But the men are just as much a part of the street’s rhythm. They bring the money. They arrived from all over—Europe, the U.S., Australia, India, China, Japan, Korea. Some walked in groups, loud and confident. Others drifted alone, slowly, trying not to be noticed even as they scanned every bar.
 
-    There were the usual types: solo men in polo shirts with tanned arms, groups of Brits in football jerseys, retired men with walking sticks, a few younger travelers holding beers, looking amazed and slightly lost at the same time. People of all colors, languages, religions.
-
-    At first, I judged them—harshly. I wanted to photograph them in a way that exposed something. I wanted to make them look guilty. A few times, I did. One night, out walking along Beach Road, I caught an old man mid-negotiation—his hand resting on a girl’s back, whispering something into her ear. He had a walking stick. He was old enough to be her great-grandfather. I got pissed off. I lifted my camera and took a shot—point-blank, face to face. He gave me a half-hearted chase, swinging his walking stick and shouting, “Idiot! Come back!” in a thick German accent. I didn’t stop. I didn’t even look back.
+    On Soi 6, there were the usual types: solo men in polo shirts with tanned arms, groups of Brits in football jerseys, retired men with walking sticks, a few younger travelers holding beers, looking amazed and slightly lost at the same time. People of all colors, languages, religions.`
+  },
+  {
+    type: 'component',
+    render: () => (
+      <div className="max-w-2xl mx-auto px-4">
+        <p className="essay-text">
+          At the call of “sexy man, handsome man”—shouted with cheerful repetition—some men beamed like schoolboys, delighted at the attention. Others avoided eye contact, unsure how to respond. But for a moment, even the most average man could feel wanted, desirable—even if only because he had cash to spend. I began to suspect that for many, this was the real allure. Not just the promise of <i>boom boom</i>—as the girls referred to sex—, but the warm illusion of being chosen.
+        </p>
+      </div>
+    )
+  },
+  {
+    type: 'text',
+    content: `At first, I judged them—harshly. I wanted to photograph them in a way that exposed something. I wanted to make them look guilty. A few times, I did. One night, out walking along Beach Road, I caught an old man mid-negotiation—his hand resting on a girl’s back, whispering something into her ear. He had a walking stick. He was old enough to be her great-grandfather. I got pissed off. I lifted my camera and took a shot—point-blank, face to face. He gave me a half-hearted chase, swinging his walking stick and shouting, “Idiot! Come back!” in a thick German accent. I didn’t stop. I didn’t even look back.
 
     Later at home, my teacher asked, “What were you trying to prove?”`
   },
@@ -238,7 +277,9 @@ While I was still learning the ropes, it was different with the men—especially
     type: 'text',
     content: `He said I had picked on that man because he was old and weak. That I bullied him. And he was right—I wouldn’t have dared if it had been someone like The Rock. Or a group of intimidating young men. He reminded me that good photography doesn’t humiliate. It doesn’t create enmity. It observes, reflects, connects. He told me I needed to try to empathize—not just with the sex workers, but with the men too. That moment stayed with me.
 
-    If they were Swedish, I’d say, “Bra, jag pratar en liten grann svenska också.” I could hold my own with Norwegians, and catch a word or two from the Danes. If they were French, I’d mention that I religiously practiced Duolingo every day. If they were Welsh, I’d say I used to work with a guy from Caerphilly. Japanese? I had a quote from my favorite anime ready to go. Sometimes I played the like-minded tourist.
+    It’s something I’m still learning from him. As he once put it—in Turkish—“Biz insanları ayrıştırmak için çabalamıyoruz, kaynaştırmak için uğraşıyoruz.” We’re not trying to divide people, but to bring them together. There’s plenty we could disagree on, plenty that could pull us apart. But instead, we meet halfway. We find common ground, and choose to look past each other’s flaws.
+
+    That mindset helped me talk to all kinds of people on the street—especially the tourists. If they were Swedish, I’d say, “Bra, jag pratar en liten grann svenska också.” I could hold my own with Norwegians, and catch a word or two from the Danes. If they were French, I’d mention that I religiously practiced Duolingo every day. If they were Welsh, I’d say I used to work with a guy from Caerphilly. Japanese? I had a quote from my favorite anime ready to go. Sometimes I played the like-minded tourist.
 
     Sometimes I didn’t need to say much at all—just mentioning I was Turkish was enough to spark a conversation. “That’s where I got my hair transplant,” they’d say, or, “I flew there for my teeth.” Cheap and professional, they’d grin, showing their pearly white smiles.`
   },
@@ -291,26 +332,35 @@ While I was still learning the ropes, it was different with the men—especially
   },
   {
     type: 'text',
-    content: `Each day had a costume. Nurse. Schoolgirl. French maid. Police. FC Barcelona jersey, cropped just above the ribs. Matching bikinis for the lot. The outfits weren’t for fun—they were assigned by the bar. I’d sometimes see the mamasan taking a lineup photo just before opening.
-
-Some nights, if a girl was celebrating her birthday, you could spot it instantly: she’d be draped in colorful garlands of Thai baht banknotes—sometimes hundreds of them—pinned to a sash or taped to her dress. Each note, decorated with the King of Thailand’s portrait, fluttered as she moved. It was a visual symbol of both celebration and commerce, and another reminder of how money, memory, and affection intertwined on the street.
-
-Later, I found one of the Telegram channels where those photos were uploaded—subscribed to by thousands. Each post showed the girls in matching outfits, standing against the same wall, tagged with names, short descriptions, and a bar logo. The lighting was identical. The framing never changed. You could scroll through them like a food delivery app.`
+    content: `Each day had a costume. Nurse. Schoolgirl. French maid. Police. FC Barcelona jersey, cropped just above the ribs. Matching bikinis for the lot. The outfits weren’t for fun—they were assigned by the bar. I’d sometimes see the mamasan taking a lineup photo just before opening.`
+  },
+  {
+    type: 'image',
+    src: '/images/pattaya/soi6-10.jpg',
+    caption: 'Mamasan taking the roll call. March 2024.',
+  },
+  {
+    type: 'text',
+    content: `Later, I found one of the Telegram channels where those photos were uploaded—subscribed to by thousands. Each post showed the girls in matching outfits, standing against the same wall, tagged with names, short descriptions, and a bar logo. The lighting was identical. The framing never changed. You could scroll through them like a food delivery app.`
+  },
+  {
+    type: 'text',
+    content: `Some nights, if a girl was celebrating her birthday, you could spot it instantly: she’d be draped in colorful garlands of Thai baht banknotes—sometimes hundreds of them—pinned to a sash or taped to her dress. Each note, decorated with the King of Thailand’s portrait, fluttered as she moved. It was a visual symbol of both celebration and commerce.`
   },
   {
     type: 'component',
     render: () => (
       <div className="max-w-2xl mx-auto px-4">
         <p className="essay-text">
-          The birthdays weren’t exactly private affairs either. Bars would post announcements on Telegram, complete with a glamorous portrait of the birthday girl. Messages like, <code className="text-sm text-gray-600">“It’s Yoshi’s and Nam’s birthday party today! Come and make great memories with us at Toy Box Pattaya Soi 6, from 4 PM till 2 AM 🎉🎂🍻🥃🍾👩🏻🎶”</code><FootnoteButton number={1} note="From a Toy Box Pattaya announcement on 17 April 2025, posted in the Nightwish Group Telegram channel." /> would pop up daily, inviting customers to join—and spend.
+          These birthdays weren’t private affairs. Bars promoted them openly on Telegram, often with a glamorous portrait of the birthday girl. Messages like, <code className="text-sm text-gray-600">“It’s Yoshi’s and Nam’s birthday party today! Come and make great memories with us at Toy Box Pattaya Soi 6, from 4 PM till 2 AM 🎉🎂🍻🥃🍾👩🏻🎶”</code><FootnoteButton number={1} note={"From an announcement on 17 April 2025, posted in the \"We Love Soi 6\" Telegram channel with 8,032 subscribers as of 30 April 2025."} /> would pop up daily—personal milestones turned into public invitations to spend.
         </p>
       </div>
     )
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-10.jpg',
-    caption: 'Mamasan taking the roll call. March 2024.',
+    src: 'images/pattaya/soi6-80.jpg',
+    caption: 'Birthday girl. June 2024.',
   },
   {
     type: 'text',
@@ -333,15 +383,30 @@ Later, I found one of the Telegram channels where those photos were uploaded—s
     type: 'text',
     content: `I spent a week in Pattaya that March. This time, my teacher didn’t join me in Soi 6. He said that street drained him. I understood. It wasn’t light work. We continued on to the Philippines and Taiwan—two of the few countries in Asia my teacher hadn’t yet visited. I’d been to the Philippines before and helped translate here and there and assumed the tour guide's mantle. A few days after the earthquake in Taiwan we were back in our base. And soon later my teacher returned to Stockholm. Now I was alone.
 
-    What I hadn’t planned for was a motorcycle accident. It happened just before we left for Manila—another rider crashed into me, and I twisted my ankle badly. I still feel it, 13 months into it and I still haven't managed to see a doctor about it, which is a long story. We continued the trip, but it certainly didn't make it easier. When we returned to Pattaya in April, the pain lingered. I stayed home some days. But others, I pushed through. I figured I’d keep photographing for the project while I still had the energy, and start traveling once I needed space. A win-win. I spent another three weeks in Pattaya that April.
+    What I hadn’t planned for was a motorcycle accident. It happened just before we left for Manila—another rider crashed into me, and I twisted my ankle badly. I still feel it at the time of writing this, 13 months after the crash and I still haven't managed to see a doctor about it, which is a long story in itself. We, anyways, continued the trip, but my ankle certainly didn't make it easier. After a few weeks of touristing, we returned to Pattaya. During our travels—whether in Singapore, Davao City, or Cebu City—we stumbled upon scenes that echoed Pattaya’s nightlife and sex work culture, though always on a smaller scale. Pattaya remained unmatched in scale, openness, and intensity. And I wasn't ready to deal with that intensity when we returned to Pattaya in April, the pain lingered and I just didn't mentally have the energy to put myself out there. I stayed home some days. But later on, I pushed through. I figured I’d keep photographing for the project while I still had the energy, and start traveling once I needed space. A win-win. I spent another three weeks in Pattaya that April.`
+  },
+  {
+    type: 'component',
+    render: () => (
+      <div className="max-w-2xl mx-auto px-4">
+        <p className="essay-text">
+          I went out a couple of days during Songkran with my back-up camera, an OM System TG-7. Waterproof just as it needed to be.
+          I took quite a few photos then, some of which I put up{" "}
+          <Link to="/brief/songkran" className="underline text-blue-600 hover:text-blue-800">
+            here
+          </Link>
+          .
+        </p>
+      </div>
+    )
+  },
+  {
+    type: 'text',
+    content: `After Songkran, once my ankle had started to heal, I spent more time sitting down for drinks, talking with the women. Conversations usually happened over a lady drink and a smartphone—usually an expensive iPhone—using Google Translate. I’d inadvertently see the translations pop up, along with dozens of other notifications sliding in from the top of their screens: usually messages from foreign men, and usually obscene. It was a strange window into their daily life—something halfway between public and private.
 
-    After Songkran, once my ankle had started to heal, I spent more time sitting down for drinks, talking with the women. Conversations usually happened over a lady drink and a smartphone—usually an expensive iPhone—using Google Translate. I’d watch the translations pop up, along with dozens of other notifications sliding in from the top of their screens: LINE messages, WhatsApp texts, obscene messages from customers. It was a strange window into their daily life—something halfway between public and private.
+Sometimes, when a woman proudly showed me photos of her children, I couldn’t help but notice what else was on the screen. In the same photo gallery, right next to pictures of smiling toddlers, there would be dozens of selfies taken with different farangs. It was jarring. Before the night was over, they often asked to take a selfie with me too—adding me, I guess, to that same ongoing gallery.
 
-Sometimes, when a woman proudly showed me photos of her children, I couldn’t help but notice what else was on the screen. In the same photo gallery, right next to pictures of smiling toddlers, there would be dozens of selfies taken with different farangs—Western men. It was jarring. I’d later learn that farang is the Thai word for foreigner, especially white Westerners. Before the night was over, they often asked to take a selfie with me too—adding me, I guess, to the same ongoing gallery.
-
-Phone conversations could also get funny. Over these broken, phone-assisted chats, I was asked more than once if I had a boyfriend. At first, I thought it was just teasing, but later I learned that the Thai word they used—แฟน (faen)—doesn’t specify gender. It just means “romantic partner.”
-
-    Cambodia was next. I went to see Angkor Wat. Originally, it was supposed to be just a visa run—but it turned into a much-needed breather from Pattaya. I missed being on the road, in more ordinary places, far from the world’s sex tourism capital. So I kept going. I forced myself to walk everywhere. Slowly, the pain in my ankle started to subside. I took photos constantly, slipping into places I doubt many tourists ever did.`
+Phone conversations could also get funny. Over these broken, phone-assisted chats, I was asked more than once if I had a boyfriend. At first, I thought it was just teasing, but later I learned that the Thai word they used—แฟน (faen)—doesn’t specify gender. It just means “romantic partner.”`
   },
   {
     type: 'image',
@@ -350,11 +415,60 @@ Phone conversations could also get funny. Over these broken, phone-assisted chat
   },
   {
     type: 'text',
-    content: `In Phnom Penh, I started noticing familiar signs—ads from the Nightwish Group, the company that owns more than thirty bars in Pattaya. Now they were here too, plastered across tuk-tuks, promoting new gogo bars on Phnom Penh’s red-light street. It was the same machinery, just smaller. Built on the same logic of exploitation. It made my stomach turn.
+    content: ``
+  },
+  {
+    type: 'component',
+    render: () => (
+      <div className="max-w-2xl mx-auto px-4">
+        <p className="essay-text">
+          Cambodia was next. I went to see Angkor Wat.
+          Originally, it was supposed to be just a visa run—but it turned into a much-needed breather from Pattaya.
+          I missed being on the road, in more ordinary places, far from the world’s sex tourism capital.
+          So I kept going. I forced myself to walk everywhere.
+          Slowly, the pain in my ankle started to subside.
+          I took photos constantly, slipping into places I doubt many tourists ever did.
+          I went to Battambang,
+          Cardamom Mountains,
+          Khemarak Phoumin,
+          Pursat,
+          Sihanoukville from where I share some photos{" "}
+          <Link to="/brief/sihanoukville" className="underline text-blue-600 hover:text-blue-800">
+            here
+          </Link>
+          ,
+          Koh Rong where I even took a run along the white beach,
+          and once French colonial city Kampot and eventually to the capital Phnom Penh.
+        </p>
+        <p className="essay-text">
+          My first night in Phnom Penh, I started noticing familiar signs—ads from the Nightwish Group, saying they own more than 30 bars in Pattaya.
+          I was immediately alerted.
+          The ad was plastered on the side of a passing tuk-tuk and it promoted that they <i>finally</i> opened a bar in Phnom Penh too.
+          There I already noticed I was on a red-light street of sorts.
+          Not as brazen as Pattaya's any, but I noticed young women idling outside bars on their smartphones.
+          A sight not too far off that of Soi 6's bars.
+          It must have been the same machinery, just smaller.
+          Built on the same logic of exploitation and now one bar by the same people that exploit Thai sex workers in Pattaya.
+          It made my stomach turn.
+          I remember immediately texting my teacher who was back in Stockholm.
+          He said to be careful, and not be too rash to take photos.
+        </p>
+      </div>
+    )
+  },
+  {
+    type: 'component',
 
-    Worse: in the backstreets and shadows, I began to suspect that some of the children—six, seven years old—weren’t just working the streets. They were being sold.
 
-    I took another photo that haunts me. At the time, I didn’t fully realize what I was seeing. Only later, editing my photos from Cambodia, did the horror hit. I researched. I found reports. I found NGOs fighting child trafficking in Cambodia. I contacted them. I never heard back. Just the sheer fact that such NGOs must exist fills me with dread. If you have any contacts, any way of helping, reach out. I am willing to share what I saw.
+  },
+  {
+    type: 'image',
+    src: '/images/pattaya/cambodia.jpg',
+    caption: 'At a Phnom Penh bar. May 2024.',
+  },
+  {
+    type: 'text',
+    content: `This above photo is from that night still haunts me. At the time, I didn’t fully realize what I was seeing, but I had a bad feeling about it. I took a photo of this boy next to the bar girls at a bar's entrance in Phnom Penh's red light street. Then I gave him a few coins as pocket money and went in for a beer and to see what it's like. I got my beer, but the mamasan that show my interest in the kid brought him to my table and said he wants an orange juice. I said sure get him one, but she sat the boy on my table next to me and was making him say thank you and everything. I felt really bizarre and soon left. I thought it was her kid, but that bad feeling lingered. Only later, when editing my photos from Cambodia, did the horror hit. I researched. I found reports. I found NGOs fighting child trafficking in Cambodia. I contacted them, but never heard back. But just the sheer fact that such NGOs must exist fills me with dread.
 
     Sorry for the digression—but it had to be said. After Phnom Penh, I crossed into Vietnam by land, traveling from the south all the way to the north. Then into Laos. I was back to walking again without so much pain, saw wonderful things. I'm grateful for that getaway.`
   },

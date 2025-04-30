@@ -47,7 +47,7 @@ export default function PhotoEssay() {
         src: '/images/pattaya/soi6-01.jpg',
         caption: 'Start of a working day. June 2024.',
       },
-      published: true,
+      published: false,
       publishedDate: 'Work in progress',
       essay: soi6EssayBlocks,
       shareUrl: 'https://seewhateyeshot.github.io/projects/soi6',
