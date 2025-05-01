@@ -50,7 +50,15 @@ const essayContent = [
       () => (
         <div className="max-w-2xl mx-auto px-4">
           <p className="essay-text">
-            I was hungry for all of it. Everything was new. At first, I photographed whatever caught my eye—stray dogs, food carts, fish markets, signs I couldn’t read. I was especially drawn to international couples. Whenever I saw an older Western man—what locals call a <i>farang</i>—paired with a young, striking Thai woman—a common sight in Pattaya—I felt a strong urge to photograph it. The contrast spoke volumes.
+            I was hungry for all of it. Everything was new.
+            At first, I photographed whatever caught my eye—stray dogs, food carts, fish markets, signs I couldn’t read.
+            I was especially drawn to international couples.
+            Whenever I saw an older Western man—what locals call a <i>farang</i>—paired with a young, striking Thai woman—a common sight in Pattaya—I felt a strong urge to photograph it.
+            The contrast spoke volumes. But what struck me just as much was the silence between them.
+            I rarely saw them talk.
+            They’d sit next to each other at a bar or restaurant, their bodies close but their eyes elsewhere—on their phones,
+            on the street, on nothing in particular.
+            It was as if they existed side by side, not together.
           </p>
         </div>
       )
@@ -193,9 +201,11 @@ const essayContent = [
     type: 'text',
     content: `Carrying a camera changes the rules of engagement. I felt I had a duty to the women to ask for their permission before taking a photo. A few times I couldn’t—like when photographing a big scene with dozens of people and only half a heartbeat to catch it—but otherwise, I made sure to ask. Some didn’t want to be seen. You could tell even without words: a hand raised to cover their face before I even lifted my camera. I never bothered them. Sometimes, if I took a photo without asking first, I would go up afterward, show it to them, and make sure they were okay with it.
 
-Later, I would learn why some women were so cautious. Many had boyfriends, significant others, husbands, or family back in their hometown villages—people who didn’t know they were working in Pattaya. Or if they knew, they believed what they had been told: that she worked at a restaurant, a hotel, or a 7-Eleven. A photograph could unravel a carefully maintained story. And sometimes, it was simply anxiety—a reflex born from living between two worlds.
+    I'd sometimes need to muster some backing up to myself. I’d show them some of my older photos on Instagram, explain I wasn’t just some random tourist, and promise to send the picture if they wanted. Sometimes, even with a smile, they’d instinctively cover their face or shake their head. I would not push then. That was that. Other times, they’d say they looked ugly or weren’t ready. In those moments, if I felt there was real warmth between us, I’d gently protest: “Kun suay mâak mâak”—you’re very beautiful. More often than not, it cracked a smile and turned the no into a yes. Not always. But enough times to feel like I’d earned the moment.
 
-While I was still learning the ropes, it was different with the men—especially when they were rude or aggressive toward the women. I didn’t feel the same obligation to ask them. But I’ll get to that later.`
+    Later, I would learn why some women were so cautious. Many had boyfriends, significant others, husbands, or family back in their hometown villages—people who didn’t know they were working in Pattaya. Or if they knew, they believed what they had been told: that she worked at a restaurant, a hotel, or a 7-Eleven. A photograph could unravel a carefully maintained story. And sometimes, it was simply anxiety—a reflex born from living between two worlds.
+
+    While I was still learning the ropes, it was different with the men—especially when they were rude or aggressive toward the women. I didn’t feel the same obligation to ask them. But I’ll get to that later.`
   },
   {
     type: 'image',
@@ -270,7 +280,7 @@ While I was still learning the ropes, it was different with the men—especially
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-08.jpg',
+    src: '/images/pattaya/soi6-47.jpg',
     caption: 'There must be some way out of here. June 2024.'
   },
   {
@@ -404,9 +414,9 @@ While I was still learning the ropes, it was different with the men—especially
     type: 'text',
     content: `After Songkran, once my ankle had started to heal, I spent more time sitting down for drinks, talking with the women. Conversations usually happened over a lady drink and a smartphone—usually an expensive iPhone—using Google Translate. I’d inadvertently see the translations pop up, along with dozens of other notifications sliding in from the top of their screens: usually messages from foreign men, and usually obscene. It was a strange window into their daily life—something halfway between public and private.
 
-Sometimes, when a woman proudly showed me photos of her children, I couldn’t help but notice what else was on the screen. In the same photo gallery, right next to pictures of smiling toddlers, there would be dozens of selfies taken with different farangs. It was jarring. Before the night was over, they often asked to take a selfie with me too—adding me, I guess, to that same ongoing gallery.
+    Sometimes, when a woman proudly showed me photos of her children, I couldn’t help but notice what else was on the screen. In the same photo gallery, right next to pictures of smiling toddlers, there would be dozens of selfies taken with different farangs. It was jarring. Before the night was over, they often asked to take a selfie with me too—adding me, I guess, to that same ongoing gallery.
 
-Phone conversations could also get funny. Over these broken, phone-assisted chats, I was asked more than once if I had a boyfriend. At first, I thought it was just teasing, but later I learned that the Thai word they used—แฟน (faen)—doesn’t specify gender. It just means “romantic partner.”`
+    Phone conversations could also get funny. Over these broken, phone-assisted chats, I was asked more than once if I had a boyfriend. At first, I thought it was just teasing, but later I learned that the Thai word they used—แฟน (faen)—doesn’t specify gender. It just means “romantic partner.”`
   },
   {
     type: 'image',
@@ -415,7 +425,16 @@ Phone conversations could also get funny. Over these broken, phone-assisted chat
   },
   {
     type: 'text',
-    content: ``
+    content: `Sometimes, I’d go to the bar’s toilet even if I didn’t need to—just to catch my breath, or to hunt for photos. The bathrooms were small, dimly lit, often with cracked mirrors and dusty fans spinning slowly overhead. It was also where many of the sex workers touched up their makeup before stepping back out.
+
+    On one such visit, a woman I’d spoken to earlier agreed to let me photograph her as she applied her lipstick in front of the mirror. It had taken a little convincing—not for permission, but to get her to hold a serious, almost anxious expression. I was hoping to catch that quiet, reflective moment before she stepped back into her shift.
+
+    Then, mid-composure, an African American man burst into the bathroom. I’d seen him earlier at the bar with his friends—loud, cheerful, clearly drunk. He looked at us, flashed a thumbs-up, and without hesitation stumbled straight to the urinal, without so much as even closing the door halfway even. The scene was so absurd it almost made me laugh—but I knew this was a moment worth capturing. He filled in the empty space beside her, a gap that screamed in the frame. Technically, it wasn’t one of my strongest shots—but something about it stayed with me. The absurdity. The composition. The questions. It made the final cut.`
+  },
+  {
+    type: 'image',
+    src: '/images/pattaya/soi6-38.jpg',
+    caption: 'Powder room. April 2024.'
   },
   {
     type: 'component',
@@ -503,11 +522,18 @@ Phone conversations could also get funny. Over these broken, phone-assisted chat
 
     That summer, I took more time off and did something I had dreamed of for years: I cycled from Sweden to Turkey. A journey I’d made many times before—by plane, in a few hours—but never like this. My youth felt like it was slipping, and the severance money wasn’t gone yet. I figured if not now, then when?
 
-    I convinced my parents, packed light, and started pedaling from Sweden in late August. I crossed countries slowly, watching autumn unfold one European country at a time, and arrived home just before Christmas—though in Turkey, that’s just another day.
+    I convinced my parents, packed light, and started pedaling from Sweden in late August. I crossed countries slowly, watching autumn unfold one European country at a time, and arrived home just before Christmas—though in Turkey, that’s just another day.`
+  },
+  {
+    type: 'image',
+    src: '/images/pattaya/soi6-08.jpg',
+    caption: 'Street scene. June 2024.',
+  },
+  {
+    type: 'text',
+    content: `The ride was long, beautiful, and not without hardship. But it recharged me. I met wonderful people. I laughed a lot. It gave me the energy I needed to return to the Pattaya photos—months later, finally ready to sit with them. To edit. To remember. To really look.
 
-    The ride was long, beautiful, and not without hardship. But it recharged me. I met wonderful people. I laughed a lot. It gave me the energy I needed to return to the Pattaya photos—months later, finally ready to sit with them. To edit. To remember. To really look.
-
-    My hard drive—where I kept the original files—broke. I neither have the money nor know the right person to attempt a proper recovery. Luckily, I do have backups from before June, and low-resolution JPEG exports from that final week. They’re only good enough to print at A5—but just fine for sharing online.
+    My hard drive—where I kept the original files—broke. I neither have the money nor know the right person to attempt a proper recovery. Luckily, I do have backups from before June, and low-resolution JPEG exports from that final week in June. They’re only good enough to print at A5—but just fine for sharing online.
 
     I don’t know what else to do with these photos.`
   },
@@ -523,7 +549,7 @@ Phone conversations could also get funny. Over these broken, phone-assisted chat
         <PortraitReel
           title={'"Scenes"'}
           images={scenes}
-          caption={`In June 2024, in my stay in Pattaya for about a week I did a lot of "burst" shots. And I noticed some of them play out like an old silent film. Thanks to this realization and with an intention perhaps to stitch together a short film out of them, right after I left Pattaya I exported low-resolution JPEGs of the photos I took then that are lost now. They are just wide enough to display on a computer screen so here we go. And here are the fragmented scenes that led to the mass export.
+          caption={`In June 2024, during my stay in Pattaya for about a week I did a lot of "burst" shots. And I noticed some of them play out like an old silent film. Thanks to this realization and with an intention perhaps to stitch together a short film out of them, right after I left Pattaya I exported all my photos in low-resolution JPEGs. Thanks to that I still have something to show from my all-out week. They are just wide enough to display on a computer screen so here we go. And here are the fragmented scenes that led to the mass export.
             Big majority from June 2024, and a few from April 2024.`}
         />
       );
