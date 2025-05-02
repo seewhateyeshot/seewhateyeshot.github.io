@@ -67,3 +67,11 @@
     margin-right: 8px;
   }
 } */
+
+.portrait-reel.landscape {
+  gap: 1rem;
+}
+
+.portrait-reel.portrait {
+  gap: 0.75rem;
+}
