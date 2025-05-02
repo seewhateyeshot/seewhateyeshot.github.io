@@ -118,7 +118,7 @@ const essayContent = [
   },
   {
     type: 'text',
-    content: `That same night, we returned to Beach Road. This was another kind of madness. Russian families—on seemingly perpetual vacation since the war in Ukraine—strolled past scenes of negotiation, where groups of Indian men huddled around a single freelancer. I assumed it was for group engagements. I’d see the same scenes again and again.
+    content: `That same night, we returned to Beach Road. It was another kind of madness. I saw people of every nation and color—many foreign women too, mostly Western. Families with small children strolled past scenes of negotiation, where freelance sex workers bargained with men under the coconut trees. The shadows of the swaying leaves danced in the glow of the streetlights, stretching across the sidewalk and onto the sand. I’d see the same scenes again and again.
 
     We passed street vendors selling ready-to-smoke joints, Viagra substitutes, and children’s toys—often side by side. Children ran through the crowds. Thousands of people moved past, each one a character of their own.
 
@@ -148,17 +148,6 @@ const essayContent = [
 
     content: `Then on that first night again, just to test my limits, he took me to a massive brothel lounge where women lined the walls, each with a number and a color code. The colors marked the price. I wasn’t allowed in with my camera—and even without it, I noticed certain guests, especially South Asian men, being delayed or turned away. On our way out, we stopped to chat with a few Indian tourists lingering at the entrance. I hadn't seen anything like it before.`
   },
-  // {
-  //   type: 'component',
-  //   render: () => {
-  //     const beachRoadImages = Array.from({ length: 18 }, (_, i) => {
-  //       const num = String(i + 1).padStart(2, '0'); // pad 1 → 01
-  //       return `/images/pattaya/beach_road/beach_road-${num}.jpg`;
-  //     });
-
-  //     return <PortraitReel title="Beach Road Photos" images={beachRoadImages} caption="Before I had a clear focus on Soi 6, I collected photos during our twice-daily walks on the Beach Road. December 2023." />;
-  //   }
-  // },
   {
     type: 'text',
     content: `We quickly decided that Soi 6 was the most photographable street—narrow, compact, alive. There were motorcycles and the occasional car, but it was walkable. Most people didn’t mind the camera; many vloggers wandered around with selfie sticks already. It was different from Walking Street, where “No Photo” signs hung everywhere, bouncers waved laser pointers at any raised lens, and most of the action was hidden behind closed doors. I didn't go back to the Walking Street again, I wasn't interested in where I couldn't photograph. My teacher told me that when he had first photographed Pattaya, Soi 6 had been more like Walking Street: guarded, closed off, hostile to cameras. But after the pandemic, something had shifted. There were no bouncers anymore. No closed doors. The bars were open to the street. The energy was immediate.`
@@ -192,9 +181,13 @@ const essayContent = [
   },
   {
     type: 'image',
-    src: 'images/pattaya/soi6-00.jpg',
-    caption: 'Collapsed woman, April 2024. (Photographed with an OM System TG-7)'
+    src: 'images/pattaya/soi6-1312.jpg',
+    caption: 'Even the police patrol isn’t immune from Soi 6’s rituals, April 2024.'
 
+  },
+  {
+    type: 'text',
+    content: `Technically, prostitution is illegal in Thailand. But on Soi 6, like in many red-light areas, the law seems more like a formality than a boundary. The police were visible, and would happily pose for my photos, often giving a thumbs-up amid everything that was going on on Soi 6. From what I gathered, bars pay regular “fees” to operate undisturbed. It’s less about enforcement than about maintaining order, appearances, and income flows. Everyone seemed to know their role in the system. And even though there have been raids in recent years, police reports often claim that no signs of prostitution were found in Pattaya.`,
   },
   {
     type: 'text',
@@ -225,7 +218,31 @@ const essayContent = [
   },
   {
     type: 'text',
-    content: `I began to recognize faces. Some bar girls would wave. A few started calling me “photo man.” They’d pull me aside from the crowd, pose, and ask me to send the pictures later. I started exchanging contact info—Instagram, Line, WhatsApp. Sometimes I’d get a message within ten minutes: “Where is my pic???” At the end of each day, back at home, I made sure to send everyone their photos. It became part of my nightly ritual—reviewing the day’s shots, selecting a few to show my teacher for critique, and sending the ones I promised to the girls. Occasionally, I’d even spot my photos posted on their profiles, and feel a quiet satisfaction.
+    content: `Whenever I left Soi 6, I found myself back on Beach Road. It was a kind of decompression zone. The chaos thinned out a bit—but the contradictions didn’t. Russian families—some seemingly on a perpetual vacation since the war in Ukraine made going home impossible—strolled past scenes of open negotiation. Whole families with small kids, sometimes even a baby in a stroller, walked right past freelancers leaning against lampposts, haggling with men I’d later see again on Soi 6. Groups of South Asian men often surrounded a single sex worker, which I assumed was for a group engagement. I saw tour buses offloading Indian and Chinese men en masse. Curious, I’d sometimes say hi and ask about their time in Pattaya. The answers could be bizarre—one man told me “Nana Plaza is better,” referring to Bangkok’s bar-packed red-light district. I also heard Turkish often. I assumed the speakers felt at ease many thousand miles from home, and maybe that’s why I caught so many unfiltered conversations—casual bragging, crude jokes, all circling around their exploits. Some men laughed loudly. Others scanned the street in silence.
+
+    During that first visit, I took many photos on Beach Road. I hadn’t yet locked in on Soi 6 as the core of the project. I was just drawn to what was unfolding in front of me—this strange ecosystem where families brushed shoulders with transactional intimacy, children in swimsuits skipped past sex workers in heels. Pattaya wasn’t hiding anything. Everyone was part of the same current.`
+  },
+  {
+    type: 'component',
+    render: () => {
+      const beachRoadImages = Array.from({ length: 18 }, (_, i) => {
+        const num = String(i + 1).padStart(2, '0'); // pad 1 → 01
+        return `/images/pattaya/beach_road/beach_road-${num}.jpg`;
+      });
+
+      return (
+        <PortraitReel
+          title="Beach Road Photos"
+          images={beachRoadImages}
+          orientation="landscape"
+          caption="Before I had a clear focus on Soi 6, I collected photos during our twice-daily walks on the Beach Road. December 2023."
+        />
+      );
+    }
+  },
+  {
+    type: 'text',
+    content: `Back on Soi 6, I began to recognize faces. Some bar girls would wave. A few started calling me “photo man.” They’d pull me aside from the crowd, pose, and ask me to send the pictures later. I started exchanging contact info—Instagram, Line, WhatsApp. Sometimes I’d get a message within ten minutes: “Where is my pic???” At the end of each day, back at home, I made sure to send everyone their photos. It became part of my nightly ritual—reviewing the day’s shots, selecting a few to show my teacher for critique, and sending the ones I promised to the girls. Occasionally, I’d even spot my photos posted on their profiles, and feel a quiet satisfaction.
 
     To keep up, I started a note on my phone titled “Soi 6 Names,” where I jotted down each name after taking a photo—along with the bar where she worked, the date we met, and, if I had it, her contact information. I reviewed it often, matching names to faces. The next time I crossed paths with one of them, I’d try to surprise her by calling her by name. It didn’t hurt. It made most interactions warmer, easier—and sometimes even opened the door to longer conversations.`
   },
@@ -261,7 +278,7 @@ const essayContent = [
   },
   {
     type: 'text',
-    content: `But as I built stronger rapport with some of the workers, I accepted their offers for a drink a few times. It was usually a small beer for me, and a “lady drink” for them—typically a non-alcoholic juice priced at a premium. I asked around: from a 150-baht lady drink, a woman might keep 30 to 50 baht. The rest went to the bar.
+    content: `But as I built stronger rapport with some of the workers, I accepted their offers for a drink a few times. It was usually a small beer for me, and a “lady-drink” for them—typically a non-alcoholic juice priced at a premium. I asked around: from a 150-baht lady-drink, a woman might keep 30 to 50 baht. The rest went to the bar.
 
     Sharing a drink gave me a reason to pause—to cool off from the heat and the constant movement—and more importantly, it gave space for conversation, and for more honest photographs.`
   },
@@ -414,20 +431,27 @@ const essayContent = [
     render: () => (
       <div className="max-w-2xl mx-auto px-4">
         <p className="essay-text">
-          May’s story echoed what journalist Joakim Medin explores in his 2019 book Thailandsvenskarna.
+          May’s story echoed what Swedish journalist Joakim Medin explores in his 2019 book Thailandsvenskarna.
           In addition to traveling to Thailand to investigate the phenomenon firsthand,
           Medin also draws on revealing demographic data.
           According to Sweden’s national statistics agency, 78 percent of Thai migrants to Sweden are women,
           and 80–90 percent of them arrive through a relationship with a Swedish
           man<FootnoteButton number={2} note={"Joakim Medin, Thailandssvenskarna, Verbal Förlag, 2019, p. 127."} />.
           That number is striking—especially when compared to countries like Afghanistan,
-          where the overwhelming majority of migrants are men.In Sweden,
+          where the overwhelming majority of migrants are men.
+        </p>
+        <p className="essay-text">
+          In Sweden,
           many of these women live in legally precarious situations:
           their right to stay is tied to the continuation of the relationship.
           If it ends, they risk deportation. Medin describes women who are isolated,
           cut off from support networks, and trapped in controlling or abusive dynamics—treated as housekeepers,
           caregivers, or worse.
-          The power imbalance is built in.
+        </p>
+        <p className="essay-text">
+          As someone who has lived in Sweden with a temporary residence permit for 4 years,
+          my anxiety with the Swedish Migration Authority must have been an anthill.
+          For these women, the power imbalance is built in.
         </p>
       </div>
 
@@ -452,7 +476,7 @@ const essayContent = [
 
     When I passed by, she’d sometimes grab my arm and say she was hungry, asking for pizza. There was only one place on Soi 6 that sold it—a little shop crammed between bars. It felt like a luxury amid the usual local stalls. I got her a slice a few times. She’d smile, thank me, and go back to work—unless she wanted ice cream, that is.
 
-    We shared a few drinks together—usually me ordering her a ladydrink and a small Chang for myself. Her English was limited, but she knew how to navigate conversations with customers using her phone and body language. You could tell she’d done it a thousand times. She wasn’t the loudest, or the most aggressive, but her experience showed.`
+    We shared a few drinks together—usually me ordering her a lady-drink and a small Chang for myself. Her English was limited, but she knew how to navigate conversations with customers using her phone and body language. You could tell she’d done it a thousand times. She wasn’t the loudest, or the most aggressive, but her experience showed.`
   },
   {
     type: 'image',
@@ -514,17 +538,48 @@ const essayContent = [
   },
   {
     type: 'text',
-    content: `I spent a week in Pattaya that March. This time, my teacher didn’t join me in Soi 6. He said that street drained him. I understood. It wasn’t light work. We continued on to the Philippines and Taiwan—two of the few countries in Asia my teacher hadn’t yet visited. I’d been to the Philippines before and helped translate here and there and assumed the tour guide's mantle. A few days after the earthquake in Taiwan we were back in our base. And soon later my teacher returned to Stockholm. Now I was alone.
+    content: `When I got back to Pattaya in March, some people on Soi 6 recognized me. The recognition was warm—smiles, waves, the occasional “photo man!” called out from a bar. That familiarity softened my return.
 
-    What I hadn’t planned for was a motorcycle accident. It happened just before we left for Manila—another rider crashed into me, and I twisted my ankle badly. I still feel it at the time of writing this, 13 months after the crash and I still haven't managed to see a doctor about it, which is a long story in itself. We, anyways, continued the trip, but my ankle certainly didn't make it easier. After a few weeks of touristing, we returned to Pattaya. During our travels—whether in Singapore, Davao City, or Cebu City—we stumbled upon scenes that echoed Pattaya’s nightlife and sex work culture, though always on a smaller scale. Pattaya remained unmatched in scale, openness, and intensity. And I wasn't ready to deal with that intensity when we returned to Pattaya in April, the pain lingered and I just didn't mentally have the energy to put myself out there. I stayed home some days. But later on, I pushed through. I figured I’d keep photographing for the project while I still had the energy, and start traveling once I needed space. A win-win. I spent another three weeks in Pattaya that April.`
+    I spent a week in Pattaya that March. This time, my teacher didn’t join me in Soi 6. He said that street drained him. I understood. It wasn’t light work. We continued on to the Philippines and Taiwan—two of the few countries in Asia my teacher hadn’t yet visited. I’d been to the Philippines before and helped translate here and there and assumed the tour guide's mantle. A few days after the earthquake in Taiwan we were back in our base. And soon later my teacher returned to Stockholm. Now I was alone.
+
+    What I hadn’t planned for was a motorcycle accident. It happened just before we left for Manila—another motorcyclist crashed into me, and I twisted my ankle badly. I still feel it at the time of writing this, 13 months after the crash and I still haven't managed to see a doctor about it, which is a long story in itself. We, anyways, continued the trip, but my ankle certainly didn't make it easier. After a few weeks of touristing, we returned to Pattaya. During our travels—whether in Singapore, Davao City, or Cebu City—we stumbled upon scenes that echoed Pattaya’s nightlife and sex work culture, though always on a smaller scale. Pattaya remained unmatched in scale, openness, and intensity. And I wasn't ready to deal with that intensity when we returned to Pattaya in April, the pain lingered and I just didn't mentally have the energy to put myself out there. I stayed home some days. But later on, I pushed through. I figured I’d keep photographing for the project while I still had the energy, and start traveling once I needed space. A win-win. I spent another three weeks in Pattaya that April.`
+  },
+  {
+    type: 'image',
+    src: '/images/pattaya/soi6-75.jpg',
+    caption: 'Tourist from London and bar girls posing, June 2024.'
+  },
+  {
+    type: 'text',
+    content: `Linda had reached out while I was traveling in Taiwan. One morning, she texted me saying she’d heard I was in Pattaya. I explained I wasn’t—I was on the road with my teacher. I sent her a photo of the three of us: me, him, and an old friend from Taiwan who had been showing us around. Linda asked if my Taiwanese friend was my “boyfriend.” At first, I thought she was teasing—but later, I learned that the Thai word แฟน (faen) doesn’t specify gender. It just means “romantic partner.”
+
+    We hadn’t talked in a while, so I told her we could get a coffee and catch up once I was back. She said okay.
+
+    When I returned to Pattaya, she messaged again. She said a customer had “bought” her out of the bar and would keep her for the next ten days. “Linda did it because Linda needed money to live like this,” she wrote. “The bar was very quiet.” I asked, “Are you happy?” She replied, “Yes, he is very nice. He is 56 years old.”
+
+    A few days later, the tone changed. “Can’t be with the customer,” she wrote. “He’s doing drugs.” I asked how she was. She eventually told me, “Yes, some days he hurts Linda, but Linda can’t go anywhere, so she has to wait until he returns because he already received his money.”
+
+    When I saw her again during Songkran, she was back at the bar, working like nothing had happened. The whole thing stayed with me—not just what she endured, but the fact that she had reached out to me. Maybe she didn’t have many people to talk to. Maybe she wasn’t looking for help. But she wanted someone to know. And for reasons I still don’t fully understand, I was one such someone.`
+  },
+  {
+    type: 'image',
+    src: '/images/pattaya/soi6-77.jpg',
+    caption: 'Ineffective weapon during Songkran, April 2024.',
   },
   {
     type: 'component',
     render: () => (
       <div className="max-w-2xl mx-auto px-4">
         <p className="essay-text">
-          I went out a couple of days during Songkran with my back-up camera, an OM System TG-7. Waterproof just as it needed to be.
-          I took quite a few photos then, some of which I put up{" "}
+          My teacher had returned to Sweden just as Songkran began.
+          He got splashed a little—but nothing compared to what was waiting for me.
+          Luckily for me, he had spoken to his friend who owned the two apartments and, I suspect,
+          put in a good word. I was allowed to stay as long as I wanted.
+        </p>
+        <p className="essay-text">
+          Despite my hurting ankle, I couldn’t miss Songkran.
+          I went out on a couple of days with my backup camera, an OM System TG-7—waterproof,
+          just as it needed to be. I took quite a few photos, some of which I’ve included{" "}
           <Link to="/brief/songkran" className="underline text-blue-600 hover:text-blue-800">
             <strong>here</strong>
           </Link>
@@ -534,12 +589,16 @@ const essayContent = [
     )
   },
   {
+    type: 'image',
+    src: 'images/pattaya/soi6-00.jpg',
+    caption: 'Collapsed woman, April 2024. (Photographed with an OM System TG-7)'
+
+  },
+  {
     type: 'text',
-    content: `After Songkran, once my ankle had started to heal, I spent more time sitting down for drinks, talking with the women. Conversations usually happened over a lady drink and a smartphone—usually an expensive iPhone—using Google Translate. I’d inadvertently see the translations pop up, along with dozens of other notifications sliding in from the top of their screens: usually messages from foreign men, and usually obscene. It was a strange window into their daily life—something halfway between public and private.
+    content: `After that I returned to my rhythm. After Songkran in April, once my ankle had started to not make life too miserable for me, I was walking Soi 6 regularly again and taking photos that I thought were good. I felt more productive at least, which otherwise felt like being kind of stuck in the world's brothel with no friends. I did, however, take more pauses during my walks and spent more time sitting down for drinks, talking with the women. Conversations usually happened over a lady-drink and a smartphone—usually an expensive iPhone—using Google Translate. I’d inadvertently see the translations pop up, along with dozens of other notifications sliding in from the top of their screens: usually messages from foreign men, and usually obscene. It was a strange window into their daily life—something halfway between public and private.
 
-    Sometimes, when a woman proudly showed me photos of her children, I couldn’t help but notice what else was on the screen. In the same photo gallery, right next to pictures of smiling toddlers, there would be dozens of selfies taken with different farangs. It was jarring. Before the night was over, they often asked to take a selfie with me too—adding me, I guess, to that same ongoing gallery.
-
-    Phone conversations could also get funny. Over these broken, phone-assisted chats, I was asked more than once if I had a boyfriend. At first, I thought it was just teasing, but later I learned that the Thai word they used—แฟน (faen)—doesn’t specify gender. It just means “romantic partner.”`
+    Phone conversations would also get funny. Over these broken, phone-assisted chats, I was asked more than once if I had a boyfriend or a husband. Sometimes, when a woman proudly showed me photos of her children, I couldn’t help but notice what else was on the screen. In the same photo gallery, right next to pictures of smiling toddlers, there would be dozens of selfies taken with different farangs. It was jarring. Before the night was over, they often asked to take a selfie with me too—adding me, I guess, to that same ongoing gallery.`
   },
   {
     type: 'image',
@@ -560,27 +619,38 @@ const essayContent = [
     caption: 'Powder room, April 2024.'
   },
   {
+    type: 'text',
+    content: `When I returned to Soi 6, I saw that Namtan and Mint—pseudonyms—were still on the street. But I couldn’t find May. I texted her, and she told me she had gone back to her hometown in Korat, in the Isan province. She said she was tired of Pattaya.
+
+    I asked if I could visit her in Isan. She said I could. By then, I was starting to feel I had to see Isan with my own eyes—to understand what drives so many young women to sex work in Pattaya. I began toying with the idea of expanding the project beyond Soi 6—maybe even developing two parallel photo series. Of course, I had no idea how to do this as a hobby photographer, but I thought May could give me a lead. And the least I could do was take photos.
+
+    But my visa-free month in Thailand was nearly up, ever since we’d returned from Taiwan. I had already booked a flight to Siem Reap in Cambodia—the cheapest international route I could find—to avoid trouble at the border. I figured I’d spend a few days exploring Cambodia, and then return to Thailand with a clearer plan to visit Isan—maybe even by motorcycle.`
+  },
+  {
+    type: 'image',
+    src: '/images/pattaya/soi6-95.jpg',
+    caption: 'Law and order, March 2024.'
+  },
+  {
     type: 'component',
     render: () => (
       <div className="max-w-2xl mx-auto px-4">
         <p className="essay-text">
-          Cambodia was next. I went to see Angkor Wat.
-          Originally, it was supposed to be just a visa run—but it turned into a much-needed breather from Pattaya.
+          Then I was in Cambodia.
+          I went to see Angkor Wat and had a fantastic time touring the temple complex by motorcycle—dodging the $37 entrance fee for foreigners that is lifted just before sunset.
+          Originally, my trip was supposed to be just a visa run—but it turned into a much-needed breather from Pattaya.
           I missed being on the road, in more ordinary places, far from the world’s sex tourism capital.
           So I kept going. I forced myself to walk everywhere.
-          Slowly, the pain in my ankle started to subside.
-          I took photos constantly, slipping into places I doubt many tourists ever did.
-          I went to Battambang,
-          Cardamom Mountains,
-          Khemarak Phoumin,
-          Pursat,
-          Sihanoukville from where I share some photos{" "}
+          Slowly, the pain in my ankle began to subside.
+          I took photos constantly, slipping into places I doubt many tourists ever did. I visited
+          Battambang, the Cardamom Mountains,
+          Khemarak Phoumin, Pursat, and Sihanoukville—where I took some of the photos I
+          share{" "}
           <Link to="/brief/sihanoukville" className="underline text-blue-600 hover:text-blue-800">
-            here
+            <strong>here</strong>
           </Link>
-          ,
-          Koh Rong where I even took a run along the white beach,
-          and once French colonial city Kampot and eventually to the capital Phnom Penh.
+          . I went to Koh Rong, where I even managed a run along the white beach,
+          and eventually made it to Kampot—the once French colonial city—before heading to the capital, Phnom Penh.
         </p>
         <p className="essay-text">
           My first night in Phnom Penh, I started noticing familiar signs—ads from the Nightwish Group, saying they own more than 30 bars in Pattaya.
@@ -652,9 +722,16 @@ const essayContent = [
     type: 'text',
     content: `The ride was long, beautiful, and not without hardship. But it recharged me. I met wonderful people. I laughed a lot. It gave me the energy I needed to return to the Pattaya photos—months later, finally ready to sit with them. To edit. To remember. To really look.
 
-    My hard drive—where I kept the original files—broke. I neither have the money nor know the right person to attempt a proper recovery. Luckily, I do have backups from before June, and low-resolution JPEG exports from that final week in June. They’re only good enough to print at A5—but just fine for sharing online.
-
-    I don’t know what else to do with these photos.`
+    My hard drive—where I kept the original files—broke. I neither have the money nor know the right person to attempt a proper recovery. Luckily, I do have backups from before June, and low-resolution JPEG exports for some of the photos from that final week in June. They’re only good enough to print at A5—but just fine for sharing online.`
+  },
+  {
+    type: 'image',
+    src: '/images/pattaya/soi6-lost.jpg',
+    caption: 'Frenchman, a photo I had not exported, only a low-resolution preview survived, June 2024.'
+  },
+  {
+    type: 'text',
+    content: `I don’t know what else to do with these photos.`
   },
   {
     type: 'component',
