@@ -45,7 +45,7 @@ export default function PhotoEssay() {
       subtitle: 'For seven weeks, I photographed a bar street in Pattaya, Thailand',
       cover: {
         src: '/images/pattaya/soi6-01.jpg',
-        caption: 'Start of a working day. June 2024.',
+        caption: 'Start of a new working day, June 2024.',
       },
       published: false,
       publishedDate: 'Work in progress',

@@ -18,7 +18,7 @@ const essayContent = [
           <Link to="/blog/starting-to-shoot" className="underline text-blue-600 hover:text-blue-800">
             this blog post
           </Link>
-          , mentored me with informal lessons and themed assignments like nightlife, dreams, and taxi drivers. His homework taught me how to move around with a camera, approach strangers, and "shoot with my heart, not my brain".
+          , mentored me with informal lessons and themed assignments like nightlife, dreams, and taxi drivers. His homework taught me how to move around with a camera, approach strangers, and <em>shoot with my heart, not my brain</em>.
         </p>
       </div>
     )
@@ -36,7 +36,7 @@ const essayContent = [
   {
     type: 'image',
     src: '/images/pattaya/soi6-02.jpg',
-    caption: 'The customer is always welcome. June 2024.'
+    caption: 'The customer is always welcome, June 2024.'
   },
   {
     type: 'text',
@@ -66,7 +66,7 @@ const essayContent = [
   {
     type: 'image',
     src: '/images/pattaya/soi6-03.jpg',
-    caption: 'Man with a bar-fined girl. December 2023.'
+    caption: 'Man with a bar-fined girl, December 2023.'
   },
   {
     type: 'text',
@@ -81,18 +81,27 @@ const essayContent = [
   {
     type: 'image',
     src: '/images/pattaya/soi6-19.jpg',
-    caption: 'Children were often around. March 2024.',
+    caption: 'Children were often around, March 2024.',
+  },
+  {
+    type: 'component',
+    render:
+      () => (
+        <div className="max-w-2xl mx-auto px-4">
+          <p className="essay-text">
+            My teacher spoke quite a bit of Thai and started teaching me from day one. <em>Sawatdee khrap</em> for hello. <em>Sabai dee mai?</em> for how are you. <em>Tai ruup dai mai?</em> to ask for a photo. He’d already made a long list of phrases on his phone, transliterated into Turkish—<em>sawatdee khrap</em> became <em>savadikap</em>, easier for me to read and remember. I’d review them before dinner. He was good with people—charming, quick to joke, unafraid to make a fool of himself if it helped build rapport. To a mother holding her toddler, he’d say <em>Nà-làk mâak mâak</em>, meaning very cute. If the heat was unbearable, he’d complain loudly to a stranger: <em>Róon!</em> One night, when it dropped to 22 degrees and locals pulled on hoodies, he hugged himself dramatically and shrieked <em>Namkeng! Namkeng!</em>—ice—rubbing his arms like he was freezing. Maybe he didn’t know the word for <em>cold</em>. But it sure was entertaining.
+          </p>
+        </div>
+      )
   },
   {
     type: 'text',
-    content: `My teacher spoke quite a bit of Thai and started teaching me from day one. “Sawatdee khrap” for hello. “Sabai dee mai?” for how are you. “Tai ruup dai mai?” to ask for a photo. He’d already made a long list of phrases on his phone, transliterated into Turkish—sawatdee khrap became savadikap, easier for me to read and remember. I’d review them before dinner. He was good with people—charming, quick to joke, unafraid to make a fool of himself if it helped build rapport. To a mother holding her toddler, he’d say “Nà-làk mâak mâak” (น่ารักมากมาก), meaning very cute. If the heat was unbearable, he’d complain loudly to a stranger: “Róon!” One night, when it dropped to 22 degrees and locals pulled on hoodies, he hugged himself dramatically and shrieked “Namkeng! Namkeng!”—ice—rubbing his arms like he was freezing. Maybe he didn’t know the word for “cold.” But it sure was entertaining.
-
-    I even took a Thai class online through Preply, and visited a language school in Pattaya to inquire about joining in person. But honestly, I wasn’t satisfied with the teaching. What helped more were the textbooks my teacher had kept from when he’d taken formal lessons years ago. I practiced with those instead, combining them with YouTube classes, and slowly built up the basics.`
+    content: `I even took a Thai class online through Preply, and visited a language school in Pattaya to inquire about joining in person. But honestly, I wasn’t satisfied with the teaching. What helped more were the textbooks my teacher had kept from when he’d taken formal lessons years ago. I practiced with those instead, combining them with YouTube classes, and slowly built up the basics.`
   },
   {
     type: 'image',
     src: '/images/pattaya/soi6-04.jpg',
-    caption: 'Some even part of the workforce. April 2024.'
+    caption: 'Some even part of the workforce, April 2024.'
   },
   {
     type: 'text',
@@ -105,7 +114,7 @@ const essayContent = [
   {
     type: 'image',
     src: '/images/pattaya/soi6-05.jpg',
-    caption: 'A usual Soi-6 scene. April 2024.'
+    caption: 'A usual Soi 6 scene, April 2024.'
   },
   {
     type: 'text',
@@ -115,16 +124,24 @@ const essayContent = [
 
     My teacher said he wanted to show me another bar street. He led me to Soi 6.
 
-    It was a different kind of overwhelming. The bars were open-air, low to the ground, close enough to touch. Bar girls lined the fronts, outnumbering everyone else ten to one. Flickering neon bounced off high heels and bare skin. Above the bars, TVs played European football matches or old Western music videos—Guns N’ Roses, the Eagles, Aerosmith. Different songs blasted from every direction, merging into a deafening, shapeless roar.
+    It was a different kind of overwhelming. The bars were open-air, low to the ground, close enough to touch. Bar girls lined the fronts, outnumbering everyone else ten to one. Flickering neon bounced off high heels and bare skin. Above the bars, TVs blared European football matches and old Western music videos—Guns N’ Roses, the Eagles, Aerosmith. From every direction came noise: thumping bass, crashing cymbals, screeching guitar solos—colliding with the constant chorus of women’s voices calling into the street. The music, the voices, the scooters, the engines—all tangled into one shapeless, deafening roar.
 
-    Older men clutched beers wrapped in foam sleeves, trying and failing to keep them cold in the humid night air.
-
-    As we walked, women called out from every side: “Sexy man,” “Handsome man,” “Where you go?”—basic English, shouted with practiced ease. But it wasn’t just words. Every few meters, a girl would reach out—grabbing an arm, a waist, sometimes even the groin—trying to physically pull us inside.`
+    Older men perched on bar stools overlooking the street, under a canopy of tiny ceiling fans constantly twirling in different spiral directions, clutched beers wrapped in foam sleeves, trying and failing to keep them cold in the humid night air.`
+  },
+  {
+    type: 'component',
+    render: () => (
+      <div className="max-w-2xl mx-auto px-4">
+        <p className="essay-text">
+          As we walked, I started to understand the calls: <em>Sexy man</em>, <em>Handsome man</em>, <em>Where you go?</em>—basic English, shouted with practiced ease. But it wasn’t just words. Every few meters, a girl reached out—grabbing an arm, a waist, sometimes even the groin—trying to physically pull us inside. You couldn’t just walk past. You were part of the show.
+        </p>
+      </div>
+    )
   },
   {
     type: 'image',
     src: 'images/pattaya/soi6-34.jpg',
-    caption: 'The Goya smile. December 2023.'
+    caption: 'The Goya smile, December 2023.'
   },
   {
     type: 'text',
@@ -149,25 +166,23 @@ const essayContent = [
   {
     type: 'image',
     src: 'images/pattaya/soi6-59.jpg',
-    caption: 'Allure of the open bar. December 2023.',
+    caption: 'Allure of the open bar, December 2023.',
   },
   {
     type: 'text',
     content: `Apart from a trip to Chiang Mai and Bangkok for a few days, for the rest of my stay, even though I continued taking photos wherever I was, I returned to Soi 6 almost every day as part of our Beach Road walk—sometimes twice a day, once in the afternoon and again at night. My teacher usually came with me, offering tips on how to interact. He’d watch both me and the street, and later at home, he’d offer critique—on my presence, what I did or didn’t do.
 
-    I was starting to learn the rhythm: when the music started, when the bar stools were wiped down, when the girls stirred awake and had breakfast right where they’d work later. Later in the day, before customers started rolling in, they’d often sit idly at the bar, eyes glued to their smartphones—scrolling Instagram, dancing for TikTok, replying to messages. It was a digital lull, a quiet prelude to the chaos ahead. When the men began drifting in. Every hour had a different texture. In the afternoon, the street felt softer. There was space. By evening, it grew louder, more compressed, more electric.
-
-    Sometimes, when the constant commotion of Soi 6 grew overwhelming, I would slip into the alley that ran parallel to it—Soi 6/1. It was narrower, darker, and quieter. The back sides of the bars opened onto it: kitchens, trash bins, stacked crates, washing lines. It wasn’t meant for show.`
+    I was starting to learn the rhythm: when the music started, when the bar stools were wiped down, when the girls stirred awake and had breakfast right where they’d work later. Later in the day, before customers started rolling in, they’d often sit idly at the bar, eyes glued to their smartphones—scrolling Instagram, dancing for TikTok, replying to messages. It was a digital lull, a quiet prelude to the chaos ahead. When the men began drifting in. Every hour had a different texture. In the afternoon, the street felt softer. There was space. By evening, it grew louder, more compressed, more electric.`
   },
   {
     type: 'component',
     render: () => (
       <div className="max-w-2xl mx-auto px-4">
         <p className="essay-text">
-          He also had a few Thai expressions he liked to throw at me, half-mocking, half-endearing.
+          My teacher also had a few Thai expressions he liked to throw at me, half-mocking, half-endearing.
           His favorite was <i>tin-ton farang</i> (ติ๊นต๊องฝรั่ง)—crazy foreigner.
           He’d call me that whenever I was too enthusiastic, acting silly, or trying too hard to charm someone.
-          Another was <i>mao</i> (เมา), which means drunk.
+          Another was <i>mao</i>, which means drunk.
           Sometimes, while I was crouched down taking portraits on Soi 6, he’d shout <i>tin-ton farang</i>!
           from across the street, or tease me with <i>maomao</i>! It always cracked up the bar girls nearby.
           Moments like those broke the ice. They helped soften the scene, loosen everyone’s guard.
@@ -176,15 +191,37 @@ const essayContent = [
     )
   },
   {
-    type: 'text',
-    content: `I started walking Soi 6/1 often, partly to catch my breath, partly to find more natural moments—away from the endless calls of “handsome man” and the engineered performances on the main street. It was there that I quickly learned something else: Soi 6/1 was where many of the kathoeys—Thai trans women—waited for customers.
+    type: 'image',
+    src: 'images/pattaya/soi6-00.jpg',
+    caption: 'Collapsed woman, April 2024. (Photographed with an OM System TG-7)'
 
-    In the shadows of the bigger show, another reality unfolded. It was quieter, less aggressive, more vulnerable somehow. And it taught me that Pattaya’s economy of desire had many layers—not all of them equally seen.`
+  },
+  {
+    type: 'text',
+    content: `Sometimes, when the constant commotion of Soi 6 grew overwhelming, I would slip into the alley that ran parallel to it—Soi 6/1. It was narrower, darker, and quieter. The back sides of the bars opened onto it: kitchens, trash bins, stacked crates, washing lines. It wasn’t meant for show.`
+  },
+  {
+    type: 'component',
+    render: () => (
+      <div className="max-w-2xl mx-auto px-4">
+        <p className="essay-text">
+          I started walking Soi 6/1 often,
+          partly to catch my breath,
+          partly to find more natural moments—away from the endless calls of “handsome man” and
+          the engineered performances on the main street.
+          It was there that I quickly learned something else: Soi 6/1 was where many of the <em>kathoey</em>s—Thai trans women—waited for customers.
+        </p>
+      </div>
+    )
+  },
+  {
+    type: 'text',
+    content: `In the shadows of the bigger show, another reality unfolded. It was quieter, less aggressive, more vulnerable somehow. And it taught me that Pattaya’s economy of desire had many layers—not all of them equally seen.`
   },
   {
     type: 'image',
     src: '/images/pattaya/soi6-41.jpg',
-    caption: 'The only bar accessible from Soi 6/1, employing trans sex workers. April 2024.'
+    caption: 'A trans sex worker at a Soi 6/1 bar, April 2024.'
   },
   {
     type: 'text',
@@ -195,7 +232,7 @@ const essayContent = [
   {
     type: 'image',
     src: 'images/pattaya/soi6-06.jpg',
-    caption: 'Makeup check before work. June 2024.'
+    caption: 'Makeup check before work, June 2024.'
   },
   {
     type: 'text',
@@ -210,7 +247,7 @@ const essayContent = [
   {
     type: 'image',
     src: '/images/pattaya/soi6-07.jpg',
-    caption: 'A usual night at work. April 2024.'
+    caption: 'A usual night at work, April 2024.'
   },
   {
     type: 'component',
@@ -224,20 +261,18 @@ const essayContent = [
   },
   {
     type: 'text',
-    content: `But as I built stronger rapport with some of the workers, I started accepting their offers for a drink. Sometimes I even invited them. It was usually a small beer for me, and a “lady drink” for them—typically a non-alcoholic juice priced at a premium. I asked around: from a 150-baht lady drink, a woman might keep 30 to 50 baht. The rest went to the bar. What a business.
+    content: `But as I built stronger rapport with some of the workers, I accepted their offers for a drink a few times. It was usually a small beer for me, and a “lady drink” for them—typically a non-alcoholic juice priced at a premium. I asked around: from a 150-baht lady drink, a woman might keep 30 to 50 baht. The rest went to the bar.
 
-    Sharing a drink gave me a reason to pause—to cool off from the heat and the constant movement—and more importantly, it gave space for conversations, and for more honest photographs.`
+    Sharing a drink gave me a reason to pause—to cool off from the heat and the constant movement—and more importantly, it gave space for conversation, and for more honest photographs.`
   },
   {
     type: 'image',
     src: '/images/pattaya/soi6-31.jpg',
-    caption: 'In such a bar. March 2024.'
+    caption: 'In such a bar, March 2024.'
   },
   {
     type: 'text',
     content: `Of course, part of me felt uneasy. I was “buying” time, and by extension, buying the photos. I couldn’t help but feel strange about it—here I was, a six-months-into-it, barely-budding photographer, buying drinks for sex workers. But when I managed to take a photograph that felt real, one that captured something more than a transaction, it somehow made up for it.
-
-    Some women spoke better English. A few had once been married to Western men. One had lived in Sweden with a Swedish husband—but it hadn’t worked out. She didn’t want to talk about him. Instead, she showed me photos from her time there—the heavy food she didn’t miss, the IKEA-catalog house she didn’t love—and shivered dramatically at the memory of the cold. Another woman told me she had studied in Bangkok and “freelanced” during university to make ends meet. She was making far more in Pattaya now.
 
     But for most, when I asked where they came from, the answer was always the same: Isan. Isan. Isan. Thailand’s northeast. A rice-farming region. Poor. Hard to leave. After my first few conversations, I went home and started watching YouTube documentaries about it.
 
@@ -246,15 +281,9 @@ const essayContent = [
     I’d ask when they last saw their children. It was usually months. Maybe that was a question better left alone. But I cared. I kept wondering about it. I kept trying to make sense of the system that had brought them here—the same system that pulled in millions of men every year.`
   },
   {
-    type: 'component',
-    render: () => {
-      const portraitImages = Array.from({ length: 29 }, (_, i) => {
-        const num = String(i + 1).padStart(2, '0'); // pad 1 → 01
-        return `/images/pattaya/portraits/soi6_portrait-${num}.jpg`;
-      });
-
-      return <PortraitReel title="Friends from Soi 6" images={portraitImages} caption="Taken across March, April, and June 2024." />;
-    }
+    type: 'image',
+    src: '/images/pattaya/soi6-65.jpg',
+    caption: 'Changing into pyjamas, April 2024.'
   },
   {
     type: 'text',
@@ -274,14 +303,14 @@ const essayContent = [
   },
   {
     type: 'text',
-    content: `At first, I judged them—harshly. I wanted to photograph them in a way that exposed something. I wanted to make them look guilty. A few times, I did. One night, out walking along Beach Road, I caught an old man mid-negotiation—his hand resting on a girl’s back, whispering something into her ear. He had a walking stick. He was old enough to be her great-grandfather. I got pissed off. I lifted my camera and took a shot—point-blank, face to face. He gave me a half-hearted chase, swinging his walking stick and shouting, “Idiot! Come back!” in a thick German accent. I didn’t stop. I didn’t even look back.
+    content: `At first, I judged them—harshly. I wanted to photograph them in a way that exposed something. I wanted to make them look guilty. A few times, I did. One night, out walking along Beach Road, I caught an old man mid-negotiation—his hand resting on a girl’s waist, whispering something into her ear. He had a walking stick. He was old enough to be her great-grandfather. I got pissed off. I lifted my camera and took a shot—point-blank, face to face. He gave me a half-hearted chase, swinging his walking stick and shouting, “Idiot! Come back!” in a thick German accent. I didn’t stop. I didn’t even look back.
 
     Later at home, my teacher asked, “What were you trying to prove?”`
   },
   {
     type: 'image',
     src: '/images/pattaya/soi6-47.jpg',
-    caption: 'There must be some way out of here. June 2024.'
+    caption: 'There must be some way out of here, June 2024.'
   },
   {
     type: 'text',
@@ -296,7 +325,7 @@ const essayContent = [
   {
     type: 'image',
     src: '/images/pattaya/soi6-09.jpg',
-    caption: 'Yankees that have done several medical Turkish trips. June 2024.'
+    caption: 'Yankees that have done several medical Turkish trips, June 2024.'
   },
   {
     type: 'text',
@@ -307,7 +336,7 @@ const essayContent = [
   {
     type: 'image',
     src: '/images/pattaya/soi6-92.jpg',
-    caption: 'Man with a shawl. December 2023.'
+    caption: 'Man with a shawl, December 2023.'
   },
   {
     type: 'text',
@@ -322,7 +351,7 @@ const essayContent = [
   {
     type: 'image',
     src: '/images/pattaya/soi6-13.jpg',
-    caption: 'An international couple. December 2023.',
+    caption: 'An international couple, December 2023.',
   },
   {
     type: 'component',
@@ -347,7 +376,7 @@ const essayContent = [
   {
     type: 'image',
     src: '/images/pattaya/soi6-10.jpg',
-    caption: 'Mamasan taking the roll call. March 2024.',
+    caption: 'Mamasan taking the roll call, March 2024.',
   },
   {
     type: 'text',
@@ -370,7 +399,101 @@ const essayContent = [
   {
     type: 'image',
     src: 'images/pattaya/soi6-80.jpg',
-    caption: 'Birthday girl. June 2024.',
+    caption: 'Birthday girl, June 2024.',
+  },
+  {
+    girl: 'May',
+    type: 'text',
+    content: `I had a dozen names to memorize from that first visit in December 2023 in the growing note on my phone. But only a few of my contacts spoke English well enough for real conversation.
+
+    One of them was May—a pseudonym. She told me she had once lived in Sweden, supposedly for school, though I quietly suspected there was more to the story. When she learned I had lived there too, she lit up and started showing me photos. Her photos showed a life that felt oddly familiar to me: warm jackets, snowy sidewalks, Christmas lights, sterile IKEA interiors—though every meal still had a bowl of rice at the center.`
+  },
+  {
+    girl: 'May',
+    type: 'component',
+    render: () => (
+      <div className="max-w-2xl mx-auto px-4">
+        <p className="essay-text">
+          May’s story echoed what journalist Joakim Medin explores in his 2019 book Thailandsvenskarna.
+          In addition to traveling to Thailand to investigate the phenomenon firsthand,
+          Medin also draws on revealing demographic data.
+          According to Sweden’s national statistics agency, 78 percent of Thai migrants to Sweden are women,
+          and 80–90 percent of them arrive through a relationship with a Swedish
+          man<FootnoteButton number={2} note={"Joakim Medin, Thailandssvenskarna, Verbal Förlag, 2019, p. 127."} />.
+          That number is striking—especially when compared to countries like Afghanistan,
+          where the overwhelming majority of migrants are men.In Sweden,
+          many of these women live in legally precarious situations:
+          their right to stay is tied to the continuation of the relationship.
+          If it ends, they risk deportation. Medin describes women who are isolated,
+          cut off from support networks, and trapped in controlling or abusive dynamics—treated as housekeepers,
+          caregivers, or worse.
+          The power imbalance is built in.
+        </p>
+      </div>
+
+    )
+  },
+  {
+    girl: 'May',
+    type: 'text',
+    content: `At the time of writing this, Medin is imprisoned in Turkey—my home country—while his wife awaits the birth of their daughter.`
+  },
+  {
+    type: 'image',
+    src: '/images/pattaya/soi6-08.jpg',
+    caption: 'Street scene, June 2024.',
+  },
+  {
+    girl: 'Linda',
+    type: 'text',
+    content: `I met Linda—a pseudonym— early on, and from that first encounter, she always waved when she saw me on the street. She liked being photographed—or at least, she played that part well. Every time I sent her a picture, she’d reply with mock outrage: “Ugly!!! No want photo!” But the next day, there she was again, posing and laughing like nothing had changed. It became our ritual.
+
+    Linda was older than most of the women I met on Soi 6. You could see it in the lines on her face. She said she didn’t have children, and she carried herself with a kind of confidence that stood out. I noticed how the younger girls at her bar looked to her—not with fear, but with a quiet deference. She wasn’t the mamasan; there was already one at her bar. But Linda held her own space.
+
+    When I passed by, she’d sometimes grab my arm and say she was hungry, asking for pizza. There was only one place on Soi 6 that sold it—a little shop crammed between bars. It felt like a luxury amid the usual local stalls. I got her a slice a few times. She’d smile, thank me, and go back to work—unless she wanted ice cream, that is.
+
+    We shared a few drinks together—usually me ordering her a ladydrink and a small Chang for myself. Her English was limited, but she knew how to navigate conversations with customers using her phone and body language. You could tell she’d done it a thousand times. She wasn’t the loudest, or the most aggressive, but her experience showed.`
+  },
+  {
+    type: 'image',
+    src: '/images/pattaya/soi6-71.jpg',
+    caption: 'With a customer, April 2024.',
+  },
+  {
+    girl: 'Mint',
+    type: 'text',
+    content: `One of the people I grew close to on Soi 6 was Mint—a kathoey and under another pseudonym. She was upfront from the beginning. As she put it, “I’m ladyboy.”. At first, she saw me as a potential customer. I gently explained I wasn’t interested in that—but asked if I could take her photograph. She absolutely loved the idea. She posed like an experienced model—serious expression, sharp angles—flowing from one stance to the next while I scrambled to frame her properly amid the chaos of Soi 6.
+
+    Mint became my most enthusiastic model. If I hadn’t shown up one day, she’d text: “I do nice makeup today...no photo?” If I walked past her bar without stopping, she’d run out and drag me back—literally, with strong arms. She was taller than me, stronger too, and completely at ease in her body.
+
+    She didn’t just pose for herself—she brought me in. She’d take me by the wrist and pull me into her bar, introducing me to the other girls: “He is my friend.” That word—friend—mattered. People trusted her, and through her, they started to trust me. Mint gave me access I wouldn’t have earned alone. Her energy, her confidence, her joy in being photographed—it opened doors. She helped me reach the kind of intimacy I was always chasing with my camera.`
+  },
+  {
+    type: 'image',
+    src: '/images/pattaya/soi6-82.jpg',
+    caption: 'Nightfall after the water fights during Songkran, April 2024.',
+  },
+  {
+    girl: 'Namtan',
+    type: 'text',
+    content: `I first photographed Namtan—yet another pseudonym— in December 2023. She was lively, confident, and always camera-ready. We followed each other on Instagram—I’d send her the pictures I took of her, and in return, I got small glimpses into her life. Unlike many of the women I met, Namtan didn’t have children, and she moved with a kind of freedom that stood out on Soi 6.
+
+    Her stories were often from upscale clubs on Walking Street—flashing lights, expensive bottles, selfies from the VIP section. Then one day, she posted from a hospital bed—she’d drunk too much. A few hours later, she was back behind the bar, working like nothing had happened. She’d drink a beer with me without hesitation.
+
+    She once told me she had a Western boyfriend who sent her money regularly. But she made good money on her own, too. She didn’t talk about struggle or sacrifice—not in the way others did. Her life felt fast-paced, unstable, but self-directed. She often posted photos with her boyfriend too—a middle-aged man with a shaved head and tattoos—like a badge of stability and sponsorship.
+
+    She reminded me of how Ray Manzarek once described Jim Morrison in his autobiography: someone who could drink until collapse, then get up and keep going like nothing happened. That was Namtan. She burned through nights, smiled at the hangovers, and stayed standing through it all. Not every story on the street followed the same script. Hers ran louder, looser, and very much on her own terms.`
+  },
+  {
+    type: 'component',
+    render: () => {
+      const portraitImages = Array.from({ length: 29 }, (_, i) => {
+        const num = String(i + 1).padStart(2, '0'); // pad 1 → 01
+        return `/images/pattaya/portraits/soi6_portrait-${num}.jpg`;
+      });
+
+      return <PortraitReel title="Friends from Soi 6" images={portraitImages} caption="Taken across March, April, and June 2024." />;
+    }
   },
   {
     type: 'text',
@@ -387,7 +510,7 @@ const essayContent = [
   {
     type: 'image',
     src: '/images/pattaya/soi6-11.jpg',
-    caption: 'Flower-selling girls putting on makeup. April 2024.'
+    caption: 'Flower-selling girls putting on makeup, April 2024.'
   },
   {
     type: 'text',
@@ -421,7 +544,7 @@ const essayContent = [
   {
     type: 'image',
     src: '/images/pattaya/soi6-32.jpg',
-    caption: 'There is too much confusion. June 2024.'
+    caption: 'There is too much confusion, June 2024.'
   },
   {
     type: 'text',
@@ -434,7 +557,7 @@ const essayContent = [
   {
     type: 'image',
     src: '/images/pattaya/soi6-38.jpg',
-    caption: 'Powder room. April 2024.'
+    caption: 'Powder room, April 2024.'
   },
   {
     type: 'component',
@@ -483,7 +606,7 @@ const essayContent = [
   {
     type: 'image',
     src: '/images/pattaya/cambodia.jpg',
-    caption: 'At a Phnom Penh bar. May 2024.',
+    caption: 'At a Phnom Penh bar, May 2024.',
   },
   {
     type: 'text',
@@ -494,7 +617,7 @@ const essayContent = [
   {
     type: 'image',
     src: '/images/pattaya/soi6-12.jpg',
-    caption: 'A short getaway. December 2023.',
+    caption: 'A short getaway, December 2023.',
   },
   {
     type: 'text',
@@ -507,7 +630,7 @@ const essayContent = [
   {
     type: 'image',
     src: '/images/pattaya/soi6-33.jpg',
-    caption: 'French maids. June 2024.',
+    caption: 'French maids, June 2024.',
   },
   {
     type: 'text',
@@ -524,11 +647,7 @@ const essayContent = [
 
     I convinced my parents, packed light, and started pedaling from Sweden in late August. I crossed countries slowly, watching autumn unfold one European country at a time, and arrived home just before Christmas—though in Turkey, that’s just another day.`
   },
-  {
-    type: 'image',
-    src: '/images/pattaya/soi6-08.jpg',
-    caption: 'Street scene. June 2024.',
-  },
+
   {
     type: 'text',
     content: `The ride was long, beautiful, and not without hardship. But it recharged me. I met wonderful people. I laughed a lot. It gave me the energy I needed to return to the Pattaya photos—months later, finally ready to sit with them. To edit. To remember. To really look.
@@ -564,7 +683,7 @@ const essayContent = [
   {
     type: 'image',
     src: '/images/pattaya/soi6-14.jpg',
-    caption: 'Breaking the fourth wall. April 2024.',
+    caption: 'Breaking the fourth wall, April 2024.',
   },
   {
     type: 'text',
@@ -584,7 +703,7 @@ const essayContent = [
     type: 'image',
     src: '/images/pattaya/soi6-15.jpg',
     alt: 'Closing image from Soi 6',
-    caption: 'Dog with a bottle. December 2023.',
+    caption: 'Dog with a bottle, December 2023.',
   },
 ];
 
