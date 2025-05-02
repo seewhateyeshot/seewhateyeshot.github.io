@@ -16,7 +16,7 @@ const essayContent = [
         <p className="essay-text">
           I had just started photography that summer. My teacher, to whom I inevitably refer a lot and pay a proper homage in{" "}
           <Link to="/blog/starting-to-shoot" className="underline text-blue-600 hover:text-blue-800">
-            this blog post
+            <strong>this blog post</strong>
           </Link>
           , mentored me with informal lessons and themed assignments like nightlife, dreams, and taxi drivers. His homework taught me how to move around with a camera, approach strangers, and <em>shoot with my heart, not my brain</em>.
         </p>
@@ -526,7 +526,7 @@ const essayContent = [
           I went out a couple of days during Songkran with my back-up camera, an OM System TG-7. Waterproof just as it needed to be.
           I took quite a few photos then, some of which I put up{" "}
           <Link to="/brief/songkran" className="underline text-blue-600 hover:text-blue-800">
-            here
+            <strong>here</strong>
           </Link>
           .
         </p>
