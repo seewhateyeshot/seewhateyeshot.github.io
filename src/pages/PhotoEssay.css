@@ -84,3 +84,19 @@
   font-size: 1.1rem;
   align-items: center;
 }
+
+.toc-nav {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .toc-nav {
+    display: block;
+    width: 10rem;
+    position: sticky;
+    top: 5rem;
+    /* same as top-10 */
+    align-self: flex-start;
+    padding: 0;
+  }
+}

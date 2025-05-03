@@ -13,6 +13,7 @@ import songkranEssayBlocks from '../data/songkranEssayBlocks';
 import './PhotoEssay.css';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { useInView } from 'react-intersection-observer';
 
 function ColoredTextBlock({ content, color = 'black' }) {
   return (
@@ -131,8 +132,34 @@ export default function PhotoEssay() {
 
   let imageCount = 1;
 
+  const [activeId, setActiveId] = useState(null);
+
   const renderedEssayBlocks = essayContent.map((block, i) => {
-    if (block.type === 'component' && typeof block.render === 'function') {
+    if (block.type === 'heading') {
+      const id = block.id;
+      const [ref, inView] = useInView({
+        threshold: 0.6, // section needs to be 60% visible
+      });
+
+      useEffect(() => {
+        if (inView) {
+          console.log(`setting ${id}`)
+          setActiveId(id);
+        }
+      }, [inView]);
+
+      return {
+        key: i,
+        type: 'heading',
+        node: (
+          <div ref={ref} id={id} className="max-w-2xl mx-auto px-4 py-6">
+            <h2 className="text-2xl font-bold dark:text-white">{block.text}</h2>
+          </div>
+        ),
+        block
+      };
+    }
+    else if (block.type === 'component' && typeof block.render === 'function') {
       // Call the render() here, always
       const node = block.render();
       return { key: i, type: 'component', node };
@@ -145,8 +172,9 @@ export default function PhotoEssay() {
     .map(({ id, text }) => ({ id, text }));
 
   return (
-    <div className="photo-essay grid grid-cols-1 lg:grid-cols-[16rem_1fr] gap-4 px-4" data-testid="photo-essay">
-      <nav className=" lg:block w-64 sticky top-24 self-start text-sm text-gray-400 dark:text-gray-500">
+    <div className="photo-essay flex grid grid-cols-1 lg:grid-cols-[16rem_1fr] gap-4 px-4" data-testid="photo-essay">
+      {/* Desktop TOC */}
+      <nav className="toc-nav w-64 sticky top-10 self-start px-4 text-sm text-gray-600 dark:text-gray-300">
         <ul className="space-y-2">
           {tocItems.map(item => (
             <li key={item.id}>
@@ -161,7 +189,12 @@ export default function PhotoEssay() {
                 }}
                 className="cursor-pointer text-left hover:underline"
               >
-                {item.text}
+                <span
+                  className={`cursor-pointer hover:underline ${activeId === item.id ? 'text-black dark:text-white font-bold' : ''
+                    }`}
+                >
+                  {item.text}
+                </span>
               </button>
             </li>
           ))}
@@ -218,13 +251,7 @@ export default function PhotoEssay() {
             }
 
             if (block.type === 'heading') {
-              return (
-                <div key={key} className="max-w-2xl mx-auto px-4 mt-10 mb-4">
-                  <h2 id={block.id} className="text-2xl font-bold border-b pb-1 dark:text-gray-200">
-                    {block.text}
-                  </h2>
-                </div>
-              );
+              return <div key={key}>{node}</div>;
             }
 
             if (block.type === 'text') {
