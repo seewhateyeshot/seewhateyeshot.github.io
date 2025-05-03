@@ -140,114 +140,154 @@ export default function PhotoEssay() {
     return { key: i, type: 'regular', block };
   });
 
+  const tocItems = essayContent
+    .filter(block => block.type === 'heading' && block.id && block.text)
+    .map(({ id, text }) => ({ id, text }));
+
   return (
-    <div className="photo-essay" data-testid="photo-essay">
-      <div className="photo-essay-header">
-        <center>
-          <h1 className="essay-title text-4xl font-bold mt-6 mb-2 dark:text-white"
-            data-testid="essay-title">
-            {project.title}
-          </h1>
-          <p className="text-lg text-gray-700 italic dark:text-gray-300">{project.subtitle}</p>
-          <p className="essay-author text-gray-700 dark:text-white">by Çağdaş</p>
-          {project.published ? (
-            <p className="essay-published text-sm text-gray-400">
-              {project.publishedDate}
-            </p>
-          ) : (
-            <p className="essay-published text-sm text-red-400">
-              Work in progress
-            </p>
-          )}
-          <div className="share-buttons" style={{ display: 'flex', justifyContent: 'center' }}>
-            <ShareButtons url={project.shareUrl} title={project.shareTitle} />
-          </div>
-        </center>
-      </div>
+    <div className="photo-essay grid grid-cols-1 lg:grid-cols-[16rem_1fr] gap-4 px-4" data-testid="photo-essay">
+      <nav className=" lg:block w-64 sticky top-24 self-start text-sm text-gray-400 dark:text-gray-500">
+        <ul className="space-y-2">
+          {tocItems.map(item => (
+            <li key={item.id}>
+              <button
+                onClick={() => {
+                  const el = document.getElementById(item.id);
+                  if (el) {
+                    const yOffset = -80; // adjust this value as needed
+                    const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                  }
+                }}
+                className="cursor-pointer text-left hover:underline"
+              >
+                {item.text}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </nav>
 
-      <div className="flex justify-center px-4">
-        <div className="max-w-5xl w-full">
-          <img
-            src={project.cover.src}
-            alt="cover"
-            className="w-full rounded essay-cover-image"
-            data-testid="essay-cover-img"
-            onClick={() => setLightboxIndex(0)}
-          />
-          <p className="image-caption project-cover-caption text-center italic text-gray-500 text-sm mt-2 dark:text-white">
-            {project.cover.caption}
-          </p>
+      <main className="max-w-5xl w-full mx-auto">
+        <div className="photo-essay-header">
+          <center>
+            <h1 className="essay-title text-4xl font-bold mt-6 mb-2 dark:text-white"
+              data-testid="essay-title">
+              {project.title}
+            </h1>
+            <p className="text-lg text-gray-700 italic dark:text-gray-300">{project.subtitle}</p>
+            <p className="essay-author text-gray-700 dark:text-white">by Çağdaş</p>
+            {project.published ? (
+              <p className="essay-published text-sm text-gray-400">
+                {project.publishedDate}
+              </p>
+            ) : (
+              <p className="essay-published text-sm text-red-400">
+                Work in progress
+              </p>
+            )}
+            <div className="share-buttons" style={{ display: 'flex', justifyContent: 'center' }}>
+              <ShareButtons url={project.shareUrl} title={project.shareTitle} />
+            </div>
+          </center>
         </div>
-      </div>
 
-      {renderedEssayBlocks.map(({ key, type, block, node }) => {
-        if (type === 'component') {
-          return (
-            <div key={key} className="essay-component">
-              {node}
-            </div>
-          );
-        }
+        <div className="flex justify-center px-4">
+          <div className="max-w-5xl w-full">
+            <img
+              src={project.cover.src}
+              alt="cover"
+              className="w-full rounded essay-cover-image"
+              data-testid="essay-cover-img"
+              onClick={() => setLightboxIndex(0)}
+            />
+            <p className="image-caption project-cover-caption text-center italic text-gray-500 text-sm mt-2 dark:text-white">
+              {project.cover.caption}
+            </p>
+          </div>
+        </div>
 
-        if (block.type === 'text') {
-          if (block.color) {
-            return <ColoredTextBlock key={key} content={block.content} color={block.color} />;
-          }
-          return (
-            <div key={key} className="max-w-2xl mx-auto px-4 dark:text-white">
-              <p className="essay-text">{block.content}</p>
-            </div>
-          );
-        }
-
-        if (block.type === 'image') {
-          const currentIndex = imageCount++;
-          return (
-            <div key={key} className="w-full flex justify-center px-4">
-              <div className="max-w-5xl w-full">
-                <div className="relative group">
-                  <img
-                    src={block.src}
-                    alt={block.alt || ''}
-                    loading="lazy"
-                    className="w-full rounded cursor-pointer transition-opacity duration-300 group-hover:opacity-95"
-                    data-testid="essay-block-image"
-                    onClick={() => setLightboxIndex(currentIndex)}
-                  />
-                  <button
-                    onClick={() => setLightboxIndex(currentIndex)}
-                    className="absolute cursor-pointer top-2 right-2 bg-black bg-opacity-50 text-white w-5 h-5 flex items-center justify-center rounded transition-opacity duration-300 opacity-80 md:opacity-0 md:group-hover:opacity-100"
-                    aria-label="View full screen"
-                  >
-                    ⛶
-                  </button>
+        {
+          renderedEssayBlocks.map(({ key, type, block, node }) => {
+            if (type === 'component') {
+              return (
+                <div key={key} className="essay-component">
+                  {node}
                 </div>
-                {block.caption && (
-                  <p className="text-center italic text-gray-500 text-sm mt-2 dark:text-white">
-                    {block.caption}
-                  </p>
-                )}
-              </div>
-            </div>
-          );
+              );
+            }
+
+            if (block.type === 'heading') {
+              return (
+                <div key={key} className="max-w-2xl mx-auto px-4 mt-10 mb-4">
+                  <h2 id={block.id} className="text-2xl font-bold border-b pb-1 dark:text-gray-200">
+                    {block.text}
+                  </h2>
+                </div>
+              );
+            }
+
+            if (block.type === 'text') {
+              if (block.color) {
+                return <ColoredTextBlock key={key} content={block.content} color={block.color} />;
+              }
+              return (
+                <div key={key} className="max-w-2xl mx-auto px-4 dark:text-gray-200">
+                  <p className="essay-text">{block.content}</p>
+                </div>
+              );
+            }
+
+            if (block.type === 'image') {
+              const currentIndex = imageCount++;
+              return (
+                <div key={key} className="w-full flex justify-center px-4">
+                  <div className="max-w-5xl w-full">
+                    <div className="relative group">
+                      <img
+                        src={block.src}
+                        alt={block.alt || ''}
+                        loading="lazy"
+                        className="w-full rounded cursor-pointer transition-opacity duration-300 group-hover:opacity-95"
+                        data-testid="essay-block-image"
+                        onClick={() => setLightboxIndex(currentIndex)}
+                      />
+                      <button
+                        onClick={() => setLightboxIndex(currentIndex)}
+                        className="absolute cursor-pointer top-2 right-2 bg-black bg-opacity-50 text-white w-5 h-5 flex items-center justify-center rounded transition-opacity duration-300 opacity-80 md:opacity-0 md:group-hover:opacity-100"
+                        aria-label="View full screen"
+                      >
+                        ⛶
+                      </button>
+                    </div>
+                    {block.caption && (
+                      <p className="text-center italic text-gray-500 text-sm mt-2 dark:text-white">
+                        {block.caption}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              );
+            }
+
+            return null;
+          })
         }
 
-        return null;
-      })}
-
-      <Lightbox
-        open={lightboxIndex >= 0}
-        close={() => setLightboxIndex(-1)}
-        slides={images}
-        index={lightboxIndex}
-        plugins={[Zoom]}
-        zoom={{
-          maxZoomPixelRatio: 2, // default is 2 — increase for deeper zoom
-          zoomInMultiplier: 1.5,
-          doubleTapDelay: 300,
-          doubleClickDelay: 300,
-        }}
-      />
-    </div>
+        <Lightbox
+          open={lightboxIndex >= 0}
+          close={() => setLightboxIndex(-1)}
+          slides={images}
+          index={lightboxIndex}
+          plugins={[Zoom]}
+          zoom={{
+            maxZoomPixelRatio: 2, // default is 2 — increase for deeper zoom
+            zoomInMultiplier: 1.5,
+            doubleTapDelay: 300,
+            doubleClickDelay: 300,
+          }}
+        />
+      </main >
+    </ div >
   );
 }

@@ -127,7 +127,7 @@ export default function App() {
   }
 
   return (
-    <div className="container min-h-screen bg-white text-black dark:bg-zinc-950 dark:text-white">
+    <div className="container min-h-screen bg-white text-black dark:bg-zinc-950 dark:text-gray-300">
       <Analytics />
       {/* NAVBAR */}
       <nav className="navbar">

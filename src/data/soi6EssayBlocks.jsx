@@ -4,7 +4,13 @@ import FootnoteButton from '../components/FootnoteButton';
 import PortraitReel from '../components/PortraitReel';
 import Soi6Poem from '../components/Soi6Poem';
 
+
 const essayContent = [
+  {
+    type: 'heading',
+    id: 'intro',
+    text: 'Introduction'
+  },
   {
     type: 'text',
     content: `I first arrived in Pattaya in December 2023. My photography teacher—a close friend—had arranged a place for me to stay. It was partly an escape from the Swedish winter, partly wanderlust. I’d heard of Pattaya before—maybe from him, maybe just from its reputation. Either way, I was curious. I had three weeks of vacation from my software engineering job, which was draining the life out of me, and I decided to take it all.`
@@ -29,7 +35,7 @@ const essayContent = [
 
     He gave me a key to his apartment though and I spent long hours in his home library. He owns more than a thousand books—mostly doorstops, many by masters, quite a few signed to his name. I’d leaf through monographs, street photography collections, retrospective volumes. I cataloged them all for him, and helped sell a few in his absence, hoping it might help his finances.
 
-    That winter, Stockholm felt lifeless. Colder and darker than usual. My job was draining me. I was buried under my mortgage and rising interest rates. I could barely afford to do the things I used to. I remember spending what little remained of my salary on a few screenings at the film festival, then scraping by on potatoes and lentils for the rest of the month. Street photography no longer gave me the same spark it had in the summer. Maybe it’s a weak excuse, but I still think Stockholm isn’t the most exciting place for photography—too clean, too quiet, too conforming.
+    That winter, Stockholm felt lifeless. Colder and darker than usual. My job was draining me. I was buried under my mortgage and rising interest rates. I could barely afford to do the things I used to. I'd spend what little remained of my salary on a few screenings at the film festival, then scraping by on potatoes till the end of the month. Street photography no longer gave me the same spark. Maybe it’s a weak excuse, but I still think Stockholm isn’t the most exciting place for photography—too clean, too quiet, too conforming.
 
     We stayed in touch often. When I asked him about visiting him in Thailand, he said I could come. He had a place for me to stay—the vacant unit next door was his friend’s too. I asked if three weeks, all I could take off from work, would be too long. He said, “You can stay here rent-free for as long as you want.”`
   },
@@ -37,6 +43,11 @@ const essayContent = [
     type: 'image',
     src: '/images/pattaya/soi6-02.jpg',
     caption: 'The customer is always welcome, June 2024.'
+  },
+  {
+    type: 'heading',
+    id: 'pattaya',
+    text: 'Pattaya'
   },
   {
     type: 'text',
@@ -70,41 +81,6 @@ const essayContent = [
   },
   {
     type: 'text',
-    content: `In my first days, whenever I saw such a pair, I had an instinct to take a photo. And I thought about a girl I once went out with. She had a Swedish father and a Filipina mother. She looked Asian, with little to give her heritage away except for her broad frame and tall height.
-
-    She once told me she had stopped walking hand in hand with her father when she was barely a teenager—people would mistake them for a mail-order couple, and her dad for her husband. I remember how bizarre it sounded, and how deeply it must have hurt. In Sweden, growing up not looking “ethnically Swedish” already makes life hard enough. In the Philippines, she said, locals would sometimes shout at them in the street, accusing her of betraying her country by marrying an old white man—who was, in fact, her father.
-
-    I thought about that story often in Pattaya. I caught myself hoping, foolishly, that many of the older Western men and young Thai women I saw were actually fathers and daughters. That maybe there was a happier story hidden in the pairings. Even when I saw a very young Thai woman—perhaps even underage—sandwiched between two older Western men on a motorcycle at a traffic light, even though disgust rose in me, I tried to write a kinder story in my head: maybe a father, an uncle, a niece.
-
-    Still, I instinctively took the photo. It’s a photo that haunts me—her distressed expression frozen mid-glance. One I will not share. I didn’t ask permission, and they never noticed me. And after all the time I spent in Pattaya, I know better now. They weren’t family.`
-  },
-  {
-    type: 'image',
-    src: '/images/pattaya/soi6-19.jpg',
-    caption: 'Children were often around, March 2024.',
-  },
-  {
-    type: 'component',
-    render:
-      () => (
-        <div className="max-w-2xl mx-auto px-4">
-          <p className="essay-text">
-            My teacher spoke quite a bit of Thai and started teaching me from day one. <em>Sawatdee khrap</em> for hello. <em>Sabai dee mai?</em> for how are you. <em>Tai ruup dai mai?</em> to ask for a photo. He’d already made a long list of phrases on his phone, transliterated into Turkish—<em>sawatdee khrap</em> became <em>savadikap</em>, easier for me to read and remember. I’d review them before dinner. He was good with people—charming, quick to joke, unafraid to make a fool of himself if it helped build rapport. To a mother holding her toddler, he’d say <em>Nà-làk mâak mâak</em>, meaning very cute. If the heat was unbearable, he’d complain loudly to a stranger: <em>Róon!</em> One night, when it dropped to 22 degrees and locals pulled on hoodies, he hugged himself dramatically and shrieked <em>Namkeng! Namkeng!</em>—ice—rubbing his arms like he was freezing. Maybe he didn’t know the word for <em>cold</em>. But it sure was entertaining.
-          </p>
-        </div>
-      )
-  },
-  {
-    type: 'text',
-    content: `I even took a Thai class online through Preply, and visited a language school in Pattaya to inquire about joining in person. But honestly, I wasn’t satisfied with the teaching. What helped more were the textbooks my teacher had kept from when he’d taken formal lessons years ago. I practiced with those instead, combining them with YouTube classes, and slowly built up the basics.`
-  },
-  {
-    type: 'image',
-    src: '/images/pattaya/soi6-04.jpg',
-    caption: 'Some even part of the workforce, April 2024.'
-  },
-  {
-    type: 'text',
     content: `My teacher enabled my photography from day one. He pointed out photo opportunities, translated short conversations, and showed me which alleys were safe, which bars to avoid, where the light hit just right. If I misread a moment or hesitated, he’d tell me what went wrong.
 
     On my first night, after dinner, we went for a walk down Beach Road—something that quickly became our daily ritual. Halfway along, we reached the entrance to the notorious Walking Street. My teacher led me in.
@@ -113,8 +89,8 @@ const essayContent = [
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-05.jpg',
-    caption: 'A usual Soi 6 scene, April 2024.'
+    src: '/images/pattaya/soi6-19.jpg',
+    caption: 'Children were often around, March 2024.',
   },
   {
     type: 'text',
@@ -127,6 +103,11 @@ const essayContent = [
     It was a different kind of overwhelming. The bars were open-air, low to the ground, close enough to touch. Bar girls lined the fronts, outnumbering everyone else ten to one. Flickering neon bounced off high heels and bare skin. Above the bars, TVs blared European football matches and old Western music videos—Guns N’ Roses, the Eagles, Aerosmith. From every direction came noise: thumping bass, crashing cymbals, screeching guitar solos—colliding with the constant chorus of women’s voices calling into the street. The music, the voices, the scooters, the engines—all tangled into one shapeless, deafening roar.
 
     Older men perched on bar stools overlooking the street, under a canopy of tiny ceiling fans constantly twirling in different spiral directions, clutched beers wrapped in foam sleeves, trying and failing to keep them cold in the humid night air.`
+  },
+  {
+    type: 'image',
+    src: '/images/pattaya/soi6-04.jpg',
+    caption: 'Some even part of the workforce, April 2024.'
   },
   {
     type: 'component',
@@ -148,6 +129,39 @@ const essayContent = [
 
     content: `Then on that first night again, just to test my limits, he took me to a massive brothel lounge where women lined the walls, each with a number and a color code. The colors marked the price. I wasn’t allowed in with my camera—and even without it, I noticed certain guests, especially South Asian men, being delayed or turned away. On our way out, we stopped to chat with a few Indian tourists lingering at the entrance. I hadn't seen anything like it before.`
   },
+
+  {
+    type: 'text',
+    content: `In my first days, whenever I saw such a pair, I had an instinct to take a photo. And I thought about a girl I once went out with. She had a Swedish father and a Filipina mother. She looked Asian, with little to give her heritage away except for her broad frame and tall height.
+
+    She once told me she had stopped walking hand in hand with her father when she was barely a teenager—people would mistake them for a mail-order couple, and her dad for her husband. I remember how bizarre it sounded, and how deeply it must have hurt. In Sweden, growing up not looking “ethnically Swedish” already makes life hard enough. In the Philippines, she said, locals would sometimes shout at them in the street, accusing her of betraying her country by marrying an old white man—who was, in fact, her father.
+
+    I thought about that story often in Pattaya. I caught myself hoping, foolishly, that many of the older Western men and young Thai women I saw were actually fathers and daughters. That maybe there was a happier story hidden in the pairings. Even when I saw a very young Thai woman—perhaps even underage—sandwiched between two older Western men on a motorcycle at a traffic light, even though disgust rose in me, I tried to write a kinder story in my head: maybe a father, an uncle, a niece.
+
+    Still, I instinctively took the photo. It’s a photo that haunts me—her distressed expression frozen mid-glance. One I will not share. I didn’t ask permission, and they never noticed me. And after all the time I spent in Pattaya, I know better now. They weren’t family.`
+  },
+
+  {
+    type: 'component',
+    render:
+      () => (
+        <div className="max-w-2xl mx-auto px-4">
+          <p className="essay-text">
+            My teacher spoke quite a bit of Thai and started teaching me from day one. <em>Sawatdee khrap</em> for hello. <em>Sabai dee mai?</em> for how are you. <em>Tai ruup dai mai?</em> to ask for a photo. He’d already made a long list of phrases on his phone, transliterated into Turkish—<em>sawatdee khrap</em> became <em>savadikap</em>, easier for me to read and remember. I’d review them before dinner. He was good with people—charming, quick to joke, unafraid to make a fool of himself if it helped build rapport. To a mother holding her toddler, he’d say <em>Nà-làk mâak mâak</em>, meaning very cute. If the heat was unbearable, he’d complain loudly to a stranger: <em>Róon!</em> One night, when it dropped to 22 degrees and locals pulled on hoodies, he hugged himself dramatically and shrieked <em>Namkeng! Namkeng!</em>—ice—rubbing his arms like he was freezing. Maybe he didn’t know the word for <em>cold</em>. But it sure was entertaining.
+          </p>
+        </div>
+      )
+  },
+  {
+    type: 'text',
+    content: `I even took a Thai class online through Preply, and visited a language school in Pattaya to inquire about joining in person. But honestly, I wasn’t satisfied with the teaching. What helped more were the textbooks my teacher had kept from when he’d taken formal lessons years ago. I practiced with those instead, combining them with YouTube classes, and slowly built up the basics.`
+  },
+  {
+    type: 'image',
+    src: '/images/pattaya/soi6-05.jpg',
+    caption: 'A usual Soi 6 scene, April 2024.'
+  },
+
   {
     type: 'text',
     content: `We quickly decided that Soi 6 was the most photographable street—narrow, compact, alive. There were motorcycles and the occasional car, but it was walkable. Most people didn’t mind the camera; many vloggers wandered around with selfie sticks already. It was different from Walking Street, where “No Photo” signs hung everywhere, bouncers waved laser pointers at any raised lens, and most of the action was hidden behind closed doors. I didn't go back to the Walking Street again, I wasn't interested in where I couldn't photograph. My teacher told me that when he had first photographed Pattaya, Soi 6 had been more like Walking Street: guarded, closed off, hostile to cameras. But after the pandemic, something had shifted. There were no bouncers anymore. No closed doors. The bars were open to the street. The energy was immediate.`

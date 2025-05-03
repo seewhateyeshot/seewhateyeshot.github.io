@@ -20,7 +20,7 @@ export default function DarkModeToggle() {
   return (
     <button
       onClick={() => setIsDark(prev => !prev)}
-      className="border px-3 py-1 rounded flex items-center gap-2"
+      className="cursor-pointer border px-3 py-1 rounded flex items-center gap-2"
     >
       <span>{isDark ? '🌞' : '🌙'}</span>
     </button>
