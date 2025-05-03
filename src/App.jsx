@@ -157,7 +157,9 @@ export default function App() {
       </main>
 
       <footer className="footer">
-        © {new Date().getFullYear()}. All rights reserved.
+        © {new Date().getFullYear()}. All rights reserved. <br />
+        No cookies, no tracking. <br />
+        This site uses <a href="https://www.goatcounter.com/">GoatCounter</a> for anonymous visit counts.
       </footer>
     </div>
   );
