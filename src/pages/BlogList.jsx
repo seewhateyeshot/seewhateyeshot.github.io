@@ -1,6 +1,7 @@
 import React from 'react';
 import { blogPosts } from '../data/blogPosts';
 import { Link } from 'react-router-dom';
+import './BlogList.css';
 
 export default function BlogList() {
   return (
@@ -11,9 +12,11 @@ export default function BlogList() {
           <li key={post.slug}>
             <Link
               to={`/blog/${post.slug}`}
-              className="text-2xl font-semibold text-blue-600 hover:underline"
+              className="text-2xl font-semibold text-blue hover:underline"
             >
-              {post.title}
+              <span className="blog-title underline hover:text-blue">
+                {post.title}
+              </span>
             </Link>
             <p className="text-gray-600 mt-1">{post.excerpt}</p>
           </li>

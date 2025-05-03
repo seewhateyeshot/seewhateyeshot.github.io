@@ -7,9 +7,12 @@ import ShareButtons from '../components/ShareButtons';
 import { useParams } from 'react-router-dom';
 import bikingHomeEssayBlocks from '../data/bikingHomeEssayBlocks.js';
 import soi6EssayBlocks from '../data/soi6EssayBlocks.jsx';
+import samosEssayBlocks from '../data/samosEssayBlocks';
 import sihanoukvilleEssayBlocks from '../data/sihanoukvilleEssayBlocks';
 import songkranEssayBlocks from '../data/songkranEssayBlocks';
 import './PhotoEssay.css';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 function ColoredTextBlock({ content, color = 'black' }) {
   return (
@@ -62,7 +65,7 @@ export default function PhotoEssay() {
       },
       essay: sihanoukvilleEssayBlocks,
       shareUrl: 'https://seewhateyeshot.github.io/brief/sihanoukville',
-      shareTitle: 'A Photo Series on Sihanoukville',
+      shareTitle: 'A Brief Photo Series on Sihanoukville',
     },
     songkran: {
       title: 'Songkran',
@@ -73,11 +76,41 @@ export default function PhotoEssay() {
       },
       essay: songkranEssayBlocks,
       shareUrl: 'https://seewhateyeshot.github.io/brief/songkran',
-      shareTitle: 'A Photo Series on Songkran',
+      shareTitle: 'A Brief Photo Series on Songkran',
+    },
+    samos: {
+      title: 'Samos',
+      subtitle: 'Island',
+      cover: {
+        src: '/images/samos/samos-01.jpg',
+        caption: 'Samos.',
+      },
+      essay: samosEssayBlocks,
+      shareUrl: 'https://seewhateyeshot.github.io/brief/samos',
+      shareTitle: 'A Brief Photo Series on Samos',
     },
   };
 
   const project = projectMap[id];
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (!project) return;
+
+    if (location.hash) {
+      const id = location.hash.slice(1);
+      // delay scroll to ensure DOM is ready
+      const timeout = setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 50); // tweak if needed
+
+      return () => clearTimeout(timeout);
+    }
+  }, [location.hash, project]);
 
   if (!project) {
     return (
@@ -98,16 +131,25 @@ export default function PhotoEssay() {
 
   let imageCount = 1;
 
+  const renderedEssayBlocks = essayContent.map((block, i) => {
+    if (block.type === 'component' && typeof block.render === 'function') {
+      // Call the render() here, always
+      const node = block.render();
+      return { key: i, type: 'component', node };
+    }
+    return { key: i, type: 'regular', block };
+  });
+
   return (
     <div className="photo-essay" data-testid="photo-essay">
       <div className="photo-essay-header">
         <center>
-          <h1 className="essay-title text-4xl font-bold mt-6 mb-2"
+          <h1 className="essay-title text-4xl font-bold mt-6 mb-2 dark:text-white"
             data-testid="essay-title">
             {project.title}
           </h1>
-          <p className="text-lg text-gray-700 italic">{project.subtitle}</p>
-          <p className="essay-author">by Çağdaş</p>
+          <p className="text-lg text-gray-700 italic dark:text-gray-300">{project.subtitle}</p>
+          <p className="essay-author text-gray-700 dark:text-white">by Çağdaş</p>
           {project.published ? (
             <p className="essay-published text-sm text-gray-400">
               {project.publishedDate}
@@ -132,28 +174,36 @@ export default function PhotoEssay() {
             data-testid="essay-cover-img"
             onClick={() => setLightboxIndex(0)}
           />
-          <p className="image-caption text-center italic text-gray-500 text-sm mt-2">
+          <p className="image-caption project-cover-caption text-center italic text-gray-500 text-sm mt-2 dark:text-white">
             {project.cover.caption}
           </p>
         </div>
       </div>
 
-      {essayContent.map((block, i) => {
-        if (block.type === 'text') {
-          if (block.color) {
-            return <ColoredTextBlock key={i} content={block.content} color={block.color} />;
-          }
+      {renderedEssayBlocks.map(({ key, type, block, node }) => {
+        if (type === 'component') {
           return (
-            <div className="max-w-2xl mx-auto px-4">
-              <p key={i} className="essay-text">{block.content}</p>
+            <div key={key} className="essay-component">
+              {node}
             </div>
           );
         }
-        if (block.type === 'image') {
-          const currentIndex = imageCount;
-          imageCount++;
+
+        if (block.type === 'text') {
+          if (block.color) {
+            return <ColoredTextBlock key={key} content={block.content} color={block.color} />;
+          }
           return (
-            <div className="w-full flex justify-center px-4" key={i}>
+            <div key={key} className="max-w-2xl mx-auto px-4 dark:text-white">
+              <p className="essay-text">{block.content}</p>
+            </div>
+          );
+        }
+
+        if (block.type === 'image') {
+          const currentIndex = imageCount++;
+          return (
+            <div key={key} className="w-full flex justify-center px-4">
               <div className="max-w-5xl w-full">
                 <div className="relative group">
                   <img
@@ -173,17 +223,13 @@ export default function PhotoEssay() {
                   </button>
                 </div>
                 {block.caption && (
-                  <p className="text-center italic text-gray-500 text-sm mt-2">
+                  <p className="text-center italic text-gray-500 text-sm mt-2 dark:text-white">
                     {block.caption}
                   </p>
                 )}
               </div>
             </div>
           );
-        }
-
-        if (block.type === 'component' && typeof block.render === 'function') {
-          return <div key={i} className="essay-component">{block.render()}</div>;
         }
 
         return null;

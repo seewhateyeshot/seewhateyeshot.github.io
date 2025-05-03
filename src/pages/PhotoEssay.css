@@ -8,6 +8,31 @@
   color: #222;
 }
 
+[data-theme='dark'] .photo-essay {
+  color: #fff;
+}
+
+[data-theme='dark'] .photo-essay a {
+  color: #2e8ee2;
+}
+
+[data-theme='dark'] .photo-essay a:hover {
+  color: #1c3bfb;
+}
+
+[data-theme='dark'] .footnote-ref {
+  color: #2e8ee2;
+}
+
+[data-theme='dark'] .footnote-ref:hover {
+  color: #1c3bfb;
+}
+
+[data-theme='dark'] .project-cover-caption {
+  color: #fff;
+}
+
+
 .essay-text {
   margin: 2.5rem 0;
   white-space: pre-line;

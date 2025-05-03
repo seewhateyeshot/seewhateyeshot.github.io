@@ -1,3 +1,15 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+[data-theme='dark'] section div p {
+  color: #fff;
+}
+
+[data-theme='dark'] section p {
+  color: #fff;
+}
+
 .hero {
   display: flex;
   flex-direction: column;

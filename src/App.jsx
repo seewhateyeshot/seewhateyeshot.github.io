@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import Analytics from './components/Analytics';
+import DarkModeToggle from './components/DarkModeToggle';
+
 import './App.css';
 
 /**
@@ -125,34 +127,39 @@ export default function App() {
   }
 
   return (
-    <div className="container">
+    <div className="container min-h-screen bg-white text-black dark:bg-zinc-950 dark:text-white">
       <Analytics />
       {/* NAVBAR */}
       <nav className="navbar">
         {/* Logo on the left */}
         <Link to="/" className="logo flex items-center gap-2">
-          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Logo" className="h-8" />
+          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Logo" className="h-8 logo-img" />
           <span className="font-semibold text-lg tracking-tight">Çağdaş</span>
         </Link>
 
-        {/* If mobile => show hamburger, else => desktop nav */}
-        {isMobile ? (
-          <button
-            className="hamburger"
-            onClick={toggleMenu}
-          >
-            {menuOpen ? '✖' : '☰'}
-          </button>
-        ) : (
-          renderDesktopNav()
-        )}
+        <div className="flex items-center gap-3">
+          {/* If mobile => show hamburger, else => desktop nav */}
+          {isMobile ? (
+            <button
+              className="text-2xl focus:outline-none mb-1"
+              onClick={toggleMenu}
+            >
+              {menuOpen ? '✖' : '☰'}
+            </button>
+          ) : (
+            renderDesktopNav()
+          )}
+
+          <DarkModeToggle />
+          <div className="gap-1" />
+        </div>
       </nav>
 
       {/* Mobile menu is BELOW nav; pushes content down */}
       {isMobile && renderMobileMenu()}
 
       {/* Page content */}
-      <main>
+      <main className="min-h-screen">
         <Outlet />
       </main>
 

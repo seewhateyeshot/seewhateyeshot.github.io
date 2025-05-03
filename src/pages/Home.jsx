@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <section className="px-4">
       <div className="hero-text text-sm sm:text-base mb-6 text-center mt-8">
-        <p>
+        <p className="text-gray-700 dark:text-white">
           Postcard-unfriendly photography from what the guidebook leaves out
         </p>
       </div>

@@ -26,7 +26,7 @@ export default function FootnoteButton({ number, note }) {
       <button
         ref={buttonRef}
         onClick={() => setIsOpen(!isOpen)}
-        className="text-black-500 text-xs align-super ml-1 cursor-pointer"
+        className="text-gray-500 text-xs align-super ml-1 cursor-pointer"
       >
         [{number}]
       </button>

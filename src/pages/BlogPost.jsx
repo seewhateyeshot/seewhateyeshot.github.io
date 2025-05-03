@@ -2,6 +2,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { blogPosts } from '../data/blogPosts';
+import './BlogPost.css';
 
 export default function BlogPost() {
   const { slug } = useParams();
@@ -16,7 +17,7 @@ export default function BlogPost() {
       <h1 className="text-3xl font-semibold mb-2">{post.title}</h1>
       <p className="text-sm text-gray-500 mb-8">Posted on {post.date || 'unknown date'}</p>
       {post.content.split('\n\n').map((paragraph, idx) => (
-        <p key={idx} className="mb-6 leading-7 text-lg text-gray-800">
+        <p key={idx} className="blog-p mb-6 leading-7 text-lg text-gray-800">
           {paragraph}
         </p>
       ))}

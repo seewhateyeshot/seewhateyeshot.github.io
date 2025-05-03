@@ -15,7 +15,7 @@ const essayContent = [
       <div className="max-w-2xl mx-auto px-4">
         <p className="essay-text">
           I had just started photography that summer. My teacher, to whom I inevitably refer a lot and pay a proper homage in{" "}
-          <Link to="/blog/starting-to-shoot" className="underline text-blue-600 hover:text-blue-800">
+          <Link to="/blog/starting-to-shoot" className="underline text-blue-600 hover:text-blue-800 dark:text-blue-300 dark:hover:text-blue-400">
             <strong>this blog post</strong>
           </Link>
           , mentored me with informal lessons and themed assignments like nightlife, dreams, and taxi drivers. His homework taught me how to move around with a camera, approach strangers, and <em>shoot with my heart, not my brain</em>.
@@ -436,7 +436,16 @@ const essayContent = [
           Medin also draws on revealing demographic data.
           According to Sweden’s national statistics agency, 78 percent of Thai migrants to Sweden are women,
           and 80–90 percent of them arrive through a relationship with a Swedish
-          man<FootnoteButton number={2} note={"Joakim Medin, Thailandssvenskarna, Verbal Förlag, 2019, p. 127."} />.
+          man <span
+            id="ref-1"
+            onClick={() => {
+              const el = document.getElementById('footnote-1');
+              if (el) el.scrollIntoView({ /* behavior: 'smooth' */ });
+            }}
+            className="footnote-ref cursor-pointer text-blue-600 hover:underline"
+          >
+            [1]
+          </span>.
           That number is striking—especially when compared to countries like Afghanistan,
           where the overwhelming majority of migrants are men.
         </p>
@@ -782,6 +791,34 @@ const essayContent = [
     alt: 'Closing image from Soi 6',
     caption: 'Dog with a bottle, December 2023.',
   },
+  {
+    item: 'footnotes',
+    type: 'component',
+    render: () => (
+      <section className="mt-12 border-t pt-6" id="footnotes">
+        <h2 className="text-lg font-semibold mb-4">Footnotes</h2>
+        <ol className="list-decimal pl-5 space-y-2 text-sm text-gray-700">
+          <li id="footnote-1" className="mt-10 text-sm text-gray-600">
+            [1] Joakim Medin, <i>Thailandsvenskarna</i>, 2019.
+            <a href="https://joakimmedin.se/wp-content/uploads/2018/12/Welcome-to-Sin-City-Schyst-resande-okt-2018.pdf"
+              className="footnote-ref text-blue-600 hover:underline ml-1" target="_blank" rel="noopener noreferrer">
+              PDF ↗
+            </a>
+            <span
+              onClick={() => {
+                const el = document.getElementById('ref-1');
+                if (el) el.scrollIntoView({ /* behavior: 'smooth' */ });
+              }}
+              className="ml-2 cursor-pointer text-blue-600 hover:underline"
+            >
+              ↩︎
+            </span>
+          </li>
+          {/* more footnotes */}
+        </ol>
+      </section>
+    )
+  }
 ];
 
 export default essayContent;

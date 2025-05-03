@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+[data-theme='dark'] .blog-title {
+  color: #fff;
+}
+
+[data-theme='dark'] .blog-title:hover {
+  color: rgb(10, 80, 186);
+}

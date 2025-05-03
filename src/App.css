@@ -1,5 +1,61 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+[data-theme='dark'] .navbar {
+  background-color: #000;
+  color: #fff;
+}
+
+[data-theme='dark'] .navbar a {
+  background-color: #000;
+  color: #fff;
+}
+
+[data-theme='dark'] .logo-img {
+  filter: invert(1);
+}
+
+[data-theme='dark'] .dropdown {
+  background-color: #000;
+  color: #fff;
+}
+
+[data-theme='dark'] .dropdown .sub-menu {
+  background-color: #000;
+  color: #fff;
+}
+
+[data-theme='dark'] .dropdown .sub-menu:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+[data-theme='dark'] .dropdown .sub-menu li a {
+  background-color: #000;
+  color: #fff;
+}
+
+[data-theme='dark'] .dropdown .sub-menu li a:hover {
+  background-color: #999;
+  color: #fff;
+}
+
+[data-theme='dark'] .footer {
+  background-color: #000;
+  color: #fff;
+}
+
+[data-theme='dark'] .footer a {
+  color: #2e8ee2;
+  text-decoration: underline;
+}
+
+[data-theme='dark'] .footer a {
+  color: #1c3bfb;
+  text-decoration: underline;
+}
+
 /* === Global === */
 html,
 body,
