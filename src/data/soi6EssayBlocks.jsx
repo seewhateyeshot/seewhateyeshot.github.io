@@ -120,6 +120,14 @@ const essayContent = [
     )
   },
   {
+    type: 'text',
+    content: `The bars on Soi 6 lined both sides of the narrow street, packed so tight there wasn’t a single gap between them—just one flashing threshold after another, each one pumping out music like a siren call. Every sign was in English. Not Thai. Not even bilingual. Just English. This wasn’t for locals. It was a red-light welcome mat for foreign men.
+
+    Sexy in the City. Slutz on Soi 6. Seduction. Toy Box. Bender—with a giant print of the drunk robot from Futurama out front. Some names sounded like biblical sins: Avarice. Wrath. Lust. A few tried to look classy, but ended up even sleazier. No bouncers. No doors. Just open-front bars, fully exposed. The street was alive—and it was built to feed.
+
+    From the top of the street, I couldn’t see the end. Neon signs blurred into one another. The bars stretched as far as the eye could follow—and outside each, five, ten, sometimes more women waited. Sitting on stools. Smoking. Busy on their smartphones. Scanning every man who passed. If you counted both sides, every bar, every shift—it wasn’t a stretch to say over a thousand women were working Soi 6 at any given moment. And that was just the ones attached to a bar.`
+  },
+  {
     type: 'image',
     src: 'images/pattaya/soi6-34.jpg',
     caption: 'The Goya smile, December 2023.'
