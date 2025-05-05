@@ -96,9 +96,16 @@ const essayContent = [
     type: 'text',
     content: `That same night, we returned to Beach Road. It was another kind of madness. I saw people of every nation and color—many foreign women too, mostly Western. Families with small children strolled past scenes of negotiation, where freelance sex workers bargained with men under the coconut trees. The shadows of the swaying leaves danced in the glow of the streetlights, stretching across the sidewalk and onto the sand. I’d see the same scenes again and again.
 
-    We passed street vendors selling ready-to-smoke joints, Viagra substitutes, and children’s toys—often side by side. Children ran through the crowds. Thousands of people moved past, each one a character of their own.
-
-    My teacher said he wanted to show me another bar street. He led me to Soi 6.
+    We passed street vendors selling ready-to-smoke joints, Viagra substitutes, and children’s toys—often side by side. Children ran through the crowds. Thousands of people moved past, each one a character of their own.`
+  },
+  {
+    type: 'heading',
+    id: 'soi_6',
+    text: 'Soi 6'
+  },
+  {
+    type: 'text',
+    content: `My teacher said he wanted to show me another bar street. He led me to Soi 6.
 
     It was a different kind of overwhelming. The bars were open-air, low to the ground, close enough to touch. Bar girls lined the fronts, outnumbering everyone else ten to one. Flickering neon bounced off high heels and bare skin. Above the bars, TVs blared European football matches and old Western music videos—Guns N’ Roses, the Eagles, Aerosmith. From every direction came noise: thumping bass, crashing cymbals, screeching guitar solos—colliding with the constant chorus of women’s voices calling into the street. The music, the voices, the scooters, the engines—all tangled into one shapeless, deafening roar.
 
@@ -131,6 +138,11 @@ const essayContent = [
     type: 'image',
     src: 'images/pattaya/soi6-34.jpg',
     caption: 'The Goya smile, December 2023.'
+  },
+  {
+    type: 'heading',
+    id: 'diving',
+    text: 'Diving Deeper',
   },
   {
     type: 'text',
@@ -169,7 +181,11 @@ const essayContent = [
     src: '/images/pattaya/soi6-05.jpg',
     caption: 'A usual Soi 6 scene, April 2024.'
   },
-
+  {
+    type: 'heading',
+    text: 'The Street’s Rhythm',
+    id: 'rhythm',
+  },
   {
     type: 'text',
     content: `We quickly decided that Soi 6 was the most photographable street—narrow, compact, alive. There were motorcycles and the occasional car, but it was walkable. Most people didn’t mind the camera; many vloggers wandered around with selfie sticks already. It was different from Walking Street, where “No Photo” signs hung everywhere, bouncers waved laser pointers at any raised lens, and most of the action was hidden behind closed doors. I didn't go back to the Walking Street again, I wasn't interested in where I couldn't photograph. My teacher told me that when he had first photographed Pattaya, Soi 6 had been more like Walking Street: guarded, closed off, hostile to cameras. But after the pandemic, something had shifted. There were no bouncers anymore. No closed doors. The bars were open to the street. The energy was immediate.`
