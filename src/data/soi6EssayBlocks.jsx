@@ -99,11 +99,6 @@ const essayContent = [
     We passed street vendors selling ready-to-smoke joints, Viagra substitutes, and children’s toys—often side by side. Children ran through the crowds. Thousands of people moved past, each one a character of their own.`
   },
   {
-    type: 'heading',
-    id: 'soi_6',
-    text: 'Soi 6'
-  },
-  {
     type: 'text',
     content: `My teacher said he wanted to show me another bar street. He led me to Soi 6.
 
@@ -140,16 +135,15 @@ const essayContent = [
     caption: 'The Goya smile, December 2023.'
   },
   {
-    type: 'heading',
-    id: 'diving',
-    text: 'Diving Deeper',
-  },
-  {
     type: 'text',
 
     content: `Then on that first night again, just to test my limits, he took me to a massive brothel lounge where women lined the walls, each with a number and a color code. The colors marked the price. I wasn’t allowed in with my camera—and even without it, I noticed certain guests, especially South Asian men, being delayed or turned away. On our way out, we stopped to chat with a few Indian tourists lingering at the entrance. I hadn't seen anything like it before.`
   },
-
+  {
+    type: 'heading',
+    id: 'impressions',
+    text: 'First Impressions',
+  },
   {
     type: 'text',
     content: `In my first days, whenever I saw such a pair, I had an instinct to take a photo. And I thought about a girl I once went out with. She had a Swedish father and a Filipina mother. She looked Asian, with little to give her heritage away except for her broad frame and tall height.
@@ -183,8 +177,8 @@ const essayContent = [
   },
   {
     type: 'heading',
-    text: 'The Street’s Rhythm',
-    id: 'rhythm',
+    text: 'Photographing Soi 6',
+    id: 'soi_6',
   },
   {
     type: 'text',
@@ -341,6 +335,11 @@ const essayContent = [
     caption: 'Changing into pyjamas, April 2024.'
   },
   {
+    type: 'heading',
+    text: 'The Men',
+    id: 'men',
+  },
+  {
     type: 'text',
     content: `Most of the attention, naturally, falls on the women. But the men are just as much a part of the street’s rhythm. They bring the money. They arrived from all over—Europe, the U.S., Australia, India, China, Japan, Korea. Some walked in groups, loud and confident. Others drifted alone, slowly, trying not to be noticed even as they scanned every bar.
 
@@ -457,6 +456,11 @@ const essayContent = [
     caption: 'Birthday girl, June 2024.',
   },
   {
+    type: 'heading',
+    text: 'Learning Names',
+    id: 'names',
+  },
+  {
     girl: 'May',
     type: 'text',
     content: `I had a dozen names to memorize from that first visit in December 2023 in the growing note on my phone. But only a few of my contacts spoke English well enough for real conversation.
@@ -567,6 +571,11 @@ const essayContent = [
     }
   },
   {
+    type: 'heading',
+    text: 'Sweden',
+    id: 'sweden',
+  },
+  {
     type: 'text',
     content: `Eventually, my vacation ended. I flew back to Sweden—back to the grey skies and quiet desperation of Stockholm. I was still buzzing from what I’d shot. My teacher said I’d made strong work. But I knew the truth: I didn’t have much. A few decent frames. A few lucky moments.
 
@@ -582,6 +591,11 @@ const essayContent = [
     type: 'image',
     src: '/images/pattaya/soi6-11.jpg',
     caption: 'Flower-selling girls putting on makeup, April 2024.'
+  },
+  {
+    type: 'heading',
+    text: 'Pattaya as a Base',
+    id: 'back',
   },
   {
     type: 'text',
@@ -716,11 +730,6 @@ const essayContent = [
     )
   },
   {
-    type: 'component',
-
-
-  },
-  {
     type: 'image',
     src: '/images/pattaya/cambodia.jpg',
     caption: 'At a Phnom Penh bar, May 2024.',
@@ -735,6 +744,11 @@ const essayContent = [
     type: 'image',
     src: '/images/pattaya/soi6-12.jpg',
     caption: 'A short getaway, December 2023.',
+  },
+  {
+    type: 'heading',
+    text: 'Last Days',
+    id: 'last_days',
   },
   {
     type: 'text',
@@ -799,6 +813,11 @@ const essayContent = [
     }
   },
   {
+    type: 'heading',
+    text: 'Reflections',
+    id: 'reflections',
+  },
+  {
     type: 'text',
     content: `Pattaya is not a mystery. It’s a system. It’s built on mobility, memory, exchange. Some people come for a week. Some never leave. Many of the women I met were supporting families. Most of the men were running from something. And me? I came back with photographs—fragments of a place that’s always moving, always just out of frame.
 
@@ -814,6 +833,11 @@ const essayContent = [
     content: `Sometimes I wonder if I documented something or just circled around it. But I kept walking. I kept looking. And these photos—what’s left of them—are what I brought back.
 
     And still—through all of it—photography brought me joy. Maybe that’s the most complicated part.`
+  },
+  {
+    type: 'heading',
+    text: 'Elegy',
+    id: 'elegy',
   },
   {
     type: 'component',

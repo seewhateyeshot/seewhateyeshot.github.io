@@ -23,7 +23,7 @@ export default function PortraitReel({ title, images, caption, orientation = 'po
                 src={src}
                 alt={`portrait-${index}`}
                 loading="lazy"
-                className={`portrait-img w-full rounded object-cover cursor-pointer transition-opacity duration-300 group-hover:opacity-90 ${isLandscape ? 'h-auto' : 'h-56'}`}
+                className={`portrait-img w-full rounded object-cover cursor-pointer transition-opacity duration-300 group-hover:opacity-90 ${isLandscape ? 'h-auto aspect-[3/2]' : 'h-56 aspect-[2/3]'}`}
                 onClick={() => setLightboxIndex(index)}
               />
               <button

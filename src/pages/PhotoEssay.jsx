@@ -137,23 +137,24 @@ export default function PhotoEssay() {
   const renderedEssayBlocks = essayContent.map((block, i) => {
     if (block.type === 'heading') {
       const id = block.id;
-      const [ref, inView] = useInView({
-        threshold: 0.6, // section needs to be 60% visible
-      });
+      const [ref, inView] = useInView({ threshold: 0.6 });
 
       useEffect(() => {
-        if (inView) {
-          console.log(`setting ${id}`)
-          setActiveId(id);
-        }
+        if (inView) setActiveId(id);
       }, [inView]);
 
       return {
         key: i,
         type: 'heading',
         node: (
-          <div ref={ref} id={id} className="max-w-2xl mx-auto px-4 py-6">
-            <h2 className="text-2xl font-bold dark:text-white">{block.text}</h2>
+          <div id={id} className="relative">
+            <div
+              ref={ref}
+              className="max-w-2xl mx-auto px-4 pt-20 -mb-2"
+            >
+              <h2 className="text-2xl font-bold ">{block.text}</h2>
+              <hr />
+            </div>
           </div>
         ),
         block
@@ -172,9 +173,9 @@ export default function PhotoEssay() {
     .map(({ id, text }) => ({ id, text }));
 
   return (
-    <div className="photo-essay flex grid grid-cols-1 lg:grid-cols-[16rem_1fr] gap-4 px-4" data-testid="photo-essay">
+    <div className="photo-essay grid lg:grid-cols-[auto_1fr] gap px-4 max-w-screen-xl  mt-10" data-testid="photo-essay">
       {/* Desktop TOC */}
-      <nav className="toc-nav w-64 sticky top-10 self-start px-4 text-sm text-gray-600 dark:text-gray-300">
+      <nav className="sticky toc-nav top-10 w-64 self-start px-4 text-sm text-gray-600 dark:text-gray-300">
         <ul className="space-y-2">
           {tocItems.map(item => (
             <li key={item.id}>
@@ -182,7 +183,7 @@ export default function PhotoEssay() {
                 onClick={() => {
                   const el = document.getElementById(item.id);
                   if (el) {
-                    const yOffset = -80; // adjust this value as needed
+                    const yOffset = -20; // adjust this value as needed
                     const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
                     window.scrollTo({ top: y, behavior: 'smooth' });
                   }
@@ -190,7 +191,7 @@ export default function PhotoEssay() {
                 className="cursor-pointer text-left hover:underline"
               >
                 <span
-                  className={`cursor-pointer hover:underline ${activeId === item.id ? 'text-black dark:text-white font-bold' : ''
+                  className={`cursor-pointer hover:underline ${activeId === item.id ? 'text-black dark:text-white font-bold underline decoration-1 underline-offset-4' : ''
                     }`}
                 >
                   {item.text}
@@ -201,10 +202,10 @@ export default function PhotoEssay() {
         </ul>
       </nav>
 
-      <main className="max-w-5xl w-full mx-auto">
+      <main className="max-w-5xl w-full min-h-screen">
         <div className="photo-essay-header">
           <center>
-            <h1 className="essay-title text-4xl font-bold mt-6 mb-2 dark:text-white"
+            <h1 className="essay-title text-4xl font-bold mb-2 dark:text-white"
               data-testid="essay-title">
               {project.title}
             </h1>
@@ -226,7 +227,7 @@ export default function PhotoEssay() {
         </div>
 
         <div className="flex justify-center px-4">
-          <div className="max-w-5xl w-full">
+          <div className="max-w-5xl w-full relative">
             <img
               src={project.cover.src}
               alt="cover"
@@ -275,7 +276,7 @@ export default function PhotoEssay() {
                         src={block.src}
                         alt={block.alt || ''}
                         loading="lazy"
-                        className="w-full rounded cursor-pointer transition-opacity duration-300 group-hover:opacity-95"
+                        className="w-full aspect-[3/2] object-cover rounded cursor-pointer transition-opacity duration-300 group-hover:opacity-95"
                         data-testid="essay-block-image"
                         onClick={() => setLightboxIndex(currentIndex)}
                       />
