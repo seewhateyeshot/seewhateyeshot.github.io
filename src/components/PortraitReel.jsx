@@ -9,10 +9,50 @@ export default function PortraitReel({ title, images, caption, orientation = 'po
   const reelRef = useRef(null);
   const isLandscape = orientation === 'landscape';
 
+  useEffect(() => {
+    const el = reelRef.current;
+    if (!el) return;
+
+    let scrollAmount = 0;
+    const maxScroll = el.scrollWidth - el.clientWidth;
+    let direction = 1;
+    let stopped = false;
+
+    const scroll = () => {
+      if (stopped) return;
+
+      scrollAmount += direction * 3;
+
+      if (scrollAmount >= maxScroll || scrollAmount <= 0) {
+        direction *= -1;
+      }
+
+      el.scrollTo({
+        left: scrollAmount,
+        behavior: 'smooth',
+      });
+    };
+
+    const interval = setInterval(scroll, 60);
+
+    // Optional: pause when hovered
+    const handleEnter = () => (stopped = true);
+    const handleLeave = () => (stopped = false);
+
+    el.addEventListener('mouseenter', handleEnter);
+    el.addEventListener('mouseleave', handleLeave);
+
+    return () => {
+      clearInterval(interval);
+      el.addEventListener('mouseenter', handleEnter);
+      el.addEventListener('mouseleave', handleLeave);
+    };
+  }, []);
+
   return (
     <div className="portrait-reel-wrapper">
       <h2 className="portrait-reel-title">{title}</h2>
-      <div className={`portrait-reel ${isLandscape ? 'landscape' : 'portrait'}`} ref={reelRef}>
+      <div className={`portrait-reel flex overflow-x-auto snap-x snap-mandatory scrollbar-hide touch-auto ${isLandscape ? 'landscape' : 'portrait'}`} ref={reelRef}>
         {images.map((src, index) => (
           <div
             key={index}
