@@ -14,6 +14,7 @@ import './PhotoEssay.css';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
+import { BASE_URL } from '../config/config.js';
 
 function ColoredTextBlock({ content, color = 'black' }) {
   return (
@@ -70,7 +71,7 @@ export default function PhotoEssay() {
       },
       published: false,
       essay: bikingHomeEssayBlocks,
-      shareUrl: 'https://seewhateyeshot.github.io/projects/biking_home',
+      shareUrl: BASE_URL + '#/projects/biking_home',
       shareTitle: 'A Photo Essay on Pattaya’s Soi 6',
     },
     soi6: {
@@ -83,7 +84,7 @@ export default function PhotoEssay() {
       published: false,
       publishedDate: 'Work in progress',
       essay: soi6EssayBlocks,
-      shareUrl: 'https://seewhateyeshot.github.io/projects/soi6',
+      shareUrl: BASE_URL + '#/projects/soi6',
       shareTitle: 'A Photo Essay on Pattaya’s Soi 6',
       collapsible: true,
     },
@@ -98,7 +99,7 @@ export default function PhotoEssay() {
       publishedDate: 'Published on 6 May 2025',
       updatedDate: '',
       essay: sihanoukvilleEssayBlocks,
-      shareUrl: 'https://seewhateyeshot.github.io/brief/sihanoukville',
+      shareUrl: BASE_URL + '#/brief/sihanoukville',
       shareTitle: 'A Brief Photo Series on Sihanoukville',
     },
     songkran: {
@@ -109,7 +110,7 @@ export default function PhotoEssay() {
         caption: 'Buckets of water and smiles.',
       },
       essay: songkranEssayBlocks,
-      shareUrl: 'https://seewhateyeshot.github.io/brief/songkran',
+      shareUrl: BASE_URL + '#/brief/songkran',
       shareTitle: 'A Brief Photo Series on Songkran',
     },
     samos: {
@@ -120,7 +121,7 @@ export default function PhotoEssay() {
         caption: 'Samos.',
       },
       essay: samosEssayBlocks,
-      shareUrl: 'https://seewhateyeshot.github.io/brief/samos',
+      shareUrl: BASE_URL + '#/brief/samos',
       shareTitle: 'A Brief Photo Series on Samos',
     },
   };
