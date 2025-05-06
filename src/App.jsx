@@ -134,7 +134,7 @@ export default function App() {
         {/* Logo on the left */}
         <Link to="/" className="logo flex items-center gap-2">
           <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Logo" className="h-8 logo-img" />
-          <span className="font-semibold text-lg tracking-tight">Çağdaş 1</span>
+          <span className="font-semibold text-lg tracking-tight">Çağdaş</span>
         </Link>
 
         <div className="flex items-center gap-3">
