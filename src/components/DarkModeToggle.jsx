@@ -9,10 +9,16 @@ export default function DarkModeToggle() {
   function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
 
-    const themeColorMeta = document.querySelector('meta[name="theme-color"]');
-    if (themeColorMeta) {
-      themeColorMeta.setAttribute('content', theme === 'dark' ? '#0f0f0f' : '#ffffff');
+    // Forcefully reset theme-color meta tag
+    let meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) {
+      meta.parentNode.removeChild(meta);
     }
+
+    const newMeta = document.createElement('meta');
+    newMeta.setAttribute('name', 'theme-color');
+    newMeta.setAttribute('content', theme === 'dark' ? '#0f0f0f' : '#ffffff');
+    document.head.appendChild(newMeta);
   }
 
   useEffect(() => {

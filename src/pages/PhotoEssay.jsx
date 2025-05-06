@@ -180,10 +180,12 @@ export default function PhotoEssay() {
     .filter(block => block.type === 'heading' && block.id && block.text)
     .map(({ id, text }) => ({ id, text }));
 
+  //{/* comment out grid lg:grid-cols-[14rem_1fr] */}
   return (
-    <div className="photo-essay grid lg:grid-cols-[auto_1fr] gap max-w-screen-xl mx-auto mt-10" data-testid="photo-essay">
+
+    < div className="photo-essay  w-full max-w-none mx-auto mt-10" data-testid="photo-essay" >
       {/* Desktop TOC */}
-      <nav className="sticky toc-nav top-10 w-64 self-start px-4 text-sm text-gray-600 dark:text-gray-300">
+      {/* < nav className="sticky toc-nav top-10 w-64 self-start px-4 text-sm text-gray-600 dark:text-gray-300" >
         <ul className="space-y-2">
           {tocItems.map(item => (
             <li key={item.id}>
@@ -208,7 +210,7 @@ export default function PhotoEssay() {
             </li>
           ))}
         </ul>
-      </nav>
+      </nav > */}
 
       <main className="max-w-5xl w-full min-h-screen">
         <div className="photo-essay-header">

@@ -127,14 +127,14 @@ export default function App() {
   }
 
   return (
-    <div className="container min-h-screen bg-white text-black dark:bg-zinc-950 dark:text-gray-300">
+    <div className="bg-white text-black dark:bg-zinc-950 dark:text-gray-300">
       <Analytics />
       {/* NAVBAR */}
       <nav className="navbar">
         {/* Logo on the left */}
         <Link to="/" className="logo flex items-center gap-2">
           <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Logo" className="h-8 logo-img" />
-          <span className="font-semibold text-lg tracking-tight">Çağdaş</span>
+          <span className="font-semibold text-lg tracking-tight">Çağdaş 1</span>
         </Link>
 
         <div className="flex items-center gap-3">
