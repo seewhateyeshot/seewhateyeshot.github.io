@@ -17,10 +17,11 @@ const essayContent = [
   },
   {
     type: 'component',
+    collapsible: true,
     render: () => (
       <div className="max-w-2xl mx-auto px-4">
         <p className="essay-text">
-          I had just started photography that summer. My teacher, to whom I inevitably refer a lot and pay a proper homage in{" "}
+          I had just started photography that summer. My teacher, to whom I inevitably refer a lot throughout this writing and pay a proper homage in{" "}
           <Link to="/blog/starting-to-shoot" className="underline text-blue-600 hover:text-blue-800 dark:text-blue-300 dark:hover:text-blue-400">
             <strong>this blog post</strong>
           </Link>
@@ -256,6 +257,7 @@ const essayContent = [
   },
   {
     type: 'component',
+    collapsible: false,
     render: () => {
       const beachRoadImages = Array.from({ length: 18 }, (_, i) => {
         const num = String(i + 1).padStart(2, '0'); // pad 1 → 01
@@ -561,6 +563,7 @@ const essayContent = [
   },
   {
     type: 'component',
+    collapsible: false,
     render: () => {
       const portraitImages = Array.from({ length: 29 }, (_, i) => {
         const num = String(i + 1).padStart(2, '0'); // pad 1 → 01
@@ -796,6 +799,7 @@ const essayContent = [
   },
   {
     type: 'component',
+    collapsible: false,
     render: () => {
       const scenes = Array.from({ length: 24 }, (_, i) => {
         const num = String(i + 1).padStart(2, '0'); // pad 1 → 01
@@ -836,11 +840,12 @@ const essayContent = [
   },
   {
     type: 'heading',
-    text: 'Elegy',
-    id: 'elegy',
+    text: 'Closing',
+    id: 'closing',
   },
   {
     type: 'component',
+    collapsible: false,
     render: () => (
       <div className="max-w-2xl mx-auto px-4">
         <Soi6Poem />
@@ -856,6 +861,7 @@ const essayContent = [
   {
     item: 'footnotes',
     type: 'component',
+    collapsible: false,
     render: () => (
       <section className="mt-12 border-t pt-6" id="footnotes">
         <h2 className="text-lg font-semibold mb-4">Footnotes</h2>

@@ -28,7 +28,7 @@ function ColoredTextBlock({ content, color = 'black' }) {
   );
 }
 
-function EssayHeading({ id, text, setActiveId }) {
+function EssayHeading({ id, text, setActiveId, collapsedSections, setCollapsedSections }) {
   const [ref, inView] = useInView({ threshold: 0.6 });
 
   useEffect(() => {
@@ -37,11 +37,20 @@ function EssayHeading({ id, text, setActiveId }) {
 
   return (
     <div id={id} className="relative">
-      <div
-        ref={ref}
-        className="max-w-2xl mx-auto px-4 pt-20 -mb-2"
-      >
-        <h2 className="text-2xl font-bold">{text}</h2>
+      <div ref={ref} className="max-w-2xl mx-auto px-4 pt-10 -mb-2">
+        <div className="flex cursor-pointer justify-between items-center"
+          onClick={() => setCollapsedSections(prev => ({
+            ...prev,
+            [id]: !prev[id],
+          }))}>
+          <h2 className="text-2xl font-bold">{text}</h2>
+          <button
+            className="text-sm "
+
+          >
+            {collapsedSections[id] ? '▼' : '▲'}
+          </button>
+        </div>
         <hr />
       </div>
     </div>
@@ -76,6 +85,7 @@ export default function PhotoEssay() {
       essay: soi6EssayBlocks,
       shareUrl: 'https://seewhateyeshot.github.io/projects/soi6',
       shareTitle: 'A Photo Essay on Pattaya’s Soi 6',
+      collapsible: true,
     },
     sihanoukville: {
       title: 'Sihanoukville',
@@ -156,6 +166,7 @@ export default function PhotoEssay() {
   let imageCount = 1;
 
   const [activeId, setActiveId] = useState(null);
+  const [collapsedSections, setCollapsedSections] = useState({});
 
   const renderedEssayBlocks = essayContent.map((block, i) => {
     if (block.type === 'heading') {
@@ -163,7 +174,14 @@ export default function PhotoEssay() {
         key: i,
         type: 'heading',
         node: (
-          <EssayHeading key={i} id={block.id} text={block.text} setActiveId={setActiveId} />
+          <EssayHeading
+            key={i}
+            id={block.id}
+            text={block.text}
+            setActiveId={setActiveId}
+            collapsedSections={collapsedSections}
+            setCollapsedSections={setCollapsedSections}
+          />
         ),
         block
       };
@@ -171,7 +189,7 @@ export default function PhotoEssay() {
     else if (block.type === 'component' && typeof block.render === 'function') {
       // Call the render() here, always
       const node = block.render();
-      return { key: i, type: 'component', node };
+      return { key: i, type: 'component', node, collapsible: block.collapsible, les: block.les };
     }
     return { key: i, type: 'regular', block };
   });
@@ -179,6 +197,8 @@ export default function PhotoEssay() {
   const tocItems = essayContent
     .filter(block => block.type === 'heading' && block.id && block.text)
     .map(({ id, text }) => ({ id, text }));
+
+  let currentHeadingId = null;
 
   //{/* comment out grid lg:grid-cols-[14rem_1fr] */}
   return (
@@ -252,8 +272,15 @@ export default function PhotoEssay() {
         </div>
 
         {
-          renderedEssayBlocks.map(({ key, type, block, node }) => {
+          renderedEssayBlocks.map(({ key, type, block, node, collapsible, les }) => {
             if (type === 'component') {
+              const shouldCollapse = project.collapsible && currentHeadingId &&
+                collapsedSections[currentHeadingId] && collapsible !== false;
+
+              if (shouldCollapse) {
+                return null;
+              }
+
               return (
                 <div key={key} className="essay-component">
                   {node}
@@ -262,10 +289,17 @@ export default function PhotoEssay() {
             }
 
             if (block.type === 'heading') {
-              return <div key={key}>{node}</div>;
+              currentHeadingId = block.id; // track latest heading
+
+              return <div key={key} className="max-w-2xl mx-auto mb-6">{node}</div>;
             }
 
+
             if (block.type === 'text') {
+              if (project.collapsible && currentHeadingId && collapsedSections[currentHeadingId]) {
+                return null;
+              }
+
               if (block.color) {
                 return <ColoredTextBlock key={key} content={block.content} color={block.color} />;
               }
@@ -279,7 +313,7 @@ export default function PhotoEssay() {
             if (block.type === 'image') {
               const currentIndex = imageCount++;
               return (
-                <div key={key} className="w-full flex justify-center px-4">
+                <div key={key} className="w-full flex justify-center px-4 mb-2">
                   <div className="max-w-5xl w-full">
                     <div className={`relative group ${block.orientation === 'portrait'
                       ? 'max-w-prose mx-auto'

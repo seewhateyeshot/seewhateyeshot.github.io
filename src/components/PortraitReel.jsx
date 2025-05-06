@@ -9,17 +9,6 @@ export default function PortraitReel({ title, images, caption, orientation = 'po
   const reelRef = useRef(null);
   const isLandscape = orientation === 'landscape';
 
-  // useEffect(() => {
-  //   const originalTheme = document.documentElement.getAttribute('data-theme');
-  //   const metaTheme = document.querySelector('meta[name="theme-color"]');
-
-  //   if (lightboxIndex >= 0) {
-  //     document.documentElement.setAttribute('data-theme', 'dark');
-  //   } else {
-  //     document.documentElement.setAttribute('data-theme', originalTheme || 'light');
-  //   }
-  // }, [lightboxIndex]);
-
   return (
     <div className="portrait-reel-wrapper">
       <h2 className="portrait-reel-title">{title}</h2>
