@@ -18,23 +18,33 @@ export default function Soi6Poem() {
         <br />
         some are born to sweet delight ✨ <br />
         <br />
-        money here isn’t spent, <br />
-        it’s a hit — <br />
-        it writes history <br />
-        these faces in the thick of it. <br />
-        it's a beleaguered hero, <br />
-        its accursed superpower? <br />
+        money here isn’t just spent <br />
+        it’s on the radio, on the TikTok — <br />
+        the top hit, <br />
+        writing the history of bullshit. <br />
+        the washed-up hero of the American dream <br />
+        the beloved of the West <br />
+        is in the exotic East for a sequel: <br />
+        convinced the West is the best <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;in spite of <br />
+        its youth that is long-gone, <br />
+        its teeth barely hanging on.
+        its breath way too sour. <br />
+        its lingering accursed power? <br />
         a few hundred baht here <br />
         buys an eternity in an hour. <br />
         <br />
         don’t let your piggy bank on Soi 6* <br />
         &nbsp;&nbsp;&nbsp;&nbsp;crash on the floor — nevermore. <br />
         you’ve had enough of pity and mock <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;to be still writhing on all fours. <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;to be writhing on all fours. <br />
         <br />
-        praised be money. <br />
-        it feeds babies <br />
-        and temporarily relieves hungry men. <br />
+        o Thailand praised be your many tourists. <br />
+        with their dollars, pounds, euros and sins. <br />
+        it all feeds your babies <br />
+        & does something to your GDP <br />
+        while temporarily relieves the hungry <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;men. <br />
         this is it: <br />
         &nbsp;&nbsp;&nbsp;&nbsp;the cycle of life. <br />
         <br />
@@ -54,11 +64,14 @@ export default function Soi6Poem() {
         — <br />
         <br />
         the children watch. <br />
-        they know the choreography by heart. <br />
-        some are still learning how to walk. <br />
-        others already know <br />
-        how to smile without meaning it, <br />
-        playing their part on the puppet row. <br />
+        they know the dance by heart. <br />
+        some still learn to walk, <br />
+        some already play their part. <br />
+        in this puppet row, <br />
+        dealt the worst of cards — <br />
+        but everybody knows <br />
+        the game was rigged from the start. <br />
+
         <br />
         — <br />
         <br />
