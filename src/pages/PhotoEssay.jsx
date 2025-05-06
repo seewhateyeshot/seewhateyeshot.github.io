@@ -189,7 +189,7 @@ export default function PhotoEssay() {
     else if (block.type === 'component' && typeof block.render === 'function') {
       // Call the render() here, always
       const node = block.render();
-      return { key: i, type: 'component', node, collapsible: block.collapsible, les: block.les };
+      return { key: i, type: 'component', node, collapsible: block.collapsible, noWrap: block.noWrap };
     }
     return { key: i, type: 'regular', block };
   });
@@ -272,18 +272,29 @@ export default function PhotoEssay() {
         </div>
 
         {
-          renderedEssayBlocks.map(({ key, type, block, node, collapsible, les }) => {
+          renderedEssayBlocks.map(({ key, type, block, node, collapsible, noWrap }) => {
             if (type === 'component') {
               const shouldCollapse = project.collapsible && currentHeadingId &&
                 collapsedSections[currentHeadingId] && collapsible !== false;
 
-              if (shouldCollapse) {
-                return null;
+
+              if (noWrap) {
+                return (
+                  <div key={key}
+                    className="essay-component">
+                    {node}
+
+                  </div>
+                );
               }
 
               return (
-                <div key={key} className="essay-component">
-                  {node}
+                <div key={key}
+                  className={`essay-collapse-wrapper transition-all duration-500 ease-in-out overflow-hidden ${shouldCollapse ? 'max-h-0' : 'max-h-[1000px]'}`}
+                >
+                  <div className="essay-component">
+                    {node}
+                  </div>
                 </div>
               );
             }
@@ -296,16 +307,17 @@ export default function PhotoEssay() {
 
 
             if (block.type === 'text') {
-              if (project.collapsible && currentHeadingId && collapsedSections[currentHeadingId]) {
-                return null;
-              }
+              const isCollapsed = project.collapsible && currentHeadingId && collapsedSections[currentHeadingId];
 
-              if (block.color) {
-                return <ColoredTextBlock key={key} content={block.content} color={block.color} />;
-              }
               return (
-                <div key={key} className="max-w-2xl mx-auto px-4 dark:text-gray-200">
-                  <p className="essay-text">{block.content}</p>
+                <div
+                  key={key}
+                  className={`essay-collapse-wrapper transition-all duration-500 ease-in-out overflow-hidden ${isCollapsed ? 'max-h-0' : 'max-h-[1000px]'
+                    }`}
+                >
+                  <div className="max-w-2xl mx-auto px-4 dark:text-gray-200">
+                    <p className="essay-text">{block.content}</p>
+                  </div>
                 </div>
               );
             }

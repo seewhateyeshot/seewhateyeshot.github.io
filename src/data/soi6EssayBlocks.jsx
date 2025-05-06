@@ -846,6 +846,7 @@ const essayContent = [
   {
     type: 'component',
     collapsible: false,
+    noWrap: true,
     render: () => (
       <div className="max-w-2xl mx-auto px-4">
         <Soi6Poem />
