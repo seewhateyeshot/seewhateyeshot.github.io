@@ -181,7 +181,7 @@ export default function PhotoEssay() {
     .map(({ id, text }) => ({ id, text }));
 
   return (
-    <div className="photo-essay grid lg:grid-cols-[auto_1fr] gap px-4 max-w-screen-xl  mt-10" data-testid="photo-essay">
+    <div className="photo-essay grid lg:grid-cols-[auto_1fr] gap max-w-screen-xl mx-auto mt-10" data-testid="photo-essay">
       {/* Desktop TOC */}
       <nav className="sticky toc-nav top-10 w-64 self-start px-4 text-sm text-gray-600 dark:text-gray-300">
         <ul className="space-y-2">
