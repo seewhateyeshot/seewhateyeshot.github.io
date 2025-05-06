@@ -469,6 +469,17 @@ const essayContent = [
 
     One of them was May—a pseudonym. She told me she had once lived in Sweden, supposedly for school, though I quietly suspected there was more to the story. When she learned I had lived there too, she lit up and started showing me photos. Her photos showed a life that felt oddly familiar to me: warm jackets, snowy sidewalks, Christmas lights, sterile IKEA interiors—though every meal still had a bowl of rice at the center.`
   },
+
+  // <span
+  //           id="ref-1"
+  //           onClick={() => {
+  //             const el = document.getElementById('footnote-1');
+  //             if (el) el.scrollIntoView({ /* behavior: 'smooth' */ });
+  //           }}
+  //           className="footnote-ref cursor-pointer text-blue-600 hover:underline"
+  //         >
+  //           [1]
+  //         </span>
   {
     girl: 'May',
     type: 'component',
@@ -480,16 +491,7 @@ const essayContent = [
           Medin also draws on revealing demographic data.
           According to Sweden’s national statistics agency, 78 percent of Thai migrants to Sweden are women,
           and 80–90 percent of them arrive through a relationship with a Swedish
-          man <span
-            id="ref-1"
-            onClick={() => {
-              const el = document.getElementById('footnote-1');
-              if (el) el.scrollIntoView({ /* behavior: 'smooth' */ });
-            }}
-            className="footnote-ref cursor-pointer text-blue-600 hover:underline"
-          >
-            [1]
-          </span>.
+          man.
           That number is striking—especially when compared to countries like Afghanistan,
           where the overwhelming majority of migrants are men.
         </p>
@@ -859,35 +861,35 @@ const essayContent = [
     alt: 'Closing image from Soi 6',
     caption: 'Dog with a bottle, December 2023.',
   },
-  {
-    item: 'footnotes',
-    type: 'component',
-    collapsible: false,
-    render: () => (
-      <section className="mt-12 border-t pt-6" id="footnotes">
-        <h2 className="text-lg font-semibold mb-4">Footnotes</h2>
-        <ol className="list-decimal pl-5 space-y-2 text-sm text-gray-700">
-          <li id="footnote-1" className="mt-10 text-sm text-gray-600">
-            [1] Joakim Medin, <i>Thailandsvenskarna</i>, 2019.
-            <a href="https://joakimmedin.se/wp-content/uploads/2018/12/Welcome-to-Sin-City-Schyst-resande-okt-2018.pdf"
-              className="footnote-ref text-blue-600 hover:underline ml-1" target="_blank" rel="noopener noreferrer">
-              PDF ↗
-            </a>
-            <span
-              onClick={() => {
-                const el = document.getElementById('ref-1');
-                if (el) el.scrollIntoView({ /* behavior: 'smooth' */ });
-              }}
-              className="ml-2 cursor-pointer text-blue-600 hover:underline"
-            >
-              ↩︎
-            </span>
-          </li>
-          {/* more footnotes */}
-        </ol>
-      </section>
-    )
-  }
+  // {
+  //   item: 'footnotes',
+  //   type: 'component',
+  //   collapsible: false,
+  //   render: () => (
+  //     <section className="mt-12 border-t pt-6" id="footnotes">
+  //       <h2 className="text-lg font-semibold mb-4">Footnotes</h2>
+  //       <ol className="list-decimal pl-5 space-y-2 text-sm text-gray-700">
+  //         <li id="footnote-1" className="mt-10 text-sm text-gray-600">
+  //           [1] Joakim Medin, <i>Thailandsvenskarna</i>, 2019.
+  //           <a href="https://joakimmedin.se/wp-content/uploads/2018/12/Welcome-to-Sin-City-Schyst-resande-okt-2018.pdf"
+  //             className="footnote-ref text-blue-600 hover:underline ml-1" target="_blank" rel="noopener noreferrer">
+  //             PDF ↗
+  //           </a>
+  //           <span
+  //             onClick={() => {
+  //               const el = document.getElementById('ref-1');
+  //               if (el) el.scrollIntoView({ /* behavior: 'smooth' */ });
+  //             }}
+  //             className="ml-2 cursor-pointer text-blue-600 hover:underline"
+  //           >
+  //             ↩︎
+  //           </span>
+  //         </li>
+  //         {/* more footnotes */}
+  //       </ol>
+  //     </section>
+  //   )
+  // }
 ];
 
 export default essayContent;
