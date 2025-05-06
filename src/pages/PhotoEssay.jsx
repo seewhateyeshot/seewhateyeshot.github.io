@@ -8,7 +8,7 @@ import { useParams } from 'react-router-dom';
 import bikingHomeEssayBlocks from '../data/bikingHomeEssayBlocks.js';
 import soi6EssayBlocks from '../data/soi6EssayBlocks.jsx';
 import samosEssayBlocks from '../data/samosEssayBlocks';
-import sihanoukvilleEssayBlocks from '../data/sihanoukvilleEssayBlocks';
+import sihanoukvilleEssayBlocks from '../data/sihanoukvilleEssayBlocks.jsx';
 import songkranEssayBlocks from '../data/songkranEssayBlocks';
 import './PhotoEssay.css';
 import { useEffect } from 'react';
@@ -25,6 +25,26 @@ function ColoredTextBlock({ content, color = 'black' }) {
         </span>
       ))}
     </p>
+  );
+}
+
+function EssayHeading({ id, text, setActiveId }) {
+  const [ref, inView] = useInView({ threshold: 0.6 });
+
+  useEffect(() => {
+    if (inView) setActiveId(id);
+  }, [inView]);
+
+  return (
+    <div id={id} className="relative">
+      <div
+        ref={ref}
+        className="max-w-2xl mx-auto px-4 pt-20 -mb-2"
+      >
+        <h2 className="text-2xl font-bold">{text}</h2>
+        <hr />
+      </div>
+    </div>
   );
 }
 
@@ -64,6 +84,9 @@ export default function PhotoEssay() {
         src: '/images/sihanoukville/sihanoukville-01.jpg',
         caption: 'Morning in the city.',
       },
+      published: true,
+      publishedDate: 'Published on 6 May 2025',
+      updatedDate: '',
       essay: sihanoukvilleEssayBlocks,
       shareUrl: 'https://seewhateyeshot.github.io/brief/sihanoukville',
       shareTitle: 'A Brief Photo Series on Sihanoukville',
@@ -136,26 +159,11 @@ export default function PhotoEssay() {
 
   const renderedEssayBlocks = essayContent.map((block, i) => {
     if (block.type === 'heading') {
-      const id = block.id;
-      const [ref, inView] = useInView({ threshold: 0.6 });
-
-      useEffect(() => {
-        if (inView) setActiveId(id);
-      }, [inView]);
-
       return {
         key: i,
         type: 'heading',
         node: (
-          <div id={id} className="relative">
-            <div
-              ref={ref}
-              className="max-w-2xl mx-auto px-4 pt-20 -mb-2"
-            >
-              <h2 className="text-2xl font-bold ">{block.text}</h2>
-              <hr />
-            </div>
-          </div>
+          <EssayHeading key={i} id={block.id} text={block.text} setActiveId={setActiveId} />
         ),
         block
       };
@@ -271,12 +279,18 @@ export default function PhotoEssay() {
               return (
                 <div key={key} className="w-full flex justify-center px-4">
                   <div className="max-w-5xl w-full">
-                    <div className="relative group">
+                    <div className={`relative group ${block.orientation === 'portrait'
+                      ? 'max-w-prose mx-auto'
+                      : ''
+                      }`}>
                       <img
                         src={block.src}
                         alt={block.alt || ''}
                         loading="lazy"
-                        className="w-full aspect-[3/2] object-cover rounded cursor-pointer transition-opacity duration-300 group-hover:opacity-95"
+                        className={`w-full rounded cursor-pointer transition-opacity duration-300 group-hover:opacity-95 ${block.orientation === 'portrait'
+                          ? 'aspect-[2/3] object-contain'
+                          : 'aspect-[3/2] object-cover'
+                          }`}
                         data-testid="essay-block-image"
                         onClick={() => setLightboxIndex(currentIndex)}
                       />
@@ -316,6 +330,8 @@ export default function PhotoEssay() {
           }}
         />
       </main >
+      <br />
+
     </ div >
   );
 }
