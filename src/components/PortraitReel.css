@@ -1,3 +1,45 @@
+[data-theme='dark'] .portrait-reel-wrapper {
+  background-color: #000;
+  color: #fff;
+}
+
+[data-theme='dark'] .portrait-reel {
+  background-color: #fff;
+}
+
+[data-theme='light'] .portrait-reel {
+  background-color: #000;
+}
+
+[data-theme='light'] .portrait-reel-title {
+  color: #000;
+}
+
+[data-theme='dark'] .portrait-reel-title {
+  color: #fff;
+}
+
+[data-theme='dark'] .portrait-reel-caption {
+  background-color: #000;
+  color: #fff;
+}
+
+:root[data-theme='light'] {
+  --reel-band-bg: #000;
+}
+
+:root[data-theme='dark'] {
+  --reel-band-bg: #fff;
+}
+
+.reel-band-wrapper {
+  background-color: var(--reel-band-bg);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  overflow: hidden;
+  /* optional, in case of scrollbar bleed */
+}
+
 .portrait-reel-wrapper {
   width: 100%;
   background-color: #f9f9f9;
