@@ -302,7 +302,7 @@ export default function PhotoEssay() {
             if (block.type === 'heading') {
               currentHeadingId = block.id; // track latest heading
 
-              return <div key={key} className="max-w-2xl mx-auto mb-6">{node}</div>;
+              return <div key={key} className="max-w-2xl mx-auto mb-12">{node}</div>;
             }
 
 
@@ -351,7 +351,7 @@ export default function PhotoEssay() {
                       </button>
                     </div>
                     {block.caption && (
-                      <p className="text-center italic text-gray-500 text-sm mt-2 dark:text-white">
+                      <p className="text-center mb-1 italic text-gray-500 text-sm mt-2 dark:text-white">
                         {block.caption}
                       </p>
                     )}
