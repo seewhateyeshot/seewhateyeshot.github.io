@@ -15,12 +15,10 @@
   transform-style: preserve-3d;
 }
 
-/* Desktop hover flip */
 .hero-flip-container:hover .flipper {
   transform: rotateY(180deg);
 }
 
-/* Mobile auto flip */
 .hero-flip-container.flipped .flipper {
   transform: rotateY(180deg);
 }

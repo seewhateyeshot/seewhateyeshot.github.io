@@ -34,6 +34,11 @@ export default function App() {
   const [isMobile, setIsMobile] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const [theme, setTheme] = useState(() => {
+    // Get saved theme or fall back to 'dark'
+    return localStorage.getItem('theme') || 'dark';
+  });
+
   const toggleMenu = () => {
     setMenuOpen(prev => {
       const next = !prev;
@@ -50,6 +55,14 @@ export default function App() {
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () =>
+    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
 
   /**
    * Render Desktop Nav
@@ -131,27 +144,34 @@ export default function App() {
       <Analytics />
       {/* NAVBAR */}
       <nav className="navbar">
-        {/* Logo on the left */}
-        <Link to="/" className="logo flex items-center gap-2">
-          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Logo" className="h-8 logo-img" />
-          <span className="font-semibold text-lg tracking-tight">Çağdaş</span>
-        </Link>
+        <div className="navbar-div">
+          {/* Logo on the left */}
+          <Link to="/" className="logo flex items-center gap-2">
+            <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Logo" className="h-8 logo-img" />
+            <span className="font-semibold text-lg tracking-tight">Çağdaş</span>
+          </Link>
 
-        <div className="flex items-center gap-3">
-          {/* If mobile => show hamburger, else => desktop nav */}
-          {isMobile ? (
+          <div className="flex items-center gap-3">
+            {/* If mobile => show hamburger, else => desktop nav */}
+            {isMobile ? (
+              <button
+                className="text-2xl focus:outline-none mb-1"
+                onClick={toggleMenu}
+              >
+                {menuOpen ? '✖' : '☰'}
+              </button>
+            ) : (
+              renderDesktopNav()
+            )}
+
             <button
-              className="text-2xl focus:outline-none mb-1"
-              onClick={toggleMenu}
+              onClick={toggleTheme}
+              className="cursor-pointer border px-3 py-1 rounded flex items-center gap-2"
             >
-              {menuOpen ? '✖' : '☰'}
+              <span>{theme === 'dark' ? '🌞' : '🌙'}</span>
             </button>
-          ) : (
-            renderDesktopNav()
-          )}
-
-          <DarkModeToggle />
-          <div className="gap-1" />
+            <div className="gap-1" />
+          </div>
         </div>
       </nav>
 
@@ -163,11 +183,19 @@ export default function App() {
         <Outlet />
       </main>
 
+
       <footer className="footer">
-        © {new Date().getFullYear()}. All rights reserved. <br />
-        No cookies, no tracking. <br />
-        This site uses <a href="https://www.goatcounter.com/">GoatCounter</a> for anonymous visit counts.
+        <div className="footer-div">
+          © {new Date().getFullYear()}. All rights reserved. <br />
+          No cookies, no tracking. <br />
+          This site uses <a href="https://www.goatcounter.com/">GoatCounter</a> for anonymous visit counts.
+        </div>
       </footer>
     </div>
   );
 }
+
+
+
+
+

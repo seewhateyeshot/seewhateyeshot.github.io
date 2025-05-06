@@ -2,36 +2,30 @@ import { useEffect, useState } from 'react';
 
 export default function DarkModeToggle() {
   const [isDark, setIsDark] = useState(() => {
-    // Detect saved preference on first render
     return localStorage.theme === 'dark';
   });
 
-  function setTheme(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-
-    // Forcefully reset theme-color meta tag
-    let meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) {
-      meta.parentNode.removeChild(meta);
-    }
-
-    const newMeta = document.createElement('meta');
-    newMeta.setAttribute('name', 'theme-color');
-    newMeta.setAttribute('content', theme === 'dark' ? '#0f0f0f' : '#ffffff');
-    document.head.appendChild(newMeta);
-  }
-
+  // Ensure the meta tag exists only once
   useEffect(() => {
-    const html = document.documentElement;
-    if (isDark) {
-      html.setAttribute('data-theme', 'dark');
-      localStorage.theme = 'dark';
-      setTheme('dark');
-    } else {
-      html.setAttribute('data-theme', 'light');
-      localStorage.theme = 'light';
-      setTheme('light');
+    let meta = document.querySelector('meta[name="theme-color"]');
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.setAttribute('name', 'theme-color');
+      document.head.appendChild(meta);
     }
+
+    const html = document.documentElement;
+
+    const applyTheme = (theme) => {
+      html.setAttribute('data-theme', theme);
+      localStorage.theme = theme;
+      meta.setAttribute('content', theme === 'dark' ? '#000000' : '#ffffff');
+      html.classList.remove('skin-theme-clientpref-day', 'skin-theme-clientpref-night');
+      const modeClass = theme === 'dark' ? 'skin-theme-clientpref-night' : 'skin-theme-clientpref-day';
+      html.classList.add(modeClass);
+    };
+
+    applyTheme(isDark ? 'dark' : 'light');
   }, [isDark]);
 
   return (

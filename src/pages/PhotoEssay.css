@@ -93,7 +93,6 @@
     width: 10rem;
     position: sticky;
     top: 5rem;
-    /* same as top-10 */
     align-self: flex-start;
     padding: 0;
   }

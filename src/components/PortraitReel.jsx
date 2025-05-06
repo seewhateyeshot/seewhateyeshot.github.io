@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Lightbox from 'yet-another-react-lightbox';
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import 'yet-another-react-lightbox/styles.css';
@@ -8,6 +8,17 @@ export default function PortraitReel({ title, images, caption, orientation = 'po
   const [lightboxIndex, setLightboxIndex] = useState(-1);
   const reelRef = useRef(null);
   const isLandscape = orientation === 'landscape';
+
+  // useEffect(() => {
+  //   const originalTheme = document.documentElement.getAttribute('data-theme');
+  //   const metaTheme = document.querySelector('meta[name="theme-color"]');
+
+  //   if (lightboxIndex >= 0) {
+  //     document.documentElement.setAttribute('data-theme', 'dark');
+  //   } else {
+  //     document.documentElement.setAttribute('data-theme', originalTheme || 'light');
+  //   }
+  // }, [lightboxIndex]);
 
   return (
     <div className="portrait-reel-wrapper">
