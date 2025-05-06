@@ -6,14 +6,25 @@ export default function DarkModeToggle() {
     return localStorage.theme === 'dark';
   });
 
+  function setTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+
+    const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+    if (themeColorMeta) {
+      themeColorMeta.setAttribute('content', theme === 'dark' ? '#0f0f0f' : '#ffffff');
+    }
+  }
+
   useEffect(() => {
     const html = document.documentElement;
     if (isDark) {
       html.setAttribute('data-theme', 'dark');
       localStorage.theme = 'dark';
+      setTheme('dark');
     } else {
       html.setAttribute('data-theme', 'light');
       localStorage.theme = 'light';
+      setTheme('light');
     }
   }, [isDark]);
 
