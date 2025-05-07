@@ -7,15 +7,16 @@ export default function HomePageProjects() {
       image: '/images/pattaya/portraits/soi6_portrait-01.jpg',
       title: 'Soi 6',
       caption: 'For seven weeks, I photographed a bar street in Pattaya, Thailand'
+
     },
     {
-      id: '/projects/sihanoukville',
+      id: '/brief/sihanoukville',
       image: '/images/sihanoukville/sihanoukville-07.jpg',
       title: 'Sihanoukville',
       caption: 'One day in a Cambodian city in rapid transformation'
     },
     {
-      id: '/projects/songkran',
+      id: '/brief/songkran',
       image: '/images/songkran/songkran-01.jpg',
       objectPosition: 'object-[60%_center]', // custom positioning for this one
       title: 'Songkran',
