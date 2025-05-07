@@ -16,26 +16,28 @@ export default function Home() {
         <HomePageProjects />
       </div>
 
-      <section className="bio text-sm sm:text-base leading-relaxed max-w-prose mx-auto my-8">
-        <p>
-          I'm a street and documentary photographer loosely based in Stockholm.
-          I explore life on the margins: red light alleys in Thailand,
-          sleepy Cambodian towns turning into Chinese enclaves,
-          obscure villages by ancient rivers,
-          genocide memorials,
-          poor gutters and,
-          forgotten corners of the Balkans. <br />
-          I’ve biked across Europe
-          along the eastern edge of the Iron Curtain.
-          I walk a lot,
-          shoot way too many photos,
-          and edit excruciatingly slowly,
-          aiming always to capture people the way they’d want to be remembered... <br />
-          <br />
-          At least in a way that we surely cannot forget them.
+      <div className="max-w-2xl mt-10 mb-8 mx-auto  px-4">
+        <p className="text-lg leading-relaxed mb-6">
+          I’m a street and documentary photographer — and a budget traveler — loosely based in Stockholm. I explore life on the margins: red light alleys in Thailand, sleepy Asian towns, obscure villages by ancient rivers, genocide memorials, poor gutters, and forgotten corners of the Balkans.
+          <br /><br />
+          I’ve biked across Europe along the eastern edge of the Iron Curtain, from Scandinavia to Turkey. I walk a lot, shoot way too many photos, and edit excruciatingly slowly — always aiming to capture people the way they’d want to be remembered… or at least not forgotten.
         </p>
-        <br />
-      </section>
+
+        <p className="text-lg leading-relaxed mb-4">
+          I’m currently on a break from coding (except for this site). Too restless, perhaps, for office life — as an old manager once asked me:
+        </p>
+
+        <blockquote className="mt-10 text-xl text-gray-600 dark:text-gray-200 font-serif mb-2">
+          “Should we chain you to your seat?”
+        </blockquote>
+        <p className="text-sm text-gray-500 text-right italic mb-6">— my old manager</p>
+
+        <p className="text-lg leading-relaxed">
+          Maybe he should’ve. <br />
+          Now I’ve got no time for that. <br />
+          I’m out capturing people of my own.
+        </p>
+      </div>
 
       <HeroFlip />
 
