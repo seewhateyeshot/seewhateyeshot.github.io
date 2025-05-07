@@ -1,6 +1,6 @@
 describe('Photo Essay Page', () => {
   it('loads the Soi 6 project and opens a lightbox', () => {
-    cy.visit('/#/projects/soi6');
+    cy.visit('/projects/soi6');
     cy.get('.essay-cover-image').click();
     cy.get('button[aria-label="Close"]').should('exist');
   });
@@ -14,13 +14,13 @@ describe('Photo Essay Page', () => {
   });
 
   it('shows 404 on invalid project', () => {
-    cy.visit('/#/projects/doesnotexist');
+    cy.visit('/projects/doesnotexist');
     cy.contains('404');
   });
 
   // Previous bug, cover images weren't loading
   it('loads cover image for Soi 6 and displays it correctly', () => {
-    cy.visit('/#/projects/soi6');
+    cy.visit('/projects/soi6');
     cy.get('[data-testid="essay-cover-img"]')
       .should('be.visible')
       .and($img => {
@@ -30,7 +30,7 @@ describe('Photo Essay Page', () => {
   });
 
   it('should load and display all images after scrolling', () => {
-    cy.visit('/#/projects/soi6');
+    cy.visit('/projects/soi6');
 
     cy.get('[data-testid="photo-essay"]').should('exist');
 
