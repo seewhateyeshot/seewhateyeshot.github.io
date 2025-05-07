@@ -132,7 +132,7 @@ const essayContent = [
   },
   {
     type: 'image',
-    src: 'images/pattaya/soi6-34.jpg',
+    src: '/images/pattaya/soi6-34.jpg',
     caption: 'The Goya smile, December 2023.'
   },
   {
@@ -187,7 +187,7 @@ const essayContent = [
   },
   {
     type: 'image',
-    src: 'images/pattaya/soi6-59.jpg',
+    src: '/images/pattaya/soi6-59.jpg',
     caption: 'Allure of the open bar, December 2023.',
   },
   {
@@ -214,7 +214,7 @@ const essayContent = [
   },
   {
     type: 'image',
-    src: 'images/pattaya/soi6-1312.jpg',
+    src: '/images/pattaya/soi6-1312.jpg',
     caption: 'Even the police patrol isn’t immune from Soi 6’s rituals, April 2024.'
 
   },
@@ -282,7 +282,7 @@ const essayContent = [
   },
   {
     type: 'image',
-    src: 'images/pattaya/soi6-06.jpg',
+    src: '/images/pattaya/soi6-06.jpg',
     caption: 'Makeup check before work, June 2024.'
   },
   {
@@ -454,7 +454,7 @@ const essayContent = [
   },
   {
     type: 'image',
-    src: 'images/pattaya/soi6-80.jpg',
+    src: '/images/pattaya/soi6-80.jpg',
     caption: 'Birthday girl, June 2024.',
   },
   {
@@ -656,7 +656,7 @@ const essayContent = [
   },
   {
     type: 'image',
-    src: 'images/pattaya/soi6-00.jpg',
+    src: '/images/pattaya/soi6-00.jpg',
     caption: 'Collapsed woman, April 2024. (Photographed with an OM System TG-7)'
 
   },

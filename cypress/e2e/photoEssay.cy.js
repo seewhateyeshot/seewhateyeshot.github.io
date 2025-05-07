@@ -32,15 +32,16 @@ describe('Photo Essay Page', () => {
   it('should load and display all images after scrolling', () => {
     cy.visit('/projects/soi6');
 
-    cy.get('[data-testid="photo-essay"]').should('exist');
+    // Give the page time to render
+    cy.get('[data-testid="photo-essay"]', { timeout: 10000 }).should('exist');
 
+    // Ensure each image is rendered and loaded
     cy.get('[data-testid="essay-block-image"]').each(($img) => {
       cy.wrap($img)
         .scrollIntoView()
         .should('be.visible')
-        .and(($imgEl) => {
-          expect($imgEl[0].naturalWidth).to.be.greaterThan(0);
-        });
+        .should('have.prop', 'naturalWidth')
+        .and('be.gt', 0);
     });
   });
 });
