@@ -18,7 +18,7 @@ export default function Home() {
 
       <div className="max-w-2xl mt-10 mb-8 mx-auto  px-4">
         <p className="text-lg leading-relaxed mb-6">
-          I’m a street and documentary photographer — and a budget traveler — loosely based in Stockholm. I explore life on the margins: red light alleys in Thailand, sleepy Asian towns, obscure villages by ancient rivers, genocide memorials, poor gutters, and forgotten corners of the Balkans.
+          I’m a street and documentary photographer — and a budget traveler — among other things, loosely based in Stockholm, Sweden. I explore life on the margins: red light alleys in Thailand, sleepy Asian towns, right-wing extremists, obscure villages by ancient rivers, refugees, genocide memorials, poor gutters, and forgotten corners of the Balkans.
           <br /><br />
           I’ve biked across Europe along the eastern edge of the Iron Curtain, from Scandinavia to Turkey. I walk a lot, shoot way too many photos, and edit excruciatingly slowly — always aiming to capture people the way they’d want to be remembered… or at least not forgotten.
         </p>
