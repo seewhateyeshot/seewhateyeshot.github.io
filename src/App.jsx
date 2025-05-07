@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import Analytics from './components/Analytics';
-import DarkModeToggle from './components/DarkModeToggle';
+import ScrollToTop from './components/ScrollToTop';
 
 import './App.css';
 
@@ -147,6 +147,7 @@ export default function App() {
 
   return (
     <div className="bg-white text-black dark:bg-zinc-950 dark:text-gray-300">
+      <ScrollToTop />
       <Analytics />
       {/* NAVBAR */}
       <nav className="navbar">
