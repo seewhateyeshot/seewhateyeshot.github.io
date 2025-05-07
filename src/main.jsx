@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createHashRouter, RouterProvider, redirect } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, redirect } from 'react-router-dom';
 import App from './App';
 import './tailwind.css';
 import './App.css';
@@ -20,7 +20,7 @@ const validBriefIds = [
   'songkran',
 ];
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
