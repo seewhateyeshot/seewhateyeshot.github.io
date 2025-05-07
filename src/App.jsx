@@ -118,7 +118,9 @@ export default function App() {
                 <ul className="sub-menu">
                   {item.subLinks.map((sub, sidx) => (
                     <li key={sidx}>
-                      <Link to={sub.to} onClick={handleLinkClick}>
+                      <Link to={sub.to}
+                        className="block mobile-link-item hover:underline"
+                        onClick={handleLinkClick}>
                         {sub.label}
                       </Link>
                     </li>
@@ -129,7 +131,11 @@ export default function App() {
           }
           return (
             <li key={idx}>
-              <Link to={item.to} onClick={handleLinkClick}>
+              <Link
+                to={item.to}
+                className="block mobile-link-item hover:underline"
+                onClick={handleLinkClick}
+              >
                 {item.label}
               </Link>
             </li>
