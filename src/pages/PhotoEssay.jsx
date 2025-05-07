@@ -291,7 +291,7 @@ export default function PhotoEssay() {
 
               return (
                 <div key={key}
-                  className={`essay-collapse-wrapper transition-all duration-500 ease-in-out overflow-hidden ${shouldCollapse ? 'max-h-0' : 'max-h-[1000px]'}`}
+                  className={`essay-collapse-wrapper transition-all duration-500 ease-in-out overflow-hidden ${shouldCollapse ? 'max-h-0' : 'max-h-fit'}`}
                 >
                   <div className="essay-component">
                     {node}
@@ -313,7 +313,7 @@ export default function PhotoEssay() {
               return (
                 <div
                   key={key}
-                  className={`essay-collapse-wrapper transition-all duration-500 ease-in-out overflow-hidden ${isCollapsed ? 'max-h-0' : 'max-h-[1000px]'
+                  className={`essay-collapse-wrapper transition-all duration-500 ease-in-out overflow-hidden ${isCollapsed ? 'max-h-0' : 'max-h-fit'
                     }`}
                 >
                   <div className="max-w-2xl mx-auto px-4 dark:text-gray-200">
@@ -352,7 +352,7 @@ export default function PhotoEssay() {
                       </button>
                     </div>
                     {block.caption && (
-                      <p className="text-center mb-1 italic text-gray-500 text-sm mt-2 dark:text-white">
+                      <p className="text-center mb-4 italic text-gray-500 text-sm mt-2 dark:text-white">
                         {block.caption}
                       </p>
                     )}
