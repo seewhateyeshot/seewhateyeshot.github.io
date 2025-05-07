@@ -28,7 +28,7 @@ export default function Home() {
         </p>
 
         <blockquote className="mt-10 text-xl text-gray-600 dark:text-gray-200 font-serif mb-2">
-          “Should we chain you to your seat?”
+          “Should we chain you to your chair?”
         </blockquote>
         <p className="text-sm text-gray-500 text-right italic mb-6">— my old manager</p>
 
