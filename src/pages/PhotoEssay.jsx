@@ -44,7 +44,7 @@ function EssayHeading({ id, text, setActiveId, collapsedSections, setCollapsedSe
             ...prev,
             [id]: !prev[id],
           }))}>
-          <h2 className="text-2xl font-bold">{text}</h2>
+          <h2 id={id} className="text-2xl font-bold">{text}</h2>
           <button
             className="text-sm "
 
@@ -313,6 +313,7 @@ export default function PhotoEssay() {
               return (
                 <div
                   key={key}
+                  data-testid={`section-${currentHeadingId}`}
                   className={`essay-collapse-wrapper transition-all duration-500 ease-in-out overflow-hidden ${isCollapsed ? 'max-h-0' : 'max-h-fit'
                     }`}
                 >

@@ -44,4 +44,37 @@ describe('Photo Essay Page', () => {
         .and('be.gt', 0);
     });
   });
+
+  it('should collapse and expand all collapsible sections', () => {
+    cy.visit('/projects/soi6');
+
+    cy.get('[data-testid="photo-essay"]').should('exist');
+
+    // Wait for headings to load
+    cy.get('h2').should('have.length.at.least', 1);
+
+    cy.get('h2').each(($heading) => {
+      const headingText = $heading.text();
+      const headingId = $heading.attr('id');
+
+      if (!headingId || headingId == 'closing') {
+        cy.log(`⚠️ Skipping heading: "${headingText}" — no parent with id`);
+        return;
+      }
+
+      const testId = `section-${headingId}`;
+
+      cy.log(`🔍 Testing section: ${testId}`);
+
+      const $h = cy.wrap($heading);
+
+      // Collapse
+      $h.click();
+      cy.get(`[data-testid="${testId}"] p`).should('not.be.visible');
+
+      // Expand
+      $h.click();
+      cy.get(`[data-testid="${testId}"] p`).should('be.visible');
+    });
+  });
 });
