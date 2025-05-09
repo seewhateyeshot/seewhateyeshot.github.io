@@ -11,6 +11,7 @@
         "postbuild": "cp dist/index.html dist/404.html",
         "preview": "vite preview",
         "prepare": "husky install",
+        "test": "echo \"No tests here, use npm run test:e2e\" && exit 0",
         "test:e2e": "cypress run --spec 'cypress/e2e/**/*.cy.js'",
         "predeploy": "npm run build && echo 'cagdas.photos' > dist/CNAME",
         "deploy": "gh-pages -d dist"
@@ -38,7 +39,7 @@
         "eslint-plugin-react-refresh": "^0.4.19",
         "gh-pages": "^6.3.0",
         "globals": "^15.15.0",
-        "husky": "^9.1.7",
+        "husky": "^8.0.0",
         "postcss": "^8.5.3",
         "tailwindcss": "^4.1.4",
         "vite": "^6.3.2"
