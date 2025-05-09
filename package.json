@@ -11,7 +11,7 @@
         "postbuild": "cp dist/index.html dist/404.html",
         "preview": "vite preview",
         "prepare": "husky install",
-        "test:e2e": "cypress run --spec 'cypress/e2e/photoEssay.cy.js'",
+        "test:e2e": "cypress run --spec 'cypress/e2e/**/*.cy.js'",
         "predeploy": "npm run build && echo 'cagdas.photos' > dist/CNAME",
         "deploy": "gh-pages -d dist"
     },
