@@ -11,7 +11,7 @@ export default function Contact() {
       </p>
       <div className="flex items-center gap-2 mb-4">
         <Mail className="w-5 h-5 text-blue-400" />
-        <a href="mailto:cagdasmore@gmail.com">cagdasmore@gmail.com</a>
+        <a href="mailto:cagdasmore@gmail.com">cagdasmore[snail]gmail.com</a>
       </div>
       <div className="flex items-center gap-2 mb-4">
         <Instagram className="w-5 h-5 text-pink-400" />
