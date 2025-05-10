@@ -141,6 +141,16 @@ export default function App() {
             </li>
           );
         })}
+        <li className="mt-4 border-t border-gray-700 pt-4">
+          <div className="flex justify-end mt-4 pr-4">
+            <button
+              onClick={toggleTheme}
+              className="border px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded flex items-center gap-2"
+            >
+              <span>{theme === 'dark' ? '🌞 Light theme' : '🌙 Dark theme'}</span>
+            </button>
+          </div>
+        </li>
       </ul>
     );
   }
@@ -168,16 +178,16 @@ export default function App() {
                 {menuOpen ? '✖' : '☰'}
               </button>
             ) : (
-              renderDesktopNav()
+              <>
+                {renderDesktopNav()}
+                <button
+                  onClick={toggleTheme}
+                  className="ml-2 cursor-pointer border px-3 py-1 rounded flex items-center gap-1"
+                >
+                  <span>{theme === 'dark' ? '🌞' : '🌙'}</span>
+                </button>
+              </>
             )}
-
-            <button
-              onClick={toggleTheme}
-              className="cursor-pointer border px-3 py-1 rounded flex items-center gap-2"
-            >
-              <span>{theme === 'dark' ? '🌞' : '🌙'}</span>
-            </button>
-            <div className="gap-1" />
           </div>
         </div>
       </nav>
