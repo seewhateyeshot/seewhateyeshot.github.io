@@ -14,12 +14,12 @@ const LINKS = [
   {
     label: 'Projects',
     subLinks: [
-      { to: '/projects/soi6', label: 'Soi 6' },
-      { to: '/projects/biking_home', label: 'Biking Home' },
+      { to: '/projects/soi6', label: 'Soi 6 — ซอยหก' },
+      { to: '/projects/biking_home', label: 'Bikepacking' },
     ],
   },
   {
-    label: 'Short series',
+    label: 'Shorts',
     subLinks: [
       { to: '/brief/samos', label: 'Samos' },
       { to: '/brief/sihanoukville', label: 'Sihanoukville' },
@@ -64,6 +64,14 @@ export default function App() {
   const toggleTheme = () =>
     setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
 
+  const [expanded, setExpanded] = useState({
+    Projects: false,
+    Shorts: false,
+  });
+
+  const toggleSection = (section) =>
+    setExpanded((prev) => ({ ...prev, [section]: !prev[section] }));
+
   /**
    * Render Desktop Nav
    */
@@ -100,58 +108,78 @@ export default function App() {
   /**
    * Render the MOBILE menu below the navbar (when open)
    */
-  function renderMobileMenu() {
-    if (!menuOpen) return null;
-
+  function renderMobileMenu(expanded, toggleSection) {
     // define a handler to close the menu
     function handleLinkClick() {
       setMenuOpen(false);
     }
 
     return (
-      <ul className="mobile-menu">
-        {LINKS.map((item, idx) => {
-          if (item.subLinks) {
+      <div
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${menuOpen ? 'max-h-screen opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
+          }`}
+      >
+        <ul className="mobile-menu text-center text-lg font-medium space-y-2 pt-4">
+          {LINKS.map((item, idx) => {
+            if (item.subLinks) {
+              const isExpanded = expanded[item.label];
+
+              return (
+                <li key={idx}
+                >
+                  <button
+                    onClick={() => toggleSection(item.label)}
+                    className="w-full flex items-center justify-center gap-2"
+                  >
+                    {item.label.toUpperCase()}
+                    <span>{isExpanded ? '▾' : '▸'}</span>
+                  </button>
+                  <ul
+                    className={`mt-1 space-y-1 transition-all duration-300 ease-in-out overflow-hidden ${isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                      }`}
+                  >
+                    {item.subLinks.map((sub, sidx) => (
+                      <li key={sidx}
+                        className="submenu-item"
+                      >
+                        <Link
+                          to={sub.to}
+                          onClick={handleLinkClick}
+                          className="block hover:underline"
+                        >
+                          {sub.label.toUpperCase()}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              );
+            }
+
             return (
-              <li key={idx}>
-                <span>{item.label}</span>
-                <ul className="sub-menu">
-                  {item.subLinks.map((sub, sidx) => (
-                    <li key={sidx}>
-                      <Link to={sub.to}
-                        className="block mobile-link-item hover:underline"
-                        onClick={handleLinkClick}>
-                        {sub.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+              <li key={idx} className="menu-item">
+                <Link
+                  to={item.to}
+                  className="block hover:underline"
+                  onClick={handleLinkClick}
+                >
+                  {item.label.toUpperCase()}
+                </Link>
               </li>
             );
-          }
-          return (
-            <li key={idx}>
-              <Link
-                to={item.to}
-                className="block mobile-link-item hover:underline"
-                onClick={handleLinkClick}
+          })}
+          <li className="mt-6 border-t border-gray-700 pt-4">
+            <div className="flex justify-center">
+              <button
+                onClick={toggleTheme}
+                className="border text-sm px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded flex items-center gap-2"
               >
-                {item.label}
-              </Link>
-            </li>
-          );
-        })}
-        <li className="mt-4 border-t border-gray-700 pt-4">
-          <div className="flex justify-end mt-4 pr-4">
-            <button
-              onClick={toggleTheme}
-              className="border px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded flex items-center gap-2"
-            >
-              <span>{theme === 'dark' ? '🌞 Light theme' : '🌙 Dark theme'}</span>
-            </button>
-          </div>
-        </li>
-      </ul>
+                <span>{theme === 'dark' ? '🌞 Light theme' : '🌙 Dark theme'}</span>
+              </button>
+            </div>
+          </li>
+        </ul >
+      </div >
     );
   }
 
@@ -193,7 +221,7 @@ export default function App() {
       </nav>
 
       {/* Mobile menu is BELOW nav; pushes content down */}
-      {isMobile && renderMobileMenu()}
+      {isMobile && renderMobileMenu(expanded, toggleSection)}
 
       {/* Page content */}
       <main className="min-h-screen">

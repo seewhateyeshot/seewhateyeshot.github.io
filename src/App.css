@@ -31,6 +31,16 @@
   color: #fff;
 }
 
+[data-theme='dark'] .submenu-item a {
+  /* background-color: #000; */
+  color: #fff;
+}
+
+[data-theme='dark'] .menu-item a {
+  /* background-color: #000; */
+  color: #fff;
+}
+
 [data-theme='dark'] .dropdown .sub-menu li a {
   background-color: #000;
   color: #fff;
