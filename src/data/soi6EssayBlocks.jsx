@@ -177,6 +177,10 @@ const essayContent = [
     caption: 'A usual Soi 6 scene, April 2024.'
   },
   {
+    type: 'text',
+    content: `He moved through Pattaya with a kind of quiet deference I would observe—and fail to see—in most tourists. After our dinners at the small family-run restaurant, he’d carry the plates back to the kitchen, help stack chairs outside (habits I quickly picked up too), say many thanks, and leave a generous tip—even though he was barely getting by himself. No big spectacle, just ease. He’d nudge me when some old white man made a crass comment to a waitress, or laugh under his breath when one dropped a couple of 1-baht coins on the table and called it a tip. “That’s thirty-four baht to the dollar,” he’d say, “you wouldn’t even get a chewing gum in Sweden for that.” And I’d quietly contemplate Sweden in reverse—how it’s so often immigrants waiting tables, running pizzerias, playing their part while ethnic Swedes enjoy the evening. Here, the non-locals were being served. The locals served. But even here, where roles were reversed, the posture—the entitlement—looked the same.`
+  },
+  {
     type: 'heading',
     text: 'Photographing Soi 6',
     id: 'soi_6',
