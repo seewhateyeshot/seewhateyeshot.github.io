@@ -3,6 +3,7 @@ import Lightbox from 'yet-another-react-lightbox';
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import 'yet-another-react-lightbox/styles.css';
 import './PortraitReel.css';
+import ImageWithLoader from './ImageWithLoader';
 
 export default function PortraitReel({ title, images, caption, orientation = 'portrait' }) {
   const [lightboxIndex, setLightboxIndex] = useState(-1);
@@ -61,12 +62,11 @@ export default function PortraitReel({ title, images, caption, orientation = 'po
               className={`relative group inline-block flex-shrink-0 ${isLandscape ? 'w-64 sm:w-80' : 'w-36 sm:w-40'}`}
             >
               <div className="relative">
-                <img
+                <ImageWithLoader
                   src={src}
                   alt={`portrait-${index}`}
-                  loading="lazy"
-                  className={`portrait-img w-full rounded object-cover cursor-pointer transition-opacity duration-300 group-hover:opacity-90 ${isLandscape ? 'h-auto aspect-[3/2]' : 'h-56 aspect-[2/3]'}`}
                   onClick={() => setLightboxIndex(index)}
+                  className={`portrait-img w-full rounded object-cover cursor-pointer transition-opacity duration-300 group-hover:opacity-90 ${isLandscape ? 'h-auto aspect-[3/2]' : 'h-56 aspect-[2/3]'}`}
                 />
                 <button
                   onClick={() => setLightboxIndex(index)}
