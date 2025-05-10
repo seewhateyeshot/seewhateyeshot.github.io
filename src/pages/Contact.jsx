@@ -51,6 +51,33 @@ export default function Contact() {
         </a>
       </p>
 
+      <section className="mt-12 mb-12">
+        <h2 className="text-lg font-semibold mb-2">Subscribe for updates</h2>
+        <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+          Get occasional emails when I publish new photo essays or behind-the-scenes notes.
+        </p>
+        <form
+          action="https://buttondown.email/api/emails/embed-subscribe/cagdas" // Replace this
+          method="post"
+          target="popupwindow"
+          onSubmit={() => window.open('https://buttondown.email/cagdas', 'popupwindow')}
+          className="flex flex-row sm:flex-row  items-center gap-4"
+        >
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="Your email"
+            className="px-4 py-2 rounded border border-gray-300 dark:border-gray-600 dark:bg-zinc-800 dark:text-white"
+          />
+          <button
+            type="submit"
+            className="px-4 py-2 rounded bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
+          >
+            Subscribe
+          </button>
+        </form>
+      </section>
 
       <p className="text-md text-gray-900 whitespace-normal break-words">
         Also, talk to me about grants and lucky opportunities — I’m very happy to not be doing software engineering at the moment, but I’m also just eking out a living. It’d be nice to get some work in print and out there, so I can keep doing this.
