@@ -117,18 +117,60 @@ const essayContent = [
     render: () => (
       <div className="max-w-2xl mx-auto px-4">
         <p className="essay-text">
-          As we walked, I started to understand the calls: <em>Sexy man</em>, <em>Handsome man</em>, <em>Where you go?</em>—basic English, shouted with practiced ease. But it wasn’t just words. Every few meters, a girl reached out—grabbing an arm, a waist, sometimes even the groin—trying to physically pull us inside. You couldn’t just walk past. You were part of the show.
+          It’s an oft-repeated fact,
+          but one this photo essay bears repeating here:
+          Pattaya began as a sleepy fishing village.
+          Today, high-rises line Beach Road,
+          rooftop bars crown luxury hotels,
+          sprawling malls lure in tourists,
+          and the city never seems to stop building.
+          The origin of this transformation is usually
+          traced back to the Vietnam War, when American
+          soldiers came here for rest and recreation.
+          That first boom never really ended.
+          It’s easy to forget this history
+          when walking past bars named <em>the Pussy Club</em>,
+          <em>Horny Bar</em>, or
+          <em>Slutz on Soi 6</em>—but the scaffolding of that myth still booms beneath the neon.
+        </p>
+      </div>
+    )
+  },
+  {
+    type: 'component',
+    render: () => (
+      <div className="max-w-2xl mx-auto px-4">
+        <p className="essay-text">
+          As we walked, I started to understand the calls of the bar girls: “Sexy man,” “Handsome man,” “Where you go?”—basic English, shouted with practiced ease. But it wasn’t just words. Every few meters, a girl reached out—grabbing an arm, a waist, sometimes even the groin—trying to physically pull us inside. You couldn’t just walk past. You were part of the show.
         </p>
       </div>
     )
   },
   {
     type: 'text',
-    content: `The bars on Soi 6 lined both sides of the narrow street, packed so tight there wasn’t a single gap between them—just one flashing threshold after another, each one pumping out music like a siren call. Every sign was in English. Not Thai. Not even bilingual. Just English. This wasn’t for locals. It was a red-light welcome mat for foreign men.
-
-    Sexy in the City. Slutz on Soi 6. Seduction. Toy Box. Bender—with a giant print of the drunk robot from Futurama out front. Some names sounded like biblical sins: Avarice. Wrath. Lust. A few tried to look classy, but ended up even sleazier. No bouncers. No doors. Just open-front bars, fully exposed. The street was alive—and it was built to feed.
-
-    From the top of the street, I couldn’t see the end. Neon signs blurred into one another. The bars stretched as far as the eye could follow—and outside each, five, ten, sometimes more women waited. Sitting on stools. Smoking. Busy on their smartphones. Scanning every man who passed. If you counted both sides, every bar, every shift—it wasn’t a stretch to say over a thousand women were working Soi 6 at any given moment. And that was just the ones attached to a bar.`
+    content: `The bars on Soi 6 lined both sides of the narrow street, packed so tight there wasn’t a single gap between them—just one flashing threshold after another, each one pumping out music like a siren call. Every sign was in English. Not Thai. Not even bilingual. Just English. This wasn’t for locals. It was a red-light welcome mat for foreign men.`
+  },
+  {
+    type: 'component',
+    render: () => (
+      <div className="max-w-2xl mx-auto px-4">
+        <p className="essay-text">
+          We kept walking past bar names that,
+          anywhere else in the world,
+          would be pure cringe: <em>Sexy in the City</em>. <em>Seduction</em>. <em>Toy Box</em>.
+          &nbsp;<em>Bender</em>—with a giant print of the alcoholic robot from <em>Futurama</em> out
+          front, a reference I doubt was meant for the local population.
+          Some names sounded like biblical sins:&nbsp;
+          <em>Avarice</em>. <em>Wrath</em>. <em>Lust</em>.
+          A few tried to look classy, but ended up even sleazier. No bouncers. No doors.
+          Just open-front bars, fully exposed. The street was alive—and it was built to feed.
+        </p>
+      </div>
+    )
+  },
+  {
+    type: 'text',
+    content: `From the top of the street, I couldn’t see the end. Neon signs blurred into one another. The bars stretched as far as the eye could follow—and outside each, five, ten, sometimes more women waited. Sitting on stools. Smoking. Busy on their smartphones. Scanning every man who passed. If you counted both sides, every bar, every shift—it wasn’t a stretch to say over a thousand women were working Soi 6 at any given moment. And that was just the ones attached to a bar.`
   },
   {
     type: 'image',
