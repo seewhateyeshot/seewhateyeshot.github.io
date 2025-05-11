@@ -461,12 +461,21 @@ const essayContent = [
       <div className="max-w-2xl mx-auto px-4">
         <p className="essay-text">
           The more I walked the street, the more I began to notice the system behind the surface.
-          Every bar followed a routine.
-          The girls would arrive around early afternoon—sometimes still in their pajamas, sometimes already dressed for the shift.
-          A few lived upstairs, I'd seen a few I knew in the balcony hanging laundry and gave me a wave before. Others came by motorbike or shared ride.
-          Some grabbed a quick bowl of noodle soup from the carts parked outside for breakfast, then slipped into the bar, disappearing behind a curtain to change.
-          All this would unravel under the supervision of the <em>mamasan</em>—an older Thai woman—who runs the daily operations at the bar
-          recruiting workers, managing the floor, and ensuring everyone stays in character.
+          Every bar followed a routine. The girls would arrive around early afternoon—
+          sometimes still in their pajamas, sometimes already dressed for the shift.
+          A few lived upstairs; I’d seen some I knew standing on balconies, hanging laundry,
+          waving at me down to the street. These rooms weren’t just dormitories—they doubled
+          as short-time rooms where customers took them for sex.
+          A single room might serve as both sleeping quarters and workspace,
+          usually accessed via a staircase tucked inside the bar.
+          When a customer paid the <em>mamasan</em>—an older Thai woman who oversees the bar—,
+          they’d head up together. Others had places elsewhere in the city—some boasted of
+          having a whole condo to themselves, others just a small room—and
+          they’d hop on a motorbike taxi after their shift and return the next day.
+          But not everyone fit the pattern. One girl, Kwang (a pseudonym),
+          actually commuted by bicycle. She once let me borrow it for a slow photo tour of Soi 6.
+          All this would unravel under the watch of the mamasan who recruited workers,
+          managed the floor, and ensured everyone stayed in character.
         </p>
       </div>
     )
