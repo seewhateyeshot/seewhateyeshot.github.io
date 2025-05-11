@@ -103,7 +103,7 @@ const essayContent = [
     type: 'text',
     content: `My teacher said he wanted to show me another bar street. He led me to Soi 6.
 
-    It was a different kind of overwhelming. The bars were open-air, low to the ground, close enough to touch. Bar girls lined the fronts, outnumbering everyone else ten to one. Flickering neon bounced off high heels and bare skin. Above the bars, TVs blared European football matches and old Western music videos—Guns N’ Roses, the Eagles, Aerosmith. From every direction came noise: thumping bass, crashing cymbals, screeching guitar solos—colliding with the constant chorus of women’s voices calling into the street. The music, the voices, the scooters, the engines—all tangled into one shapeless, deafening roar.
+    It was a different kind of overwhelming. The bars were open-air, low to the ground, close enough to touch. Bar girls lined the fronts, outnumbering everyone else ten to one. Flickering neon bounced off high heels and bare skin. Above the bars, TVs blared European football matches and old Western music videos—Guns N’ Roses, the Eagles, Aerosmith. From every direction came noise: thumping bass, crashing cymbals, screeching guitar solos—colliding with the constant chorus of women’s voices calling into the street. The music, the voices, the scooters, the engines—all tangled up into one shapeless, deafening roar.
 
     Older men perched on bar stools overlooking the street, under a canopy of tiny ceiling fans constantly twirling in different spiral directions, clutched beers wrapped in foam sleeves, trying and failing to keep them cold in the humid night air.`
   },
@@ -197,7 +197,11 @@ const essayContent = [
 
     Still, I instinctively took the photo. It’s a photo that haunts me—her distressed expression frozen mid-glance. One I will not share. I didn’t ask permission, and they never noticed me. And after all the time I spent in Pattaya, I know better now. They weren’t family.`
   },
-
+  {
+    type: 'image',
+    src: '/images/pattaya/soi6-49.jpg',
+    caption: 'Another Goya face, December 2023.'
+  },
   {
     type: 'component',
     render:
@@ -229,7 +233,7 @@ const essayContent = [
   },
   {
     type: 'text',
-    content: `We quickly decided that Soi 6 was the most photographable street—narrow, compact, alive. There were motorcycles and the occasional car, but it was walkable. Most people didn’t mind the camera; many vloggers wandered around with selfie sticks already. It was different from Walking Street, where “No Photo” signs hung everywhere, bouncers waved laser pointers at any raised lens, and most of the action was hidden behind closed doors. I didn't go back to the Walking Street again, I wasn't interested in where I couldn't photograph. My teacher told me that when he had first photographed Pattaya, Soi 6 had been more like Walking Street: guarded, closed off, hostile to cameras. But after the pandemic, something had shifted. There were no bouncers anymore. No closed doors. The bars were open to the street. The energy was immediate.`
+    content: `We quickly decided that Soi 6 was the most photographable street—narrow, compact, alive. There were motorcycles and the occasional car, but it was walkable. Most people didn’t mind the camera; many vloggers wandered around with selfie sticks already. It was different from Walking Street, where “No Photo” signs hung everywhere, bouncers waved laser pointers at any raised lens, and most of the action was hidden behind closed doors. I didn't go back to the Walking Street again, I wasn't interested in where I couldn't photograph. My teacher told me that when he had first photographed Pattaya, Soi 6 had been more like Walking Street: guarded, closed off, hostile to cameras. But after the pandemic, something had shifted. And it became what it was when I was there to photograph.`
   },
   {
     type: 'image',
