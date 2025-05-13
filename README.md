@@ -3,7 +3,7 @@
 This is my personal photography site built using React and Vite, hosted on GitHub Pages.
 
 ## Live Site
-🚀 [https://seewhateyeshot.github.io](https://seewhateyeshot.github.io)
+🚀 [https://cagdas.photos](https://cagdas.photos)
 
 ## Features
 - Minimal layout
