@@ -641,9 +641,24 @@ const essayContent = [
   },
   {
     type: 'text',
-    content: `Eventually, my vacation ended. I flew back to Sweden—back to the grey skies and quiet desperation of Stockholm. I was still buzzing from what I’d shot. My teacher said I’d made strong work. But I knew the truth: I didn’t have much. A few decent frames. A few lucky moments.
+    content: `I had loved Thailand. The warmth, the rhythm, even the chaos—it felt alive in a way Stockholm hadn’t for years. I was filled with dread the moment the plane landed. Minus temperatures outside. A wall of gray. In my head, I heard my teacher’s voice—how he was always the last to get off the plane at Arlanda, dragging his feet, dreading the cold—even though he only returns in spring.
 
-    Still, I made a small album on my phone of what I thought were the best. I showed it to a few friends. They were astonished. A photographer I look up to told me I should get them published—easy for him to say, but I was flattered. Their reactions made me want to return. To go deeper.
+    I hadn’t had many chances to travel during my six-plus years in Sweden. Gaining citizenship took time and mental stamina, even if I didn’t have to wait as long as some people do. And now, after finally getting that little EU passport of top-tier privilege, I was returning to a place that felt emotionally colder than ever.
+
+    What hit me most was how social and easygoing Thailand had been. I’d grown used to joining my palms and greeting everyone with a cheerful “sawatdee khrap”—and seeing warm, smiling faces respond. So during my first few morning runs back in Stockholm, I instinctively said “god morgon” to people passing by. Most looked at me like I was insane. The silence stung. I also remembered I was a Middle Eastern immigrant—the word expat in Sweden reserved for people from the States, Australia, or Western Europe. Unlike in Thailand, where I was read as a white tourist, here I was just another foreigner in the wrong category—one that closes doors, not opens them.
+
+    I missed Thai food too. Before I left, the family who ran the little restaurant we ate at almost every night had gifted me a small bag of spices—real, serious chili. Back in Sweden, I added it to everything. It was the only way I could feel some heat.
+
+    I started plotting how to move to Asia. I looked for tech jobs in Japan and Singapore. Anything to take a break from Sweden. I was still buzzing from what I’d shot. My teacher said I’d made strong work. But I didn’t feel I had much. A few decent frames, sure—but not enough to show Pattaya to people who’d never heard of it. Not enough for a real series. Not enough to tell a story.`
+  },
+  {
+    type: 'image',
+    src: '/images/pattaya/soi6-90.jpg',
+    caption: 'All alone and lost, April 2024.'
+  },
+  {
+    type: 'text',
+    content: `Still, I made a small album on my phone of what I thought were the best. I showed it to a few friends. They were astonished. A photographer I look up to told me I should get them published—easy for him to say, but I was flattered. Their reactions made me want to return. To go deeper.
 
     But life in Stockholm was far from great. Work was still draining me. Money was tight. The thought of enduring another few months of Swedish winter filled me with dread. I started looking for another job, but the idea of jumping straight into another software engineering role without a real break felt unbearable. I had no energy left.
 
