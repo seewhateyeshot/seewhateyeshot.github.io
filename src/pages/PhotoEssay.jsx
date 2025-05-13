@@ -1,19 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Lightbox from 'yet-another-react-lightbox';
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import 'yet-another-react-lightbox/styles.css';
 import NotFound from "../components/NotFound";
 import ShareButtons from '../components/ShareButtons';
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
+import { useInView } from 'react-intersection-observer';
+import { Helmet } from 'react-helmet';
+/* Essay blocks */
 import bikingHomeEssayBlocks from '../data/bikingHomeEssayBlocks.js';
 import soi6EssayBlocks from '../data/soi6EssayBlocks.jsx';
 import samosEssayBlocks from '../data/samosEssayBlocks';
 import sihanoukvilleEssayBlocks from '../data/sihanoukvilleEssayBlocks.jsx';
 import songkranEssayBlocks from '../data/songkranEssayBlocks';
+
 import './PhotoEssay.css';
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import { useInView } from 'react-intersection-observer';
 import { BASE_URL } from '../config/config.js';
 
 function ColoredTextBlock({ content, color = 'black' }) {
@@ -205,6 +206,14 @@ export default function PhotoEssay() {
   return (
 
     < div className="photo-essay  w-full max-w-none mx-auto mt-10" data-testid="photo-essay" >
+      <Helmet>
+        <title>{project.title} – Çağdaş</title>
+        <meta property="og:title" content={project.title} />
+        <meta property="og:description" content={project.subtitle} />
+        <meta property="og:image" content={`https://cagdas.photos${project.cover.src}`} />
+        <meta property="og:url" content={`https://cagdas.photos/projects/${id}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
       {/* Desktop TOC */}
       {/* < nav className="sticky toc-nav top-10 w-64 self-start px-4 text-sm text-gray-600 dark:text-gray-300" >
         <ul className="space-y-2">
