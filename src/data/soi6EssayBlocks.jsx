@@ -103,9 +103,9 @@ const essayContent = [
     type: 'text',
     content: `My teacher said he wanted to show me another bar street. He led me to Soi 6.
 
-    It was a different kind of overwhelming. The bars were open-air, low to the ground, close enough to touch. Bar girls lined the fronts, outnumbering everyone else ten to one. Flickering neon bounced off high heels and bare skin. Above the bars, TVs blared European football matches and old Western music videos—Guns N’ Roses, the Eagles, Aerosmith. From every direction came noise: thumping bass, crashing cymbals, screeching guitar solos—colliding with the constant chorus of women’s voices calling into the street. The music, the voices, the scooters, the engines—all tangled up into one shapeless, deafening roar.
+    It was a different kind of overwhelming. The bars were open-air, low to the ground, close enough to touch. Bar girls lined the fronts, outnumbering everyone else ten to one. Flickering neon bounced off high heels and bare skin. Above the bars, TVs blared European football matches and old Western music videos—Guns N’ Roses, the Eagles, Aerosmith. From every direction came noise: thumping bass, crashing cymbals, screeching guitar solos—colliding with the constant chorus of women’s voices calling into the street. The music, the voices, the scooters, the engines—all tangled up into one shapeless, abrasive roar.
 
-    Older men perched on bar stools overlooking the street, under a canopy of tiny ceiling fans constantly twirling in different spiral directions, clutched beers wrapped in foam sleeves, trying and failing to keep them cold in the humid night air.`
+    Older men perched on bar stools overlooking the street, under a canopy of tiny ceiling fans twirling in different spiral directions, clutched beers wrapped in foam sleeves—trying and failing to keep them cold in the humid night air. If not perched, they drifted—some in groups, some alone—pilgrimming up and down the street. Food carts cluttered the few gaps left along the street. And children, quite a few of them, wove through it all—selling flowers, nuts, napkins, or any old trinket might pass as charm. Sometimes it was a toddler, added for sympathy, wrapped around a mother’s hip as she peddled roses or cashews.`
   },
   {
     type: 'image',
@@ -524,9 +524,9 @@ const essayContent = [
   {
     girl: 'May',
     type: 'text',
-    content: `I had a dozen names to memorize from that first visit in December 2023 in the growing note on my phone. But only a few of my contacts spoke English well enough for real conversation.
+    content: `As days passed, I became friendly with many familiar faces. I was often offered bubble tea, fruit, grilled chicken—whatever the girls happened to be snacking on—as I walked by, whether in the morning or late at night. Looking back, I remember a general sense of warmth. But the ones I knew by name were fewer; still, by December 2023, I had already jotted down over a dozen names in my notes.
 
-    One of them was May—a pseudonym. She told me she had once lived in Sweden, supposedly for school, though I quietly suspected there was more to the story. When she learned I had lived there too, she lit up and started showing me photos. Her photos showed a life that felt oddly familiar to me: warm jackets, snowy sidewalks, Christmas lights, sterile IKEA interiors—though every meal still had a bowl of rice at the center.`
+    One of them was May—a pseudonym. She was conversational in English. She told me she had once lived in Sweden, supposedly for school, though I quietly suspected there was more to the story. When she learned I had lived there too, she lit up and started showing me photos. Her photos showed a life that felt oddly familiar to me: warm jackets, snowy sidewalks, Christmas lights, sterile IKEA interiors—though every meal still had a bowl of rice at the center.`
   },
 
   // <span

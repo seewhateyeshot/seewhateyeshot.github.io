@@ -80,7 +80,7 @@ export default function Contact() {
       </section>
 
       <p className="text-md text-gray-900 whitespace-normal break-words">
-        Also, talk to me about grants and lucky opportunities — I’m very happy to not be doing software engineering at the moment, but I’m also just eking out a living. It’d be nice to get some work in print and out there, so I can keep doing this.
+        Also, talk to me about grants and lucky opportunities — I’m quite happy to not be doing software engineering at the moment, but I’m also just eking out a living. It’d be nice to get some work in print and out there, so I can keep doing this.
       </p>
 
     </section>
